@@ -1,0 +1,23 @@
+{
+  "generatedAt": "2026-07-28T16:43:26.942Z",
+  "banks": [
+    {
+      "id": "generated-构建示例",
+      "name": "构建示例",
+      "description": "构建自 examples/构建示例.csv",
+      "questionCount": 5,
+      "file": "examples/构建示例.csv",
+      "dataFile": "generated-构建示例.json",
+      "issues": []
+    },
+    {
+      "id": "generated-构建示例",
+      "name": "构建示例题库",
+      "description": "放在 banks/examples，执行 npm run build:banks 后进入站点",
+      "questionCount": 5,
+      "file": "examples/构建示例.json",
+      "dataFile": "generated-构建示例.json",
+      "issues": []
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "name": "题库模板",
+  "description": "结构化 JSON 模板。也可使用 questions 为表格式对象数组。",
+  "questions": [
+    {
+      "type": "single",
+      "stem": "示例单选题干",
+      "options": [
+        {
+          "key": "a",
+          "label": "A",
+          "content": "选项一"
+        },
+        {
+          "key": "b",
+          "label": "B",
+          "content": "选项二"
+        },
+        {
+          "key": "c",
+          "label": "C",
+          "content": "选项三"
+        },
+        {
+          "key": "d",
+          "label": "D",
+          "content": "选项四"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "a"
+        ],
+        "explanation": "解析示例"
+      },
+      "tags": [
+        "示例"
+      ],
+      "media": []
+    },
+    {
+      "type": "blank",
+      "stem": "填空示例：____ 与 ____",
+      "answer": {
+        "texts": [
+          "答案1",
+          "答案2"
+        ],
+        "explanation": "多空用数组"
+      },
+      "tags": [
+        "示例"
+      ],
+      "media": []
+    }
+  ]
+}

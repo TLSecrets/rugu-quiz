@@ -1,0 +1,191 @@
+{
+  "bank": {
+    "id": "generated-构建示例",
+    "name": "构建示例题库",
+    "description": "放在 banks/examples，执行 npm run build:banks 后进入站点",
+    "source": "generated",
+    "questionCount": 5,
+    "file": "examples/构建示例.json",
+    "createdAt": 1785257006945,
+    "updatedAt": 1785257006945
+  },
+  "questions": [
+    {
+      "id": "q-generated-构建示例-1",
+      "bankId": "generated-构建示例",
+      "type": "single",
+      "stem": "GitHub Pages 适合部署哪类应用？",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "纯静态前端"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "必须有服务端 Session 的应用"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "仅限桌面客户端"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "仅限 Docker 容器"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "a"
+        ],
+        "explanation": "Pages 托管静态资源。"
+      },
+      "tags": [
+        "部署"
+      ],
+      "sourceMeta": {
+        "fileName": "构建示例.json",
+        "row": 1
+      }
+    },
+    {
+      "id": "q-generated-构建示例-2",
+      "bankId": "generated-构建示例",
+      "type": "multiple",
+      "stem": "下列哪些属于本项目支持的题型？",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "单选"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "多选"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "判断"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "填空"
+        },
+        {
+          "id": "opt-e",
+          "key": "e",
+          "label": "E",
+          "content": "简答"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e"
+        ],
+        "explanation": "五种题型均支持。"
+      },
+      "tags": [
+        "题型"
+      ],
+      "sourceMeta": {
+        "fileName": "构建示例.json",
+        "row": 2
+      }
+    },
+    {
+      "id": "q-generated-构建示例-3",
+      "bankId": "generated-构建示例",
+      "type": "judge",
+      "stem": "导入图片位置无法识别时可标记为 unknown。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-true",
+          "key": "true",
+          "label": "A",
+          "content": "正确"
+        },
+        {
+          "id": "opt-false",
+          "key": "false",
+          "label": "B",
+          "content": "错误"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "true"
+        ],
+        "explanation": "UI 会分区展示未识别配图。"
+      },
+      "tags": [
+        "媒体"
+      ],
+      "sourceMeta": {
+        "fileName": "构建示例.json",
+        "row": 3
+      }
+    },
+    {
+      "id": "q-generated-构建示例-4",
+      "bankId": "generated-构建示例",
+      "type": "blank",
+      "stem": "默认状态管理是 ____，本地库是 ____。",
+      "media": [],
+      "answer": {
+        "texts": [
+          "Pinia",
+          "Dexie"
+        ],
+        "explanation": "多空用 | 分隔。"
+      },
+      "tags": [
+        "技术栈"
+      ],
+      "sourceMeta": {
+        "fileName": "构建示例.json",
+        "row": 4
+      }
+    },
+    {
+      "id": "q-generated-构建示例-5",
+      "bankId": "generated-构建示例",
+      "type": "short",
+      "stem": "简述选项乱序时为何要用稳定 key 判题。",
+      "media": [],
+      "answer": {
+        "texts": [
+          "显示标签 A/B/C 会随乱序变化，key 不变才能正确对答案。"
+        ],
+        "explanation": "label 仅用于展示。"
+      },
+      "tags": [
+        "练习"
+      ],
+      "sourceMeta": {
+        "fileName": "构建示例.json",
+        "row": 5
+      }
+    }
+  ]
+}
