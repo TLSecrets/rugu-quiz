@@ -135,7 +135,7 @@ const wrongs = useWrongsStore()
   color: var(--color-accent);
 }
 
-@media (min-width: 800px) {
+@media (min-width: 48rem) {
   .hero {
     grid-template-columns: 1.4fr 1fr;
     align-items: stretch;

@@ -82,7 +82,8 @@ const pageTitle = computed(() => (route.meta.title as string) || '如故题库')
   }
 }
 
-@media (min-width: 56.25rem) {
+/* --layout-tablet: 48rem — 平板起侧栏、隐藏底栏 */
+@media (min-width: 48rem) {
   .shell {
     grid-template-columns: var(--nav-width) 1fr;
   }
@@ -95,6 +96,14 @@ const pageTitle = computed(() => (route.meta.title as string) || '如故题库')
     display: none;
   }
 
+  .shell__content {
+    padding: var(--space-6) var(--space-5);
+    padding-bottom: var(--space-10);
+  }
+}
+
+/* --layout-desktop: 56.25rem — 宽屏更大留白 */
+@media (min-width: 56.25rem) {
   .shell__content {
     padding: var(--space-8) var(--space-8);
     padding-bottom: var(--space-12);

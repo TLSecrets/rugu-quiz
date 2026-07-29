@@ -21,3 +21,6 @@ export const primaryNav: NavItem[] = [
 ]
 
 export const mobileTabNav = primaryNav.filter((item) => item.mobile)
+
+/** 手机顶栏「更多」：底栏未覆盖的入口 */
+export const mobileMoreNav = primaryNav.filter((item) => !item.mobile)

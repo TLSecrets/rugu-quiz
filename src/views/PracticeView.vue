@@ -7,6 +7,7 @@ import QuestionCard from '@/components/question/QuestionCard.vue'
 import PdfExportPanel from '@/components/bank/PdfExportPanel.vue'
 import PracticeSetup from '@/components/practice/PracticeSetup.vue'
 import QuestionNavigator from '@/components/practice/QuestionNavigator.vue'
+import { MQ_DESKTOP } from '@/lib/layoutBreakpoints'
 import { useBanksStore } from '@/stores/banks'
 import { useFavoritesStore } from '@/stores/favorites'
 import { useNotesStore } from '@/stores/notes'
@@ -19,11 +20,14 @@ const favorites = useFavoritesStore()
 const notes = useNotesStore()
 
 const showResumeDialog = ref(false)
-const desktopMq =
-  typeof window !== 'undefined' ? window.matchMedia('(min-width: 56.25rem)') : null
+const desktopMq = typeof window !== 'undefined' ? window.matchMedia(MQ_DESKTOP) : null
 const navOpen = ref(desktopMq?.matches ?? false)
+let wasDesktop = desktopMq?.matches ?? false
 
 function onDesktopMqChange(e: MediaQueryListEvent) {
+  if (e.matches === wasDesktop) return
+  wasDesktop = e.matches
+  // 仅跨断点时重置默认：宽屏开、窄屏关，不覆盖用户在同档内的折叠选择
   navOpen.value = e.matches
 }
 

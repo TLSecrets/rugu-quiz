@@ -21,7 +21,8 @@
   --header-height: 3.5rem;
   --tabbar-height: 4rem;
   --touch-min: 2.75rem;
-  /* 壳层 / 练习双栏统一断点（约 900px @16px 根字号） */
+  /* 平板起用侧栏（约 768px @16）；宽屏练习/考试双栏（约 900px @16） */
+  --layout-tablet: 48rem;
   --layout-desktop: 56.25rem;
 
   --font-size-xs: 0.75rem;

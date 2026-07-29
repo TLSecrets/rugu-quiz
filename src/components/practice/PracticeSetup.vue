@@ -59,6 +59,18 @@ const filteredBankList = computed(() => {
 
 const tagMatchHint = computed(() => bankTagMatchModeLabel(settings.bankTagMatchMode))
 
+/** 标签筛选一变就清空勾选，避免筛掉的题库仍参与组卷 */
+watch(tagFilter, () => {
+  form.bankIds = []
+})
+
+watch(
+  () => settings.bankTagMatchMode,
+  () => {
+    if (tagFilter.value.length) form.bankIds = []
+  },
+)
+
 const allBanksChecked = computed(
   () =>
     filteredBankList.value.length > 0 &&
@@ -173,7 +185,7 @@ function onStart() {
         </button>
       </div>
       <div v-if="banks.allBankTags.length" class="tag-filter">
-        <p class="hint">按标签缩小题库列表（{{ tagMatchHint }}），再用「全选当前列表」一键勾选</p>
+        <p class="hint">按标签缩小题库列表（{{ tagMatchHint }}）；切换标签会清空勾选，再用「全选当前列表」一键勾选</p>
         <div class="chips">
           <button
             v-for="tag in banks.allBankTags"
@@ -351,13 +363,19 @@ function onStart() {
 
 .chips {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: var(--space-2);
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 2px;
+  max-width: 100%;
 }
 
 .chip {
-  min-height: 36px;
+  min-height: var(--touch-min);
   padding: 0 var(--space-3);
+  flex: 0 0 auto;
   border-radius: var(--radius-sm);
   border: 1px solid var(--color-border);
   font-size: var(--font-size-sm);

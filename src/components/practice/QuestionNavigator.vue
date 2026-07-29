@@ -78,6 +78,8 @@ const items = computed(() =>
   border-radius: var(--radius-lg);
   border: 1px solid var(--color-border);
   background: var(--color-surface);
+  max-height: min(50dvh, 22rem);
+  overflow: hidden;
 }
 
 .nav__title {
@@ -85,16 +87,22 @@ const items = computed(() =>
   font-weight: 600;
   color: var(--color-text-muted);
   letter-spacing: 0.04em;
+  flex-shrink: 0;
 }
 
 .nav__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(2.25rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(var(--touch-min), 1fr));
   gap: var(--space-2);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  min-height: 0;
+  flex: 1;
+  padding-right: 2px;
 }
 
 .cell {
-  min-height: 2.25rem;
+  min-height: var(--touch-min);
   border-radius: var(--radius-sm);
   border: 1px solid var(--color-border);
   font-size: var(--font-size-xs);
@@ -143,8 +151,9 @@ const items = computed(() =>
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-2) var(--space-3);
-  font-size: 11px;
+  font-size: var(--font-size-xs);
   color: var(--color-text-muted);
+  flex-shrink: 0;
 }
 
 .legend li {
@@ -178,5 +187,12 @@ const items = computed(() =>
 
 .dot--fav {
   box-shadow: inset 0 0 0 1px #d4a017;
+}
+
+/* --layout-desktop: 56.25rem — 侧栏题号可更高 */
+@media (min-width: 56.25rem) {
+  .nav {
+    max-height: min(70dvh, 36rem);
+  }
 }
 </style>

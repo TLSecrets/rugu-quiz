@@ -130,8 +130,7 @@ export const useExamStore = defineStore('exam', () => {
   )
 
   function activeBankIds(): string[] {
-    if (selectedBankIds.value.length) return selectedBankIds.value
-    return banks.banks.map((b) => b.id)
+    return selectedBankIds.value
   }
 
   function countAvailable(type: QuestionType, excludeIds?: Set<string>) {

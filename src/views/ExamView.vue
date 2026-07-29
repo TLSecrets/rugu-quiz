@@ -7,6 +7,7 @@ import QuestionNavigator from '@/components/practice/QuestionNavigator.vue'
 import { emptyAnswer } from '@/lib/grade'
 import { bankMatchesTags, bankTagMatchModeLabel } from '@/lib/bankTags'
 import { exportQuestionsPdf } from '@/lib/exportPdf'
+import { MQ_DESKTOP } from '@/lib/layoutBreakpoints'
 import { prepareOptions } from '@/lib/shuffle'
 import { useBanksStore } from '@/stores/banks'
 import { useExamStore } from '@/stores/exam'
@@ -29,12 +30,14 @@ const pdfMsg = ref<string | null>(null)
 const pdfErr = ref<string | null>(null)
 const composeError = ref<string | null>(null)
 const tagFilter = ref<string[]>([])
-const desktopMq =
-  typeof window !== 'undefined' ? window.matchMedia('(min-width: 56.25rem)') : null
+const desktopMq = typeof window !== 'undefined' ? window.matchMedia(MQ_DESKTOP) : null
 const navOpen = ref(desktopMq?.matches ?? false)
+let wasDesktop = desktopMq?.matches ?? false
 const paperTitle = ref('模拟考试')
 
 function onDesktopMqChange(e: MediaQueryListEvent) {
+  if (e.matches === wasDesktop) return
+  wasDesktop = e.matches
   navOpen.value = e.matches
 }
 
@@ -75,6 +78,18 @@ const filteredBankList = computed(() => {
 })
 
 const tagMatchHint = computed(() => bankTagMatchModeLabel(settings.bankTagMatchMode))
+
+/** 标签筛选一变就清空勾选，避免筛掉的题库仍参与组卷 */
+watch(tagFilter, () => {
+  exam.setSelectedBankIds([])
+})
+
+watch(
+  () => settings.bankTagMatchMode,
+  () => {
+    if (tagFilter.value.length) exam.setSelectedBankIds([])
+  },
+)
 
 const allBanksChecked = computed(
   () =>
@@ -227,28 +242,28 @@ const scoreLabel = computed(() => {
               {{ allBanksChecked ? '取消全选' : '全选当前列表' }}
             </button>
           </div>
-          <div v-if="banks.allBankTags.length" class="chips">
-            <p class="hint" style="width: 100%; margin: 0 0 0.25rem">
-              标签筛选：{{ tagMatchHint }}
-            </p>
-            <button
-              v-for="tag in banks.allBankTags"
-              :key="tag"
-              type="button"
-              class="chip"
-              :class="{ 'chip--on': tagFilter.includes(tag) }"
-              @click="toggleFilterTag(tag)"
-            >
-              {{ tag }}
-            </button>
-            <button
-              v-if="tagFilter.length"
-              type="button"
-              class="chip chip--ghost"
-              @click="tagFilter = []"
-            >
-              清除标签筛选
-            </button>
+          <div v-if="banks.allBankTags.length" class="tag-filter">
+            <p class="hint">标签筛选：{{ tagMatchHint }}（切换会清空勾选）</p>
+            <div class="chips">
+              <button
+                v-for="tag in banks.allBankTags"
+                :key="tag"
+                type="button"
+                class="chip"
+                :class="{ 'chip--on': tagFilter.includes(tag) }"
+                @click="toggleFilterTag(tag)"
+              >
+                {{ tag }}
+              </button>
+              <button
+                v-if="tagFilter.length"
+                type="button"
+                class="chip chip--ghost"
+                @click="tagFilter = []"
+              >
+                清除标签筛选
+              </button>
+            </div>
           </div>
           <p v-if="!filteredBankList.length" class="hint">当前标签下没有题库。</p>
           <div v-else class="checks">
@@ -430,13 +445,19 @@ const scoreLabel = computed(() => {
 
 .chips {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: var(--space-2);
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 2px;
+  max-width: 100%;
 }
 
 .chip {
-  min-height: 36px;
+  min-height: var(--touch-min);
   padding: 0 var(--space-3);
+  flex: 0 0 auto;
   border-radius: var(--radius-sm);
   border: 1px solid var(--color-border);
   font-size: var(--font-size-sm);
@@ -575,9 +596,16 @@ const scoreLabel = computed(() => {
   color: var(--color-text-muted);
 }
 
+.tag-filter {
+  display: grid;
+  gap: var(--space-2);
+  margin-bottom: var(--space-2);
+}
+
 .hint {
   font-size: var(--font-size-sm);
   color: var(--color-text-muted);
+  margin: 0;
 }
 
 .err {

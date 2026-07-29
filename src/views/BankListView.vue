@@ -277,13 +277,19 @@ async function saveEdit() {
 
 .chips {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: var(--space-2);
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 2px;
+  max-width: 100%;
 }
 
 .chip {
-  min-height: 36px;
+  min-height: var(--touch-min);
   padding: 0 var(--space-3);
+  flex: 0 0 auto;
   border-radius: var(--radius-sm);
   border: 1px solid var(--color-border);
   font-size: var(--font-size-sm);
