@@ -19,7 +19,9 @@ const favorites = useFavoritesStore()
 const notes = useNotesStore()
 
 const showResumeDialog = ref(false)
-const navOpen = ref(false)
+const navOpen = ref(
+  typeof window !== 'undefined' && window.matchMedia('(min-width: 960px)').matches,
+)
 let autoNextTimer: ReturnType<typeof setTimeout> | null = null
 
 const bankIdFromRoute = computed(() => {
@@ -179,7 +181,6 @@ watch(
   () => question.value?.id,
   () => {
     clearAutoNext()
-    navOpen.value = false
   },
 )
 
@@ -293,17 +294,6 @@ function onRestartConfirm() {
       </div>
 
       <div class="layout">
-        <aside class="layout__nav" :class="{ 'layout__nav--open': navOpen }">
-          <QuestionNavigator
-            :questions="quiz.filteredQuestions"
-            :current-index="quiz.currentIndex"
-            :verdicts="quiz.summaryVerdicts"
-            :favorite-ids="favoriteIdSet"
-            :submitted-ids="submittedIds"
-            @jump="quiz.goTo($event)"
-          />
-        </aside>
-
         <div class="layout__main">
           <QuestionCard
             :question="question"
@@ -326,6 +316,17 @@ function onRestartConfirm() {
             @reveal-answer="quiz.revealAnswer()"
           />
         </div>
+
+        <aside v-show="navOpen" class="layout__nav">
+          <QuestionNavigator
+            :questions="quiz.filteredQuestions"
+            :current-index="quiz.currentIndex"
+            :verdicts="quiz.summaryVerdicts"
+            :favorite-ids="favoriteIdSet"
+            :submitted-ids="submittedIds"
+            @jump="quiz.goTo($event)"
+          />
+        </aside>
       </div>
 
       <PdfExportPanel
@@ -412,23 +413,14 @@ function onRestartConfirm() {
 
 @media (min-width: 960px) {
   .layout {
-    grid-template-columns: minmax(11rem, 14rem) minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1fr) minmax(11rem, 14rem);
     align-items: start;
   }
 
   .layout__nav {
-    display: block !important;
     position: sticky;
     top: calc(var(--header-height, 4rem) + var(--space-3));
   }
-}
-
-.layout__nav {
-  display: none;
-}
-
-.layout__nav--open {
-  display: block;
 }
 
 .btn {

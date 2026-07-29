@@ -33,7 +33,7 @@ function updateAt(index: number, patch: Partial<Question>) {
         uncertain: false,
       }
     }
-    if (patch.domain !== undefined || patch.answer !== undefined) {
+    if (patch.answer !== undefined) {
       merged.sourceMeta = {
         ...merged.sourceMeta,
         uncertain: false,
@@ -140,15 +140,6 @@ function issueLevelClass(level?: string) {
         </label>
 
         <div class="row2">
-          <label class="field">
-            <span>领域</span>
-            <input
-              :value="q.domain ?? ''"
-              type="text"
-              placeholder="可选"
-              @change="updateAt(index, { domain: ($event.target as HTMLInputElement).value.trim() || undefined })"
-            />
-          </label>
           <label class="field">
             <span>答案</span>
             <input

@@ -3,6 +3,7 @@ import { computed, onMounted, ref, watch } from 'vue'
 import { useRouter } from 'vue-router'
 import PageHeader from '@/components/common/PageHeader.vue'
 import EmptyState from '@/components/common/EmptyState.vue'
+import { formatBankTags } from '@/lib/bankTags'
 import { fieldLabel, searchQuestions, splitHighlight } from '@/lib/search'
 import { useBanksStore } from '@/stores/banks'
 import { useQuizStore } from '@/stores/quiz'
@@ -14,7 +15,8 @@ const quiz = useQuizStore()
 
 const input = ref('')
 const keyword = ref('')
-const domainFilter = ref('')
+const bankFilter = ref('')
+const tagFilter = ref('')
 let timer: ReturnType<typeof setTimeout> | null = null
 
 watch(input, (value) => {
@@ -32,16 +34,22 @@ const allQuestions = computed(() =>
   banks.banks.flatMap((b) => banks.getQuestions(b.id)),
 )
 
-const domains = computed(() => quiz.allDomains)
-
 const hits = computed(() =>
   searchQuestions(
     allQuestions.value,
-    (bankId) => banks.getBank(bankId)?.name ?? '未知题库',
+    (bankId) => {
+      const b = banks.getBank(bankId)
+      return { name: b?.name ?? '未知题库', tags: b?.tags }
+    },
     keyword.value,
-    { domain: domainFilter.value || undefined },
+    {
+      bankId: bankFilter.value || undefined,
+      bankTag: tagFilter.value || undefined,
+    },
   ),
 )
+
+const hasFilter = computed(() => !!(keyword.value || bankFilter.value || tagFilter.value))
 
 function openHit(bankId: string, questionId: string) {
   quiz.openQuestion(bankId, questionId)
@@ -50,7 +58,7 @@ function openHit(bankId: string, questionId: string) {
 </script>
 
 <template>
-  <PageHeader title="搜索" subtitle="检索本机已加载题库的题干、选项、解析、标签与领域。">
+  <PageHeader title="搜索" subtitle="按关键词检索，可按题库或题库标签缩小范围。">
     <div class="search">
       <label class="search__label" for="q">关键词</label>
       <input
@@ -62,33 +70,47 @@ function openHit(bankId: string, questionId: string) {
         autocomplete="off"
       />
 
-      <label v-if="domains.length" class="search__label" for="domain">领域</label>
+      <label v-if="banks.banks.length" class="search__label" for="bank">题库</label>
       <select
-        v-if="domains.length"
-        id="domain"
-        v-model="domainFilter"
+        v-if="banks.banks.length"
+        id="bank"
+        v-model="bankFilter"
         class="search__select"
       >
-        <option value="">全部领域</option>
-        <option v-for="d in domains" :key="d" :value="d">{{ d }}</option>
+        <option value="">全部题库</option>
+        <option v-for="b in banks.banks" :key="b.id" :value="b.id">{{ b.name }}</option>
       </select>
 
-      <p v-if="keyword || domainFilter" class="search__meta">
+      <label v-if="banks.allBankTags.length" class="search__label" for="bank-tag">题库标签</label>
+      <select
+        v-if="banks.allBankTags.length"
+        id="bank-tag"
+        v-model="tagFilter"
+        class="search__select"
+      >
+        <option value="">全部标签</option>
+        <option v-for="t in banks.allBankTags" :key="t" :value="t">{{ t }}</option>
+      </select>
+
+      <p v-if="hasFilter" class="search__meta">
         <template v-if="keyword">「{{ keyword }}」</template>
-        <template v-if="domainFilter"> · 领域 {{ domainFilter }}</template>
+        <template v-if="bankFilter">
+          · {{ banks.getBank(bankFilter)?.name ?? '题库' }}
+        </template>
+        <template v-if="tagFilter"> · 标签 {{ tagFilter }}</template>
         · {{ hits.length }} 条结果
       </p>
     </div>
 
     <EmptyState
-      v-if="!keyword && !domainFilter"
-      title="输入关键字或选择领域"
-      description="支持题干、选项、解析、标签、领域。点击结果可跳转练习并定位到该题。"
+      v-if="!hasFilter"
+      title="输入关键字或选择题库 / 标签"
+      description="支持题干、选项、解析、题目标签。点击结果可跳转练习并定位到该题。"
     />
     <EmptyState
       v-else-if="!hits.length"
       title="没有匹配题目"
-      description="试试更短的关键词，或调整领域筛选。"
+      description="试试更短的关键词，或调整题库 / 标签筛选。"
     />
 
     <ul v-else class="results">
@@ -97,7 +119,9 @@ function openHit(bankId: string, questionId: string) {
           <div class="hit__top">
             <span class="hit__type">{{ QUESTION_TYPE_LABELS[hit.question.type] }}</span>
             <span class="hit__bank">{{ hit.bankName }}</span>
-            <span v-if="hit.question.domain" class="hit__domain">{{ hit.question.domain }}</span>
+            <span v-if="hit.bankTags?.length" class="hit__tags">{{
+              formatBankTags(hit.bankTags, 2)
+            }}</span>
             <span class="hit__field">{{ fieldLabel(hit.field) }}</span>
           </div>
           <p class="hit__stem">
@@ -186,7 +210,7 @@ function openHit(bankId: string, questionId: string) {
   color: var(--color-accent);
 }
 
-.hit__domain {
+.hit__tags {
   color: var(--color-text-secondary);
 }
 

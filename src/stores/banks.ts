@@ -1,6 +1,7 @@
 import { defineStore } from 'pinia'
 import { computed, ref } from 'vue'
 import { db } from '@/db'
+import { bankHasTag, normalizeBankTags } from '@/lib/bankTags'
 import type { Bank, Question } from '@/types/question'
 
 export const useBanksStore = defineStore('banks', () => {
@@ -14,12 +15,23 @@ export const useBanksStore = defineStore('banks', () => {
     banks.value.reduce((sum, bank) => sum + bank.questionCount, 0),
   )
 
+  const allBankTags = computed(() => {
+    const set = new Set<string>()
+    for (const bank of banks.value) {
+      for (const tag of normalizeBankTags(bank.tags)) set.add(tag)
+    }
+    return [...set].sort((a, b) => a.localeCompare(b, 'zh-CN'))
+  })
+
   async function refresh() {
     loading.value = true
     error.value = null
     try {
       const list = await db.banks.orderBy('updatedAt').reverse().toArray()
-      banks.value = list
+      banks.value = list.map((b) => ({
+        ...b,
+        tags: normalizeBankTags(b.tags),
+      }))
 
       const map: Record<string, Question[]> = {}
       for (const bank of list) {
@@ -42,10 +54,17 @@ export const useBanksStore = defineStore('banks', () => {
     return questionsByBank.value[bankId] ?? []
   }
 
+  function banksMatchingTags(tags: string[]): Bank[] {
+    const need = normalizeBankTags(tags)
+    if (!need.length) return banks.value
+    return banks.value.filter((b) => need.every((t) => bankHasTag(b.tags, t)))
+  }
+
   async function putBankWithQuestions(bank: Bank, questions: Question[]) {
     const now = Date.now()
     const next: Bank = {
       ...bank,
+      tags: normalizeBankTags(bank.tags),
       questionCount: questions.length,
       updatedAt: now,
       createdAt: bank.createdAt || now,
@@ -56,6 +75,31 @@ export const useBanksStore = defineStore('banks', () => {
       await db.questions.bulkPut(questions.map((q) => ({ ...q, bankId: next.id })))
     })
     await refresh()
+  }
+
+  async function updateBankMeta(
+    id: string,
+    patch: { name?: string; description?: string; tags?: string[] },
+  ) {
+    const existing = await db.banks.get(id)
+    if (!existing) throw new Error('题库不存在')
+    const next: Bank = {
+      ...existing,
+      name: patch.name !== undefined ? patch.name.trim() || existing.name : existing.name,
+      description:
+        patch.description !== undefined
+          ? patch.description.trim() || undefined
+          : existing.description,
+      tags: patch.tags !== undefined ? normalizeBankTags(patch.tags) : normalizeBankTags(existing.tags),
+      updatedAt: Date.now(),
+    }
+    await db.banks.put(next)
+    const idx = banks.value.findIndex((b) => b.id === id)
+    if (idx >= 0) {
+      banks.value = banks.value.map((b) => (b.id === id ? next : b))
+    } else {
+      await refresh()
+    }
   }
 
   async function removeBank(bankId: string) {
@@ -75,10 +119,13 @@ export const useBanksStore = defineStore('banks', () => {
     error,
     ready,
     totalQuestions,
+    allBankTags,
     refresh,
     getBank,
     getQuestions,
+    banksMatchingTags,
     putBankWithQuestions,
+    updateBankMeta,
     removeBank,
   }
 })

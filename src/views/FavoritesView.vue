@@ -2,6 +2,7 @@
 import { useRouter } from 'vue-router'
 import PageHeader from '@/components/common/PageHeader.vue'
 import EmptyState from '@/components/common/EmptyState.vue'
+import { formatBankTags } from '@/lib/bankTags'
 import { useBanksStore } from '@/stores/banks'
 import { useFavoritesStore } from '@/stores/favorites'
 import { useQuizStore } from '@/stores/quiz'
@@ -62,7 +63,12 @@ function practiceOne(bankId: string, questionId: string) {
           <p class="row__stem">
             {{ questionOf(item.questionId)?.stem ?? item.questionId }}
           </p>
-          <p class="row__bank">{{ banks.getBank(item.bankId)?.name ?? item.bankId }}</p>
+          <p class="row__bank">
+            {{ banks.getBank(item.bankId)?.name ?? item.bankId }}
+            <template v-if="formatBankTags(banks.getBank(item.bankId)?.tags)">
+              · {{ formatBankTags(banks.getBank(item.bankId)?.tags) }}
+            </template>
+          </p>
         </button>
         <button
           type="button"

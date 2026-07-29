@@ -1,22 +1,40 @@
 <script setup lang="ts">
-import { onMounted, ref } from 'vue'
+import { computed, onMounted, reactive, ref } from 'vue'
 import PageHeader from '@/components/common/PageHeader.vue'
 import EmptyState from '@/components/common/EmptyState.vue'
 import LoadingState from '@/components/common/LoadingState.vue'
 import ErrorState from '@/components/common/ErrorState.vue'
 import MediaBlock from '@/components/question/MediaBlock.vue'
 import RichText from '@/components/common/RichText.vue'
+import BankTagsField from '@/components/bank/BankTagsField.vue'
+import { bankHasTag, normalizeBankTags } from '@/lib/bankTags'
 import { useBanksStore } from '@/stores/banks'
 import { useQuizStore } from '@/stores/quiz'
-import { QUESTION_TYPE_LABELS, type Question } from '@/types/question'
+import { QUESTION_TYPE_LABELS, type Bank, type Question } from '@/types/question'
 
 const banks = useBanksStore()
 const quiz = useQuizStore()
 
 const previewBankId = ref<string | null>(null)
+const filterTags = ref<string[]>([])
+const editingId = ref<string | null>(null)
+const editForm = reactive({
+  name: '',
+  description: '',
+  tags: [] as string[],
+})
+const editBusy = ref(false)
+const editError = ref<string | null>(null)
 
 onMounted(() => {
   if (!banks.ready) void banks.refresh()
+})
+
+const visibleBanks = computed(() => {
+  if (!filterTags.value.length) return banks.banks
+  return banks.banks.filter((b) =>
+    filterTags.value.every((t) => bankHasTag(b.tags, t)),
+  )
 })
 
 function sourceLabel(source: string) {
@@ -36,10 +54,52 @@ function togglePreview(bankId: string) {
 function previewQuestions(bankId: string): Question[] {
   return banks.getQuestions(bankId).slice(0, 3)
 }
+
+function toggleFilterTag(tag: string) {
+  const set = new Set(filterTags.value)
+  if (set.has(tag)) set.delete(tag)
+  else set.add(tag)
+  filterTags.value = [...set]
+}
+
+function beginEdit(bank: Bank) {
+  editingId.value = bank.id
+  editForm.name = bank.name
+  editForm.description = bank.description ?? ''
+  editForm.tags = normalizeBankTags(bank.tags)
+  editError.value = null
+  previewBankId.value = null
+}
+
+function cancelEdit() {
+  editingId.value = null
+  editError.value = null
+}
+
+async function saveEdit() {
+  if (!editingId.value) return
+  editBusy.value = true
+  editError.value = null
+  try {
+    await banks.updateBankMeta(editingId.value, {
+      name: editForm.name,
+      description: editForm.description,
+      tags: editForm.tags,
+    })
+    editingId.value = null
+  } catch (e) {
+    editError.value = e instanceof Error ? e.message : '保存失败'
+  } finally {
+    editBusy.value = false
+  }
+}
 </script>
 
 <template>
-  <PageHeader title="题库" subtitle="数据保存在本机 IndexedDB。内置示例题可预览配图与公式。">
+  <PageHeader
+    title="题库"
+    subtitle="可为题库打标签（如学年），并在练习 / 考试 / 搜索中按标签筛选。"
+  >
     <LoadingState v-if="banks.loading" label="正在加载题库…" />
     <ErrorState
       v-else-if="banks.error"
@@ -57,56 +117,110 @@ function previewQuestions(bankId: string): Question[] {
       <RouterLink class="link" to="/import-export">去导入</RouterLink>
     </EmptyState>
 
-    <ul v-else class="list">
-      <li v-for="bank in banks.banks" :key="bank.id" class="card">
-        <div class="card__top">
-          <div>
-            <p class="card__badge">{{ sourceLabel(bank.source) }}</p>
-            <h3 class="card__title">{{ bank.name }}</h3>
-            <p v-if="bank.description" class="card__desc">{{ bank.description }}</p>
-          </div>
-          <p class="card__count">
-            <strong>{{ bank.questionCount }}</strong>
-            题
-          </p>
-        </div>
-
-        <div class="card__actions">
-          <RouterLink
-            class="btn btn--primary"
-            :to="{ name: 'practice', query: { bankId: bank.id } }"
-            @click="startPractice(bank.id)"
+    <template v-else>
+      <div v-if="banks.allBankTags.length" class="filter">
+        <p class="filter__label">按标签筛选</p>
+        <div class="chips">
+          <button
+            v-for="tag in banks.allBankTags"
+            :key="tag"
+            type="button"
+            class="chip"
+            :class="{ 'chip--on': filterTags.includes(tag) }"
+            @click="toggleFilterTag(tag)"
           >
-            开始练习
-          </RouterLink>
-          <button type="button" class="btn btn--ghost" @click="togglePreview(bank.id)">
-            {{ previewBankId === bank.id ? '收起预览' : '预览样题' }}
+            {{ tag }}
           </button>
         </div>
+      </div>
 
-        <div v-if="previewBankId === bank.id" class="preview">
-          <article
-            v-for="q in previewQuestions(bank.id)"
-            :key="q.id"
-            class="preview__item"
-          >
-            <p class="preview__type">{{ QUESTION_TYPE_LABELS[q.type] }}</p>
-            <RichText class="preview__stem" :source="q.stem" />
-            <MediaBlock
-              :items="q.media"
-              :placement="['after-stem', 'unknown', 'after-options', 'inline']"
-              caption="题目配图"
-            />
-            <MediaBlock
-              v-if="q.answer.media?.length"
-              :items="q.answer.media"
-              placement="in-answer"
-              caption="答案配图"
-            />
-          </article>
-        </div>
-      </li>
-    </ul>
+      <EmptyState
+        v-if="!visibleBanks.length"
+        title="没有匹配的题库"
+        description="换一组标签，或清除筛选后再看。"
+      >
+        <button type="button" class="link" @click="filterTags = []">清除筛选</button>
+      </EmptyState>
+
+      <ul v-else class="list">
+        <li v-for="bank in visibleBanks" :key="bank.id" class="card">
+          <div class="card__top">
+            <div>
+              <p class="card__badge">{{ sourceLabel(bank.source) }}</p>
+              <h3 class="card__title">{{ bank.name }}</h3>
+              <p v-if="bank.description" class="card__desc">{{ bank.description }}</p>
+              <div v-if="bank.tags?.length" class="tag-row">
+                <span v-for="tag in bank.tags" :key="tag" class="tag">{{ tag }}</span>
+              </div>
+            </div>
+            <p class="card__count">
+              <strong>{{ bank.questionCount }}</strong>
+              题
+            </p>
+          </div>
+
+          <div v-if="editingId === bank.id" class="edit">
+            <label class="field">
+              <span>名称</span>
+              <input v-model="editForm.name" type="text" maxlength="80" />
+            </label>
+            <label class="field">
+              <span>简介</span>
+              <textarea v-model="editForm.description" rows="2" maxlength="200" />
+            </label>
+            <div class="field">
+              <span>标签</span>
+              <BankTagsField v-model="editForm.tags" />
+            </div>
+            <p v-if="editError" class="err">{{ editError }}</p>
+            <div class="card__actions">
+              <button type="button" class="btn btn--primary" :disabled="editBusy" @click="saveEdit">
+                {{ editBusy ? '保存中…' : '保存' }}
+              </button>
+              <button type="button" class="btn btn--ghost" :disabled="editBusy" @click="cancelEdit">
+                取消
+              </button>
+            </div>
+          </div>
+
+          <div v-else class="card__actions">
+            <RouterLink
+              class="btn btn--primary"
+              :to="{ name: 'practice', query: { bankId: bank.id } }"
+              @click="startPractice(bank.id)"
+            >
+              开始练习
+            </RouterLink>
+            <button type="button" class="btn btn--ghost" @click="beginEdit(bank)">编辑</button>
+            <button type="button" class="btn btn--ghost" @click="togglePreview(bank.id)">
+              {{ previewBankId === bank.id ? '收起预览' : '预览样题' }}
+            </button>
+          </div>
+
+          <div v-if="previewBankId === bank.id" class="preview">
+            <article
+              v-for="q in previewQuestions(bank.id)"
+              :key="q.id"
+              class="preview__item"
+            >
+              <p class="preview__type">{{ QUESTION_TYPE_LABELS[q.type] }}</p>
+              <RichText class="preview__stem" :source="q.stem" />
+              <MediaBlock
+                :items="q.media"
+                :placement="['after-stem', 'unknown', 'after-options', 'inline']"
+                caption="题目配图"
+              />
+              <MediaBlock
+                v-if="q.answer.media?.length"
+                :items="q.answer.media"
+                placement="in-answer"
+                caption="答案配图"
+              />
+            </article>
+          </div>
+        </li>
+      </ul>
+    </template>
   </PageHeader>
 </template>
 
@@ -118,6 +232,45 @@ function previewQuestions(bankId: string): Question[] {
   color: var(--color-accent);
   font-size: var(--font-size-sm);
   font-weight: 600;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.filter {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+
+.filter__label {
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.chip {
+  min-height: 36px;
+  padding: 0 var(--space-3);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  background: var(--color-surface);
+}
+
+.chip--on {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  background: var(--color-accent-soft);
 }
 
 .list {
@@ -165,6 +318,22 @@ function previewQuestions(bankId: string): Question[] {
   max-width: 40em;
 }
 
+.tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+}
+
+.tag {
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-sm);
+  background: var(--color-accent-soft);
+  color: var(--color-accent);
+}
+
 .card__count {
   flex-shrink: 0;
   text-align: right;
@@ -186,6 +355,38 @@ function previewQuestions(bankId: string): Question[] {
   gap: var(--space-3);
 }
 
+.edit {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding-top: var(--space-2);
+  border-top: 1px dashed var(--color-border);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.field input,
+.field textarea {
+  min-height: var(--touch-min);
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  background: var(--color-bg);
+  color: var(--color-text);
+  font: inherit;
+}
+
+.err {
+  font-size: var(--font-size-sm);
+  color: var(--color-danger);
+}
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -195,6 +396,11 @@ function previewQuestions(bankId: string): Question[] {
   border-radius: var(--radius-md);
   font-size: var(--font-size-sm);
   font-weight: 600;
+}
+
+.btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
 }
 
 .btn--primary {

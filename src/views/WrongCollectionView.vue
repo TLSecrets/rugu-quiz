@@ -4,6 +4,7 @@ import { useRouter } from 'vue-router'
 import PageHeader from '@/components/common/PageHeader.vue'
 import EmptyState from '@/components/common/EmptyState.vue'
 import PdfExportPanel from '@/components/bank/PdfExportPanel.vue'
+import { formatBankTags } from '@/lib/bankTags'
 import { useBanksStore } from '@/stores/banks'
 import { useQuizStore } from '@/stores/quiz'
 import { useWrongsStore } from '@/stores/wrongs'
@@ -186,8 +187,8 @@ async function clearAll() {
             </p>
             <p class="row__bank">
               {{ banks.getBank(item.bankId)?.name ?? item.bankId }}
-              <template v-if="questionOf(item.questionId, item.bankId)?.domain">
-                · {{ questionOf(item.questionId, item.bankId)!.domain }}
+              <template v-if="formatBankTags(banks.getBank(item.bankId)?.tags)">
+                · {{ formatBankTags(banks.getBank(item.bankId)?.tags) }}
               </template>
             </p>
             <p v-if="!questionOf(item.questionId, item.bankId)" class="row__missing">

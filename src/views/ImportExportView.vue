@@ -13,6 +13,7 @@ import { createId } from '@/lib/parsers/types'
 import PdfExportPanel from '@/components/bank/PdfExportPanel.vue'
 import AiImportPanel from '@/components/bank/AiImportPanel.vue'
 import ImportPreviewEditor from '@/components/bank/ImportPreviewEditor.vue'
+import BankTagsField from '@/components/bank/BankTagsField.vue'
 import { useBanksStore } from '@/stores/banks'
 import type { Bank, Question } from '@/types/question'
 
@@ -35,6 +36,7 @@ const parseResult = ref<ParseResult | null>(null)
 const editableQuestions = ref<Question[]>([])
 const fileName = ref('')
 const bankName = ref('')
+const bankTags = ref<string[]>([])
 const mode = ref<'create' | 'replace'>('create')
 const replaceBankId = ref('')
 const message = ref<string | null>(null)
@@ -64,6 +66,7 @@ async function onFileChange(ev: Event) {
     parseResult.value = result
     editableQuestions.value = result.questions.map((q) => ({ ...q }))
     bankName.value = result.bankName
+    bankTags.value = []
     if (!result.questions.length && result.issues.length) {
       error.value = '未能解析出有效题目，请查看下方问题列表。'
     }
@@ -103,6 +106,7 @@ async function confirmImport() {
         ...existing,
         name: bankName.value.trim() || existing.name,
         description: parseResult.value?.description || existing.description,
+        tags: bankTags.value.length ? bankTags.value : existing.tags,
         source: 'import',
         updatedAt: now,
         questionCount: editableQuestions.value.length,
@@ -112,6 +116,7 @@ async function confirmImport() {
         id: createId('bank'),
         name: bankName.value.trim() || parseResult.value?.bankName || '导入题库',
         description: parseResult.value?.description,
+        tags: bankTags.value,
         source: 'import',
         questionCount: editableQuestions.value.length,
         createdAt: now,
@@ -134,6 +139,7 @@ async function confirmImport() {
     parseResult.value = null
     editableQuestions.value = []
     fileName.value = ''
+    bankTags.value = []
   } catch (e) {
     error.value = e instanceof Error ? e.message : '导入失败'
   } finally {
@@ -163,6 +169,24 @@ function onAiImported(name: string, count: number) {
   message.value = `AI 已导入「${name}」，共 ${count} 题。`
   error.value = null
 }
+
+const templateBusy = ref<string | null>(null)
+
+async function downloadTemplate(item: (typeof templates)[number]) {
+  templateBusy.value = item.name
+  error.value = null
+  try {
+    const res = await fetch(item.href)
+    if (!res.ok) throw new Error(`下载失败（${res.status}）`)
+    const blob = await res.blob()
+    downloadBlob(blob, item.name)
+    message.value = `已下载「${item.name}」`
+  } catch (e) {
+    error.value = e instanceof Error ? e.message : '模板下载失败'
+  } finally {
+    templateBusy.value = null
+  }
+}
 </script>
 
 <template>
@@ -175,7 +199,14 @@ function onAiImported(name: string, count: number) {
       <ul class="list">
         <li v-for="item in templates" :key="item.name" class="list__item">
           <span class="list__name">{{ item.name }}</span>
-          <a class="list__link" :href="item.href" download>下载</a>
+          <button
+            type="button"
+            class="list__link"
+            :disabled="templateBusy === item.name"
+            @click="downloadTemplate(item)"
+          >
+            {{ templateBusy === item.name ? '下载中…' : '下载' }}
+          </button>
         </li>
       </ul>
     </section>
@@ -206,6 +237,10 @@ function onAiImported(name: string, count: number) {
         <span>题库名称</span>
         <input v-model="bankName" type="text" />
       </label>
+      <div class="field">
+        <span>题库标签（如学年）</span>
+        <BankTagsField v-model="bankTags" />
+      </div>
 
       <div class="segment">
         <button
@@ -348,6 +383,16 @@ function onAiImported(name: string, count: number) {
   color: var(--color-accent);
   font-size: var(--font-size-sm);
   font-weight: 600;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  min-height: var(--touch-min);
+}
+
+.list__link:disabled {
+  opacity: 0.5;
+  cursor: wait;
 }
 
 .file {

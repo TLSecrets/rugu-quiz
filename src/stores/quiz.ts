@@ -19,7 +19,6 @@ export interface PracticeConfig {
   mode: PracticeMode
   bankIds: string[]
   types: QuestionType[]
-  domains: string[]
   order: PracticeOrder
   shuffleOptions: boolean
   autoNextEnabled: boolean
@@ -63,9 +62,8 @@ function resultsKeyOf(config: PracticeConfig, questionIds: string[]): string {
   if (config.mode === 'wrong') return 'wrong'
   const banks = [...config.bankIds].sort().join(',')
   const types = [...config.types].sort().join(',')
-  const domains = [...config.domains].sort().join(',')
   const head = questionIds.slice(0, 8).join(',')
-  return `${config.mode}|${banks}|${types}|${domains}|${config.order}|n${questionIds.length}|${head}`
+  return `${config.mode}|${banks}|${types}|${config.order}|n${questionIds.length}|${head}`
 }
 
 function readProgress(): PracticeProgressV2 | null {
@@ -78,7 +76,15 @@ function readProgress(): PracticeProgressV2 | null {
       index?: number
     }
     if (parsed.version === 2 && parsed.config && Array.isArray(parsed.questionIds)) {
-      return parsed
+      const raw = parsed.config as PracticeConfig & { domains?: string[] }
+      const { domains: _ignored, ...rest } = raw
+      return {
+        ...parsed,
+        config: {
+          ...defaultConfigFromLegacy(rest.mode),
+          ...rest,
+        },
+      }
     }
     // 兼容旧格式
     if (parsed.mode === 'favorites') {
@@ -123,7 +129,6 @@ function defaultConfigFromLegacy(mode: PracticeMode): PracticeConfig {
     mode,
     bankIds: [],
     types: [],
-    domains: [],
     order: 'sequential',
     shuffleOptions: true,
     autoNextEnabled: false,
@@ -148,11 +153,6 @@ function readResults(): PersistedResults | null {
 
 function matchType(q: Question, types: QuestionType[]) {
   return !types.length || types.includes(q.type)
-}
-
-function matchDomain(q: Question, domains: string[]) {
-  if (!domains.length) return true
-  return !!q.domain && domains.includes(q.domain)
 }
 
 export const useQuizStore = defineStore('quiz', () => {
@@ -273,36 +273,25 @@ export const useQuizStore = defineStore('quiz', () => {
     return { correct, wrong, partial, done, total: filteredQuestions.value.length }
   })
 
-  const allDomains = computed(() => {
-    const set = new Set<string>()
-    for (const list of Object.values(banks.questionsByBank)) {
-      for (const q of list) {
-        if (q.domain) set.add(q.domain)
-      }
-    }
-    return [...set].sort((a, b) => a.localeCompare(b, 'zh-CN'))
-  })
-
   function buildPool(cfg: PracticeConfig): Question[] {
     const types = cfg.types
-    const domains = cfg.domains
     let pool: Question[] = []
 
     if (cfg.mode === 'favorites') {
       for (const fav of favorites.items) {
         const q = banks.getQuestions(fav.bankId).find((item) => item.id === fav.questionId)
-        if (q && matchType(q, types) && matchDomain(q, domains)) pool.push(q)
+        if (q && matchType(q, types)) pool.push(q)
       }
     } else if (cfg.mode === 'wrong') {
       for (const rec of wrongs.activeItems) {
         const q = banks.getQuestions(rec.bankId).find((item) => item.id === rec.questionId)
-        if (q && matchType(q, types) && matchDomain(q, domains)) pool.push(q)
+        if (q && matchType(q, types)) pool.push(q)
       }
     } else {
       const ids = cfg.bankIds.length ? cfg.bankIds : banks.banks.map((b) => b.id)
       for (const bankId of ids) {
         for (const q of banks.getQuestions(bankId)) {
-          if (matchType(q, types) && matchDomain(q, domains)) pool.push(q)
+          if (matchType(q, types)) pool.push(q)
         }
       }
     }
@@ -406,7 +395,6 @@ export const useQuizStore = defineStore('quiz', () => {
       mode: partial.bankIds.length === 1 ? 'bank' : 'multi',
       bankIds: [...partial.bankIds],
       types: partial.types ?? [...settings.enabledTypes],
-      domains: partial.domains ?? [],
       order: partial.order ?? 'sequential',
       shuffleOptions: partial.shuffleOptions ?? settings.shuffleOptions,
       autoNextEnabled: partial.autoNextEnabled ?? settings.autoNextEnabled,
@@ -422,7 +410,6 @@ export const useQuizStore = defineStore('quiz', () => {
         mode: 'bank',
         bankIds: [bankId],
         types: [...settings.enabledTypes],
-        domains: [],
         order: 'sequential',
         shuffleOptions: settings.shuffleOptions,
         autoNextEnabled: settings.autoNextEnabled,
@@ -439,7 +426,6 @@ export const useQuizStore = defineStore('quiz', () => {
         mode: 'favorites',
         bankIds: [],
         types: [...settings.enabledTypes],
-        domains: [],
         order: 'sequential',
         shuffleOptions: settings.shuffleOptions,
         autoNextEnabled: settings.autoNextEnabled,
@@ -456,7 +442,6 @@ export const useQuizStore = defineStore('quiz', () => {
         mode: 'wrong',
         bankIds: [],
         types: [...settings.enabledTypes],
-        domains: [],
         order: 'sequential',
         shuffleOptions: settings.shuffleOptions,
         autoNextEnabled: settings.autoNextEnabled,
@@ -715,7 +700,6 @@ export const useQuizStore = defineStore('quiz', () => {
     currentSession,
     progressText,
     stats,
-    allDomains,
     startPractice,
     startBank,
     startFavorites,

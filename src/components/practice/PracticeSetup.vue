@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, reactive, watch } from 'vue'
+import { computed, reactive, ref, watch } from 'vue'
 import {
   ALL_QUESTION_TYPES,
   QUESTION_TYPE_LABELS,
@@ -7,6 +7,7 @@ import {
 } from '@/types/question'
 import type { PracticeOrder } from '@/stores/quiz'
 import type { ShowAnswerMode } from '@/types/settings'
+import { bankHasTag } from '@/lib/bankTags'
 import { useBanksStore } from '@/stores/banks'
 import { useQuizStore } from '@/stores/quiz'
 import { useSettingsStore } from '@/stores/settings'
@@ -19,11 +20,12 @@ const banks = useBanksStore()
 const quiz = useQuizStore()
 const settings = useSettingsStore()
 
+const tagFilter = ref<string[]>([])
+
 const form = reactive({
   order: 'sequential' as PracticeOrder,
   bankIds: [] as string[],
   types: [] as QuestionType[],
-  domains: [] as string[],
   shuffleOptions: settings.shuffleOptions,
   autoNextEnabled: settings.autoNextEnabled,
   autoNextDelay: settings.autoNextDelay,
@@ -48,8 +50,15 @@ watch(
   { immediate: true },
 )
 
+const filteredBankList = computed(() => {
+  if (!tagFilter.value.length) return banks.banks
+  return banks.banks.filter((b) => tagFilter.value.every((t) => bankHasTag(b.tags, t)))
+})
+
 const allBanksChecked = computed(
-  () => banks.banks.length > 0 && form.bankIds.length === banks.banks.length,
+  () =>
+    filteredBankList.value.length > 0 &&
+    filteredBankList.value.every((b) => form.bankIds.includes(b.id)),
 )
 
 const previewCount = computed(() => {
@@ -58,7 +67,6 @@ const previewCount = computed(() => {
     mode: mode as 'bank' | 'multi',
     bankIds: form.bankIds,
     types: form.types,
-    domains: form.domains,
     order: form.order,
     shuffleOptions: form.shuffleOptions,
     autoNextEnabled: form.autoNextEnabled,
@@ -68,9 +76,23 @@ const previewCount = computed(() => {
   return quiz.buildPool(cfg).length
 })
 
+function toggleFilterTag(tag: string) {
+  const set = new Set(tagFilter.value)
+  if (set.has(tag)) set.delete(tag)
+  else set.add(tag)
+  tagFilter.value = [...set]
+}
+
 function toggleAllBanks() {
-  if (allBanksChecked.value) form.bankIds = []
-  else form.bankIds = banks.banks.map((b) => b.id)
+  const ids = filteredBankList.value.map((b) => b.id)
+  if (allBanksChecked.value) {
+    const drop = new Set(ids)
+    form.bankIds = form.bankIds.filter((id) => !drop.has(id))
+  } else {
+    const set = new Set(form.bankIds)
+    for (const id of ids) set.add(id)
+    form.bankIds = [...set]
+  }
 }
 
 function toggleBank(id: string) {
@@ -97,19 +119,11 @@ function toggleType(type: QuestionType) {
   if (form.types.length === ALL_QUESTION_TYPES.length) form.types = []
 }
 
-function toggleDomain(domain: string) {
-  const set = new Set(form.domains)
-  if (set.has(domain)) set.delete(domain)
-  else set.add(domain)
-  form.domains = [...set]
-}
-
 function onStart() {
   if (!form.bankIds.length) return
   quiz.startPractice({
     bankIds: [...form.bankIds],
     types: [...form.types],
-    domains: [...form.domains],
     order: form.order,
     shuffleOptions: form.shuffleOptions,
     autoNextEnabled: form.autoNextEnabled,
@@ -151,12 +165,36 @@ function onStart() {
       <div class="block__head">
         <p class="block__label">题库</p>
         <button type="button" class="text-btn" @click="toggleAllBanks">
-          {{ allBanksChecked ? '取消全选' : '全选' }}
+          {{ allBanksChecked ? '取消全选' : '全选当前列表' }}
         </button>
       </div>
+      <div v-if="banks.allBankTags.length" class="tag-filter">
+        <p class="hint">按标签缩小题库列表，再用「全选当前列表」一键勾选</p>
+        <div class="chips">
+          <button
+            v-for="tag in banks.allBankTags"
+            :key="tag"
+            type="button"
+            class="chip"
+            :class="{ 'chip--on': tagFilter.includes(tag) }"
+            @click="toggleFilterTag(tag)"
+          >
+            {{ tag }}
+          </button>
+          <button
+            v-if="tagFilter.length"
+            type="button"
+            class="chip chip--ghost"
+            @click="tagFilter = []"
+          >
+            清除标签筛选
+          </button>
+        </div>
+      </div>
       <p v-if="!banks.banks.length" class="hint">还没有题库，请先导入。</p>
+      <p v-else-if="!filteredBankList.length" class="hint">当前标签下没有题库，换一组标签试试。</p>
       <div v-else class="checks">
-        <label v-for="bank in banks.banks" :key="bank.id" class="check">
+        <label v-for="bank in filteredBankList" :key="bank.id" class="check">
           <input
             type="checkbox"
             :checked="form.bankIds.includes(bank.id)"
@@ -164,6 +202,7 @@ function onStart() {
           />
           <span>{{ bank.name }}</span>
           <span class="muted">({{ bank.questionCount }})</span>
+          <span v-if="bank.tags?.length" class="muted">· {{ bank.tags.join(' · ') }}</span>
         </label>
       </div>
     </div>
@@ -180,22 +219,6 @@ function onStart() {
           @click="toggleType(type)"
         >
           {{ QUESTION_TYPE_LABELS[type] }}
-        </button>
-      </div>
-    </div>
-
-    <div v-if="quiz.allDomains.length" class="block">
-      <p class="block__label">领域（不选 = 全部）</p>
-      <div class="chips">
-        <button
-          v-for="domain in quiz.allDomains"
-          :key="domain"
-          type="button"
-          class="chip"
-          :class="{ 'chip--on': form.domains.includes(domain) }"
-          @click="toggleDomain(domain)"
-        >
-          {{ domain }}
         </button>
       </div>
     </div>
@@ -342,6 +365,17 @@ function onStart() {
   border-color: var(--color-accent);
   color: var(--color-accent);
   background: var(--color-accent-soft);
+}
+
+.chip--ghost {
+  border-style: dashed;
+  color: var(--color-text-secondary);
+}
+
+.tag-filter {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
 }
 
 .field-inline {

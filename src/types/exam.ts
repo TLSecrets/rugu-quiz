@@ -1,7 +1,6 @@
 import type { QuestionType } from '@/types/question'
 import type { GradeVerdict, UserAnswer } from '@/lib/grade'
 
-export type ExamScheme = 'type' | 'domain'
 export type ExamPhase = 'compose' | 'taking' | 'result'
 
 export interface TypeSlotConfig {
@@ -10,18 +9,12 @@ export interface TypeSlotConfig {
   count: number
 }
 
-export interface DomainExamEntry {
-  domain: string
-  types: Record<QuestionType, TypeSlotConfig>
-}
-
 /** 试卷中的一题 */
 export interface ExamItem {
   questionId: string
   bankId: string
   type: QuestionType
   score: number
-  domain?: string
 }
 
 export interface ExamItemResult {

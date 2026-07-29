@@ -8,11 +8,9 @@ import { useWrongsStore } from '@/stores/wrongs'
 import {
   emptyTypeSlots,
   emptyUserAnswer,
-  type DomainExamEntry,
   type ExamItem,
   type ExamItemResult,
   type ExamPhase,
-  type ExamScheme,
   type TypeSlotConfig,
 } from '@/types/exam'
 import {
@@ -25,7 +23,6 @@ const EXAM_KEY = 'rugu-exam-session'
 
 interface PersistedExam {
   phase: ExamPhase
-  scheme: ExamScheme
   items: ExamItem[]
   answers: Record<string, UserAnswer>
   results: Record<string, ExamItemResult>
@@ -49,9 +46,8 @@ export const useExamStore = defineStore('exam', () => {
   const wrongs = useWrongsStore()
 
   const phase = ref<ExamPhase>('compose')
-  const scheme = ref<ExamScheme>('type')
   const typeConfig = ref(emptyTypeSlots())
-  const domainEntries = ref<DomainExamEntry[]>([])
+  const selectedBankIds = ref<string[]>([])
   const items = ref<ExamItem[]>([])
   const answers = ref<Record<string, UserAnswer>>({})
   const results = ref<Record<string, ExamItemResult>>({})
@@ -133,12 +129,16 @@ export const useExamStore = defineStore('exam', () => {
       .map((i) => i.questionId),
   )
 
-  function countAvailable(type: QuestionType, domain?: string, excludeIds?: Set<string>) {
+  function activeBankIds(): string[] {
+    if (selectedBankIds.value.length) return selectedBankIds.value
+    return banks.banks.map((b) => b.id)
+  }
+
+  function countAvailable(type: QuestionType, excludeIds?: Set<string>) {
     let n = 0
-    for (const list of Object.values(banks.questionsByBank)) {
-      for (const q of list) {
+    for (const bankId of activeBankIds()) {
+      for (const q of banks.getQuestions(bankId)) {
         if (q.type !== type) continue
-        if (domain && q.domain !== domain) continue
         if (excludeIds?.has(q.id)) continue
         n++
       }
@@ -146,17 +146,11 @@ export const useExamStore = defineStore('exam', () => {
     return n
   }
 
-  function pickQuestions(
-    type: QuestionType,
-    count: number,
-    domain: string | undefined,
-    used: Set<string>,
-  ): Question[] {
+  function pickQuestions(type: QuestionType, count: number, used: Set<string>): Question[] {
     const pool: Question[] = []
-    for (const list of Object.values(banks.questionsByBank)) {
-      for (const q of list) {
+    for (const bankId of activeBankIds()) {
+      for (const q of banks.getQuestions(bankId)) {
         if (q.type !== type) continue
-        if (domain && q.domain !== domain) continue
         if (used.has(q.id)) continue
         pool.push(q)
       }
@@ -168,40 +162,18 @@ export const useExamStore = defineStore('exam', () => {
     const draft: ExamItem[] = []
     const used = new Set<string>()
 
-    if (scheme.value === 'type') {
-      for (const type of ALL_QUESTION_TYPES) {
-        const slot = typeConfig.value[type]
-        if (!slot.enabled || slot.count <= 0) continue
-        const picked = pickQuestions(type, slot.count, undefined, used)
-        for (const q of picked) {
-          used.add(q.id)
-          draft.push({
-            questionId: q.id,
-            bankId: q.bankId,
-            type: q.type,
-            score: Math.max(0, slot.score),
-            domain: q.domain,
-          })
-        }
-      }
-    } else {
-      for (const entry of domainEntries.value) {
-        if (!entry.domain) continue
-        for (const type of ALL_QUESTION_TYPES) {
-          const slot = entry.types[type]
-          if (!slot.enabled || slot.count <= 0) continue
-          const picked = pickQuestions(type, slot.count, entry.domain, used)
-          for (const q of picked) {
-            used.add(q.id)
-            draft.push({
-              questionId: q.id,
-              bankId: q.bankId,
-              type: q.type,
-              score: Math.max(0, slot.score),
-              domain: q.domain,
-            })
-          }
-        }
+    for (const type of ALL_QUESTION_TYPES) {
+      const slot = typeConfig.value[type]
+      if (!slot.enabled || slot.count <= 0) continue
+      const picked = pickQuestions(type, slot.count, used)
+      for (const q of picked) {
+        used.add(q.id)
+        draft.push({
+          questionId: q.id,
+          bankId: q.bankId,
+          type: q.type,
+          score: Math.max(0, slot.score),
+        })
       }
     }
 
@@ -215,7 +187,6 @@ export const useExamStore = defineStore('exam', () => {
   function persist() {
     const payload: PersistedExam = {
       phase: phase.value,
-      scheme: scheme.value,
       items: items.value,
       answers: answers.value,
       results: results.value,
@@ -236,7 +207,6 @@ export const useExamStore = defineStore('exam', () => {
       const parsed = JSON.parse(raw) as PersistedExam
       if (!parsed.items?.length) return false
       phase.value = parsed.phase
-      scheme.value = parsed.scheme
       items.value = parsed.items
       answers.value = parsed.answers ?? {}
       results.value = parsed.results ?? {}
@@ -248,15 +218,14 @@ export const useExamStore = defineStore('exam', () => {
     }
   }
 
-  function addDomainEntry() {
-    domainEntries.value = [
-      ...domainEntries.value,
-      { domain: '', types: emptyTypeSlots() },
-    ]
+  function ensureBankSelection() {
+    if (!selectedBankIds.value.length && banks.banks.length) {
+      selectedBankIds.value = banks.banks.map((b) => b.id)
+    }
   }
 
-  function removeDomainEntry(index: number) {
-    domainEntries.value = domainEntries.value.filter((_, i) => i !== index)
+  function setSelectedBankIds(ids: string[]) {
+    selectedBankIds.value = [...ids]
   }
 
   function resetCompose() {
@@ -405,9 +374,8 @@ export const useExamStore = defineStore('exam', () => {
 
   return {
     phase,
-    scheme,
     typeConfig,
-    domainEntries,
+    selectedBankIds,
     items,
     answers,
     results,
@@ -423,8 +391,8 @@ export const useExamStore = defineStore('exam', () => {
     wrongQuestionIds,
     countAvailable,
     previewCompose,
-    addDomainEntry,
-    removeDomainEntry,
+    ensureBankSelection,
+    setSelectedBankIds,
     resetCompose,
     startExam,
     goTo,

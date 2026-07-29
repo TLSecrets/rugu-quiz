@@ -1,4 +1,4 @@
-import type { Bank, Question, QuestionMedia } from '@/types/question'
+﻿import type { Bank, Question, QuestionMedia } from '@/types/question'
 
 /** 简单 SVG 占位图，用于验证多图 / 分区展示 */
 function placeholderSvg(label: string, hue: number): string {
@@ -39,6 +39,7 @@ export const sampleBank: Bank = {
   description: '覆盖五种题型，含多图占位、公式与表格样例。',
   source: 'builtin',
   questionCount: 10,
+  tags: ['2025-2026', '示例'],
   createdAt: 0,
   updatedAt: 0,
 }

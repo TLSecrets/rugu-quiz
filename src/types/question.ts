@@ -77,6 +77,8 @@ export interface Bank {
   questionCount: number
   createdAt: number
   updatedAt: number
+  /** 题库级标签/分类，如学年「2025-2026」 */
+  tags?: string[]
 }
 
 export interface FavoriteRecord {

@@ -5,11 +5,12 @@ import PageHeader from '@/components/common/PageHeader.vue'
 import QuestionCard from '@/components/question/QuestionCard.vue'
 import QuestionNavigator from '@/components/practice/QuestionNavigator.vue'
 import { emptyAnswer } from '@/lib/grade'
+import { bankHasTag } from '@/lib/bankTags'
 import { exportQuestionsPdf } from '@/lib/exportPdf'
 import { prepareOptions } from '@/lib/shuffle'
 import { useBanksStore } from '@/stores/banks'
 import { useExamStore } from '@/stores/exam'
-import { useQuizStore, type QuestionSession } from '@/stores/quiz'
+import { type QuestionSession } from '@/stores/quiz'
 import {
   ALL_QUESTION_TYPES,
   QUESTION_TYPE_LABELS,
@@ -20,13 +21,15 @@ import {
 const router = useRouter()
 const banks = useBanksStore()
 const exam = useExamStore()
-const quiz = useQuizStore()
 
 const pdfBusy = ref(false)
 const pdfMsg = ref<string | null>(null)
 const pdfErr = ref<string | null>(null)
 const composeError = ref<string | null>(null)
-const navOpen = ref(false)
+const tagFilter = ref<string[]>([])
+const navOpen = ref(
+  typeof window !== 'undefined' && window.matchMedia('(min-width: 960px)').matches,
+)
 const paperTitle = ref('模拟考试')
 
 onMounted(() => {
@@ -34,8 +37,14 @@ onMounted(() => {
   if (exam.phase === 'result' && exam.items.length) {
     void router.replace({ name: 'exam-result' })
   }
-  if (!exam.domainEntries.length) exam.addDomainEntry()
+  exam.ensureBankSelection()
 })
+
+watch(
+  () => banks.banks,
+  () => exam.ensureBankSelection(),
+  { deep: true },
+)
 
 watch(
   () => exam.phase,
@@ -44,15 +53,55 @@ watch(
   },
 )
 
-const preview = computed(() => exam.previewCompose())
-const domains = computed(() => quiz.allDomains)
+const filteredBankList = computed(() => {
+  if (!tagFilter.value.length) return banks.banks
+  return banks.banks.filter((b) => tagFilter.value.every((t) => bankHasTag(b.tags, t)))
+})
 
-function typeCount(type: QuestionType, domain?: string) {
-  return exam.countAvailable(type, domain || undefined)
+const allBanksChecked = computed(
+  () =>
+    filteredBankList.value.length > 0 &&
+    filteredBankList.value.every((b) => exam.selectedBankIds.includes(b.id)),
+)
+
+const preview = computed(() => exam.previewCompose())
+
+function typeCount(type: QuestionType) {
+  return exam.countAvailable(type)
+}
+
+function toggleFilterTag(tag: string) {
+  const set = new Set(tagFilter.value)
+  if (set.has(tag)) set.delete(tag)
+  else set.add(tag)
+  tagFilter.value = [...set]
+}
+
+function toggleAllBanks() {
+  const ids = filteredBankList.value.map((b) => b.id)
+  if (allBanksChecked.value) {
+    const drop = new Set(ids)
+    exam.setSelectedBankIds(exam.selectedBankIds.filter((id) => !drop.has(id)))
+  } else {
+    const set = new Set(exam.selectedBankIds)
+    for (const id of ids) set.add(id)
+    exam.setSelectedBankIds([...set])
+  }
+}
+
+function toggleBank(id: string) {
+  const set = new Set(exam.selectedBankIds)
+  if (set.has(id)) set.delete(id)
+  else set.add(id)
+  exam.setSelectedBankIds([...set])
 }
 
 function onStart() {
   composeError.value = null
+  if (!exam.selectedBankIds.length) {
+    composeError.value = '请至少选择题库'
+    return
+  }
   const res = exam.startExam(paperTitle.value.trim() || '模拟考试')
   if (!res.ok) composeError.value = res.message
 }
@@ -143,7 +192,7 @@ const scoreLabel = computed(() => {
     :subtitle="
       exam.phase === 'taking'
         ? `${exam.title} · 已答 ${exam.answeredCount}/${exam.items.length} · 不限时`
-        : '按题型或领域组卷，可导出空白试卷后开考（无倒计时）'
+        : '按题库 + 题型组卷，可导出空白试卷后开考（无倒计时）'
     "
   >
     <template v-if="exam.phase === 'compose'">
@@ -153,26 +202,50 @@ const scoreLabel = computed(() => {
           <input v-model="paperTitle" type="text" maxlength="40" />
         </label>
 
-        <div class="segment">
-          <button
-            type="button"
-            class="segment__btn"
-            :class="{ 'segment__btn--active': exam.scheme === 'type' }"
-            @click="exam.scheme = 'type'"
-          >
-            按题型组卷
-          </button>
-          <button
-            type="button"
-            class="segment__btn"
-            :class="{ 'segment__btn--active': exam.scheme === 'domain' }"
-            @click="exam.scheme = 'domain'"
-          >
-            按领域＋题型
-          </button>
+        <div class="bank-block">
+          <div class="bank-block__head">
+            <p class="block-label">题库范围</p>
+            <button type="button" class="text-btn" @click="toggleAllBanks">
+              {{ allBanksChecked ? '取消全选' : '全选当前列表' }}
+            </button>
+          </div>
+          <div v-if="banks.allBankTags.length" class="chips">
+            <button
+              v-for="tag in banks.allBankTags"
+              :key="tag"
+              type="button"
+              class="chip"
+              :class="{ 'chip--on': tagFilter.includes(tag) }"
+              @click="toggleFilterTag(tag)"
+            >
+              {{ tag }}
+            </button>
+            <button
+              v-if="tagFilter.length"
+              type="button"
+              class="chip chip--ghost"
+              @click="tagFilter = []"
+            >
+              清除标签筛选
+            </button>
+          </div>
+          <p v-if="!filteredBankList.length" class="hint">当前标签下没有题库。</p>
+          <div v-else class="checks">
+            <label v-for="bank in filteredBankList" :key="bank.id" class="check">
+              <input
+                type="checkbox"
+                :checked="exam.selectedBankIds.includes(bank.id)"
+                @change="toggleBank(bank.id)"
+              />
+              <span>{{ bank.name }}</span>
+              <span class="muted">({{ bank.questionCount }})</span>
+              <span v-if="bank.tags?.length" class="muted">· {{ bank.tags.join(' · ') }}</span>
+            </label>
+          </div>
         </div>
 
-        <div v-if="exam.scheme === 'type'" class="slots">
+        <div class="slots">
+          <p class="block-label">题型与分值</p>
           <div v-for="type in ALL_QUESTION_TYPES" :key="type" class="slot">
             <label class="check">
               <input v-model="exam.typeConfig[type].enabled" type="checkbox" />
@@ -200,53 +273,6 @@ const scoreLabel = computed(() => {
               </span>
             </template>
           </div>
-        </div>
-
-        <div v-else class="domains">
-          <p v-if="!domains.length" class="hint">
-            题库暂无领域字段，请改用「按题型组卷」，或先为题目填写领域。
-          </p>
-          <div v-for="(entry, ei) in exam.domainEntries" :key="ei" class="domain-card">
-            <div class="domain-card__head">
-              <select v-model="entry.domain">
-                <option value="">选择领域</option>
-                <option v-for="d in domains" :key="d" :value="d">{{ d }}</option>
-              </select>
-              <button type="button" class="btn" @click="exam.removeDomainEntry(ei)">移除</button>
-            </div>
-            <div v-if="entry.domain" class="slots">
-              <div v-for="type in ALL_QUESTION_TYPES" :key="type" class="slot">
-                <label class="check">
-                  <input v-model="entry.types[type].enabled" type="checkbox" />
-                  <span>{{ QUESTION_TYPE_LABELS[type] }}</span>
-                </label>
-                <span class="muted">可用 {{ typeCount(type, entry.domain) }} 题</span>
-                <template v-if="entry.types[type].enabled">
-                  <label class="mini">
-                    每题
-                    <input
-                      v-model.number="entry.types[type].score"
-                      type="number"
-                      min="0"
-                      step="0.5"
-                    />
-                    分
-                  </label>
-                  <label class="mini">
-                    抽
-                    <input
-                      v-model.number="entry.types[type].count"
-                      type="number"
-                      min="1"
-                      :max="Math.max(typeCount(type, entry.domain), 1)"
-                    />
-                    题
-                  </label>
-                </template>
-              </div>
-            </div>
-          </div>
-          <button type="button" class="btn" @click="exam.addDomainEntry()">添加领域</button>
         </div>
 
         <div v-if="preview.totalCount" class="preview">
@@ -293,16 +319,6 @@ const scoreLabel = computed(() => {
       </div>
 
       <div class="layout">
-        <aside class="layout__nav" :class="{ 'layout__nav--open': navOpen }">
-          <QuestionNavigator
-            :questions="exam.questions"
-            :current-index="exam.currentIndex"
-            :verdicts="{}"
-            :favorite-ids="favoriteIds"
-            :submitted-ids="submittedIds"
-            @jump="exam.goTo($event)"
-          />
-        </aside>
         <div class="layout__main">
           <QuestionCard
             variant="exam"
@@ -322,6 +338,16 @@ const scoreLabel = computed(() => {
             @next="exam.next()"
           />
         </div>
+        <aside v-show="navOpen" class="layout__nav">
+          <QuestionNavigator
+            :questions="exam.questions"
+            :current-index="exam.currentIndex"
+            :verdicts="{}"
+            :favorite-ids="favoriteIds"
+            :submitted-ids="submittedIds"
+            @jump="exam.goTo($event)"
+          />
+        </aside>
       </div>
     </template>
   </PageHeader>
@@ -355,28 +381,62 @@ const scoreLabel = computed(() => {
   color: var(--color-text);
 }
 
-.segment {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-2);
-  padding: var(--space-1);
-  border-radius: var(--radius-md);
-  background: var(--color-bg);
-  border: 1px solid var(--color-border);
+.bank-block {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
 }
 
-.segment__btn {
-  min-height: var(--touch-min);
-  border-radius: var(--radius-sm);
+.bank-block__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.block-label {
   font-size: var(--font-size-sm);
+  font-weight: 600;
   color: var(--color-text-secondary);
 }
 
-.segment__btn--active {
-  background: var(--color-surface);
-  color: var(--color-text);
+.text-btn {
+  font-size: var(--font-size-xs);
+  color: var(--color-accent);
   font-weight: 600;
-  box-shadow: var(--shadow-sm);
+  min-height: var(--touch-min);
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.chip {
+  min-height: 36px;
+  padding: 0 var(--space-3);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  background: var(--color-bg);
+}
+
+.chip--on {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  background: var(--color-accent-soft);
+}
+
+.chip--ghost {
+  border-style: dashed;
+  color: var(--color-text-secondary);
+}
+
+.checks {
+  display: grid;
+  gap: var(--space-2);
 }
 
 .slots {
@@ -433,32 +493,6 @@ const scoreLabel = computed(() => {
   font-weight: 600;
 }
 
-.domain-card {
-  display: grid;
-  gap: var(--space-3);
-  padding: var(--space-4);
-  border-radius: var(--radius-md);
-  border: 1px solid var(--color-border);
-  background: var(--color-bg);
-  margin-bottom: var(--space-3);
-}
-
-.domain-card__head {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-3);
-}
-
-.domain-card__head select {
-  flex: 1;
-  min-height: var(--touch-min);
-  padding: 0 var(--space-3);
-  border-radius: var(--radius-md);
-  border: 1px solid var(--color-border);
-  background: var(--color-surface);
-  color: var(--color-text);
-}
-
 .preview {
   padding: var(--space-3) var(--space-4);
   border-radius: var(--radius-md);
@@ -485,22 +519,13 @@ const scoreLabel = computed(() => {
 
 @media (min-width: 960px) {
   .layout {
-    grid-template-columns: minmax(11rem, 14rem) minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1fr) minmax(11rem, 14rem);
     align-items: start;
   }
   .layout__nav {
-    display: block !important;
     position: sticky;
     top: calc(var(--header-height, 4rem) + var(--space-3));
   }
-}
-
-.layout__nav {
-  display: none;
-}
-
-.layout__nav--open {
-  display: block;
 }
 
 .btn {

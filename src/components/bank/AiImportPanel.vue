@@ -5,6 +5,7 @@ import { chatCompletions, DeepseekError } from '@/lib/ai/deepseek'
 import { AI_IMPORT_SYSTEM_PROMPT, buildAiImportUserPrompt } from '@/lib/ai/importPrompt'
 import { parseAiImportResponse } from '@/lib/ai/parseAiResponse'
 import { createId } from '@/lib/parsers/types'
+import BankTagsField from '@/components/bank/BankTagsField.vue'
 import { useBanksStore } from '@/stores/banks'
 import { useSettingsStore } from '@/stores/settings'
 import { QUESTION_TYPE_LABELS, type Bank, type Question } from '@/types/question'
@@ -18,6 +19,7 @@ const banks = useBanksStore()
 
 const rawText = ref('')
 const bankName = ref('AI 导入题库')
+const bankTags = ref<string[]>([])
 const converting = ref(false)
 const importing = ref(false)
 const error = ref<string | null>(null)
@@ -121,6 +123,7 @@ async function confirmImport() {
       id: createId('bank'),
       name: bankName.value.trim() || 'AI 导入题库',
       description: '由 AI 辅助导入',
+      tags: bankTags.value,
       source: 'import',
       questionCount: previewQuestions.value.length,
       createdAt: now,
@@ -200,6 +203,10 @@ async function confirmImport() {
         <span>题库名称</span>
         <input v-model="bankName" type="text" :disabled="importing" />
       </label>
+      <div class="field">
+        <span>题库标签（如学年）</span>
+        <BankTagsField v-model="bankTags" />
+      </div>
 
       <p class="status">预览 {{ previewQuestions.length }} 题</p>
       <ul v-if="previewIssues.length" class="issues">

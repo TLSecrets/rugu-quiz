@@ -34,8 +34,8 @@ const wrongs = useWrongsStore()
       </div>
       <ul class="hero__list">
         <li>仓库 <code>banks/</code> 构建收录 + 浏览器导入 / AI 辅助</li>
-        <li>搜索 · 收藏 · 笔记 · 错题本 · 不限时模拟考试 · 公式 · PDF</li>
-        <li>选项乱序 · 深色模式 · 移动端适配</li>
+        <li>题库标签（如学年）· 搜索 / 练习 / 考试按题库与标签筛选</li>
+        <li>收藏 · 笔记 · 错题本 · 不限时模拟考试 · 公式 · PDF</li>
         <li>不做账号登录、考试计时、Docker</li>
       </ul>
     </div>

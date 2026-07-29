@@ -58,6 +58,7 @@ export async function ensureSampleBank(): Promise<void> {
     await db.banks.update(SAMPLE_BANK_ID, {
       questionCount: count,
       description: sampleBank.description,
+      tags: existing.tags?.length ? existing.tags : sampleBank.tags,
       updatedAt: now,
     })
   })

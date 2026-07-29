@@ -5,6 +5,7 @@ export interface SearchHit {
   question: Question
   bankId: string
   bankName: string
+  bankTags?: string[]
   /** 命中字段摘要 */
   snippet: string
   field: 'stem' | 'option' | 'explanation' | 'tag'
@@ -23,9 +24,6 @@ function haystacks(q: Question): Array<{ field: SearchHit['field']; text: string
   for (const tag of q.tags ?? []) {
     list.push({ field: 'tag', text: tag })
   }
-  if (q.domain) {
-    list.push({ field: 'tag', text: q.domain })
-  }
   for (const t of q.answer.texts ?? []) {
     list.push({ field: 'explanation', text: stripRichText(t) })
   }
@@ -34,25 +32,29 @@ function haystacks(q: Question): Array<{ field: SearchHit['field']; text: string
 
 export function searchQuestions(
   questions: Question[],
-  bankNameOf: (bankId: string) => string,
+  bankMetaOf: (bankId: string) => { name: string; tags?: string[] },
   keyword: string,
-  options?: { domain?: string; limit?: number },
+  options?: { bankId?: string; bankTag?: string; limit?: number },
 ): SearchHit[] {
   const q = keyword.trim().toLowerCase()
-  const domain = options?.domain?.trim()
+  const bankId = options?.bankId?.trim()
+  const bankTag = options?.bankTag?.trim()
   const limit = options?.limit ?? 50
-  if (!q && !domain) return []
+  if (!q && !bankId && !bankTag) return []
 
   const hits: SearchHit[] = []
   for (const question of questions) {
-    if (domain && question.domain !== domain) continue
+    if (bankId && question.bankId !== bankId) continue
+    const meta = bankMetaOf(question.bankId)
+    if (bankTag && !(meta.tags ?? []).includes(bankTag)) continue
     if (!q) {
       hits.push({
         question,
         bankId: question.bankId,
-        bankName: bankNameOf(question.bankId),
-        snippet: question.domain || '',
-        field: 'tag',
+        bankName: meta.name,
+        bankTags: meta.tags,
+        snippet: '',
+        field: 'stem',
       })
       if (hits.length >= limit) break
       continue
@@ -62,7 +64,8 @@ export function searchQuestions(
       hits.push({
         question,
         bankId: question.bankId,
-        bankName: bankNameOf(question.bankId),
+        bankName: meta.name,
+        bankTags: meta.tags,
         snippet: part.text,
         field: part.field,
       })
