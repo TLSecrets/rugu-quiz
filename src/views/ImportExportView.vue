@@ -239,7 +239,7 @@ async function downloadTemplate(item: (typeof templates)[number]) {
       </label>
       <div class="field">
         <span>题库标签（如学年）</span>
-        <BankTagsField v-model="bankTags" />
+        <BankTagsField v-model="bankTags" :suggestions="banks.allBankTags" />
       </div>
 
       <div class="segment">

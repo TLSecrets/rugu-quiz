@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, onMounted, reactive, ref } from 'vue'
+import { computed, onMounted, reactive, ref, watch } from 'vue'
 import PageHeader from '@/components/common/PageHeader.vue'
 import EmptyState from '@/components/common/EmptyState.vue'
 import LoadingState from '@/components/common/LoadingState.vue'
@@ -7,6 +7,7 @@ import ErrorState from '@/components/common/ErrorState.vue'
 import MediaBlock from '@/components/question/MediaBlock.vue'
 import RichText from '@/components/common/RichText.vue'
 import BankTagsField from '@/components/bank/BankTagsField.vue'
+import BankTagManager from '@/components/bank/BankTagManager.vue'
 import { bankHasTag, normalizeBankTags } from '@/lib/bankTags'
 import { useBanksStore } from '@/stores/banks'
 import { useQuizStore } from '@/stores/quiz'
@@ -29,6 +30,14 @@ const editError = ref<string | null>(null)
 onMounted(() => {
   if (!banks.ready) void banks.refresh()
 })
+
+watch(
+  () => banks.allBankTags,
+  (tags) => {
+    const set = new Set(tags)
+    filterTags.value = filterTags.value.filter((t) => set.has(t))
+  },
+)
 
 const visibleBanks = computed(() => {
   if (!filterTags.value.length) return banks.banks
@@ -98,7 +107,7 @@ async function saveEdit() {
 <template>
   <PageHeader
     title="题库"
-    subtitle="可为题库打标签（如学年），并在练习 / 考试 / 搜索中按标签筛选。"
+    subtitle="可管理标签（添加 / 修改 / 删除），再挂到各题库；练习、考试、搜索均可按标签筛选。"
   >
     <LoadingState v-if="banks.loading" label="正在加载题库…" />
     <ErrorState
@@ -109,17 +118,20 @@ async function saveEdit() {
       @retry="banks.refresh()"
     />
 
-    <EmptyState
-      v-else-if="!banks.banks.length"
-      title="暂无题库"
-      description="示例题库应在首次打开时自动写入。若仍为空，请刷新页面或前往导入。"
-    >
-      <RouterLink class="link" to="/import-export">去导入</RouterLink>
-    </EmptyState>
-
     <template v-else>
+      <BankTagManager />
+
+      <EmptyState
+        v-if="!banks.banks.length"
+        title="暂无题库"
+        description="示例题库应在首次打开时自动写入。若仍为空，请刷新页面或前往导入。"
+      >
+        <RouterLink class="link" to="/import-export">去导入</RouterLink>
+      </EmptyState>
+
+      <template v-else>
       <div v-if="banks.allBankTags.length" class="filter">
-        <p class="filter__label">按标签筛选</p>
+        <p class="filter__label">按标签筛选题库</p>
         <div class="chips">
           <button
             v-for="tag in banks.allBankTags"
@@ -170,7 +182,7 @@ async function saveEdit() {
             </label>
             <div class="field">
               <span>标签</span>
-              <BankTagsField v-model="editForm.tags" />
+              <BankTagsField v-model="editForm.tags" :suggestions="banks.allBankTags" />
             </div>
             <p v-if="editError" class="err">{{ editError }}</p>
             <div class="card__actions">
@@ -220,6 +232,7 @@ async function saveEdit() {
           </div>
         </li>
       </ul>
+      </template>
     </template>
   </PageHeader>
 </template>

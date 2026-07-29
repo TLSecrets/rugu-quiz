@@ -123,21 +123,14 @@ export async function bootstrapDatabase(): Promise<void> {
 
 /** 清空题库 / 收藏 / 笔记 / 错题与练习进度（保留设置与 API Key） */
 export async function clearLearningData(): Promise<void> {
-  await db.transaction(
-    'rw',
-    db.banks,
-    db.questions,
-    db.favorites,
-    db.notes,
-    db.wrongRecords,
-    async () => {
-      await db.favorites.clear()
-      await db.notes.clear()
-      await db.wrongRecords.clear()
-      await db.questions.clear()
-      await db.banks.clear()
-    },
-  )
+  await db.transaction('rw', [db.banks, db.questions, db.favorites, db.notes, db.wrongRecords, db.tagCatalog], async () => {
+    await db.favorites.clear()
+    await db.notes.clear()
+    await db.wrongRecords.clear()
+    await db.questions.clear()
+    await db.banks.clear()
+    await db.tagCatalog.clear()
+  })
   localStorage.removeItem('rugu-practice-progress')
   localStorage.removeItem('rugu-practice-results')
   await ensureSampleBank()
