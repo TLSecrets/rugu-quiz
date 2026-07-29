@@ -98,7 +98,7 @@ export async function syncGeneratedBanks(): Promise<void> {
       if (!payload.bank || !payload.questions?.length) continue
 
       const now = Date.now()
-      await db.transaction('rw', db.banks, db.questions, async () => {
+      await db.transaction('rw', db.banks, db.questions, db.tagCatalog, async () => {
         await db.banks.put({
           ...payload.bank,
           source: 'generated',
@@ -109,6 +109,12 @@ export async function syncGeneratedBanks(): Promise<void> {
         await db.questions.bulkPut(
           payload.questions.map((q) => ({ ...q, bankId: payload.bank.id })),
         )
+        for (const tag of payload.bank.tags ?? []) {
+          const name = String(tag).trim()
+          if (!name) continue
+          const has = await db.tagCatalog.get(name)
+          if (!has) await db.tagCatalog.put({ name, createdAt: now })
+        }
       })
     }
   } catch {

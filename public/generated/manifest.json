@@ -1,6 +1,60 @@
 {
-  "generatedAt": "2026-07-29T05:45:59.326Z",
+  "generatedAt": "2026-07-29T15:42:20.509Z",
   "banks": [
+    {
+      "id": "generated-习概",
+      "name": "习概",
+      "description": "习近平新时代中国特色社会主义思想概论",
+      "questionCount": 337,
+      "file": "2025-2026-2/习概.json",
+      "dataFile": "generated-习概.json",
+      "issues": []
+    },
+    {
+      "id": "generated-大学日语",
+      "name": "大学日语Ⅲ",
+      "description": "单词读音、汉字、外来语、文法",
+      "questionCount": 303,
+      "file": "2025-2026-2/大学日语Ⅲ.json",
+      "dataFile": "generated-大学日语.json",
+      "issues": []
+    },
+    {
+      "id": "generated-实时操作系统",
+      "name": "实时操作系统",
+      "description": "RT-Thread 实时操作系统题库",
+      "questionCount": 72,
+      "file": "2025-2026-2/实时操作系统.json",
+      "dataFile": "generated-实时操作系统.json",
+      "issues": []
+    },
+    {
+      "id": "generated-嵌入式应用开发",
+      "name": "嵌入式应用开发",
+      "description": "嵌入式应用开发课程题库",
+      "questionCount": 167,
+      "file": "2025-2026-2/嵌入式应用开发.json",
+      "dataFile": "generated-嵌入式应用开发.json",
+      "issues": []
+    },
+    {
+      "id": "generated-通信系统原理",
+      "name": "通信系统原理",
+      "description": "通信系统原理课程题库",
+      "questionCount": 70,
+      "file": "2025-2026-2/通信系统原理.json",
+      "dataFile": "generated-通信系统原理.json",
+      "issues": []
+    },
+    {
+      "id": "generated-青星赛心理健康",
+      "name": "青星赛心理健康",
+      "description": "来自青星赛心理健康刷题站",
+      "questionCount": 100,
+      "file": "2025-2026-2/青星赛心理健康.json",
+      "dataFile": "generated-青星赛心理健康.json",
+      "issues": []
+    },
     {
       "id": "generated-构建示例",
       "name": "构建示例",

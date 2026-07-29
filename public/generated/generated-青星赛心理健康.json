@@ -1,0 +1,4417 @@
+{
+  "bank": {
+    "id": "generated-青星赛心理健康",
+    "name": "青星赛心理健康",
+    "description": "来自青星赛心理健康刷题站",
+    "source": "generated",
+    "questionCount": 100,
+    "file": "2025-2026-2/青星赛心理健康.json",
+    "tags": [
+      "2025-2026-2"
+    ],
+    "createdAt": 1785339740527,
+    "updatedAt": 1785339740527
+  },
+  "questions": [
+    {
+      "id": "q-generated-青星赛心理健康-1",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "以下哪项不符合心理健康的标准？?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "自我陶醉"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "勇敢"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "关爱他人"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "热爱生命"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "a"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 1,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-2",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "请在下列选项中找出低自我形象。?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "接纳自我"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "有安全感"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "不清楚个人的能力"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "对自己的行为负责"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "c"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 2,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-3",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "以下哪一项不是人生发展顺利的表现？?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "不顾未来"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "行动有信心"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "独立进取"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "感情甜蜜"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "a"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 3,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-4",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "请在下列选项中选出成长的阻力。?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "被了解"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "受支持"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "称赞"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "被忽略"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "d"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 4,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-5",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "大学生自我形象不包括以下哪一类型？?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "延缓型"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "达成型"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "确定型"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "早定型"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "c"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 5,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-6",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "大学生自我形象不包括以下哪一项？?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "友善"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "成熟"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "学业"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "作息"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "d"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 6,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-7",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "以下哪一项不属于PERMA模型？?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "人际关系"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "性格"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "投入"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "意义"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "b"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 7,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-8",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "下面哪一项不在积极心理学的六类美德之中？?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "仁爱"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "正义"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "节制"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "诚实"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "d"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 8,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-9",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "积极心理学的24种优势不包含以下哪一项？?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "公平"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "责备"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "好奇心"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "希望"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "b"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 9,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-10",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "以下哪一部分不属于个体自我的总和之一？?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "思想"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "行动"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "情感"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "态度"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "b"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 10,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-11",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "以下\"情绪\"的描述,哪一项是不恰当的？?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "情绪是指客观事物是否满足人的需要所产生的内心体验"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "在需要得到满足时,会产生积极的情绪"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "人要时刻保持积极情绪才是好的"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "积极情绪有喜悦、爱、轻松、宁静"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "c"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 11,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-12",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "下列哪一项不属于积极情绪的功能？?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "积极情绪会激活一般的行为趋势"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "积极情绪会扩展个体的瞬间思维活动序列"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "积极情绪有利于心理和身体健康"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "积极情绪让人一直保持在喜悦平和状态"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "d"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 12,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-13",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "以下\"消极情绪\"的描述,哪一项是不恰当的？?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "消极情绪是在某种具体行为中,由外因或内因影响而产生的不良情绪体验"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "消极情绪有羞愧、内疚、恐惧、悲伤"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "在需要得不到满足时,会产生消极的感受"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "消极情绪是不正常的"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "d"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 13,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-14",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "下列哪一项不属于情绪的外部表现？?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "面部表情"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "体态表情"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "他人表情"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "语言表情"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "c"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 14,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-15",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "下列哪一项不属于情绪管理的有效方式？?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "发怒时努力控制,不让任何人知道"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "觉察自己的情绪状态并了解产生的原因"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "了解别人的情绪状态"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "不断激励自己,增强容忍力"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "a"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 15,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-16",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "下列哪一项不属于表达感受的有效方式？?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "表达感受增进沟通"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "对自己诚实,不隐瞒及否定感受"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "找寻及说出感受的来源"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "在任何环境下都去表达感受"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "d"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 16,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-17",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "下列哪一项不属于情绪调节的常用方式？?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "宣泄法"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "否认法"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "暗示法"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "运动法"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "b"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 17,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-18",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "下列哪一项不属于Ellis\"ABCD\"理论？?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "诱发事件"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "自我信念"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "积极结果"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "观念调整"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "c"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 18,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-19",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "下列哪一项不属于不合理信念的特征？?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "绝对化要求"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "客观真实"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "过分概括化"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "糟糕至极"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "b"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 19,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-20",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "下列哪一项不属于Seligman乐观解释风格？?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "暂时性的"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "个别的"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "他人的"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "非个人的"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "c"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 20,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-21",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "以下描述属于吉尔福特(J.Guilford)提出的创造力人格的是？?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "拥有充沛的体能,但都是很安静的休息者,贪玩同时又遵守纪律"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "容忍事物的模糊性,期望被认可"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "愿意克服障碍,追求完美的结果"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "有高度的独立性、旺盛的求知欲以及幽默感,能够长时间专注于某个感兴趣问题中"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "d"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 21,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-22",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "创造性思维评估的指标是？?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "流畅性、独创性和灵活性"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "高效性、敏捷性和丰富性"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "乐观性、幽默性和多产性"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "独特性、唯一性和实用性"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "a"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 22,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-23",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "以下说法,哪一项是正确的？?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "创造性培养最根本的问题是塑造创造性人格"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "创造力和智力属于同一个范畴"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "创造性培养最根本的问题是，是否处于一个良好的环境中"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "每个人的潜能只能挖掘出4%-10%,大学时期潜能开发较为困难"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "a"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 23,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-24",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "下列选项都有助于你提高创造智商CQ的是？?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "多观察多思考、敢于提出质疑、追求完美"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "保持好奇心、坚韧刻苦、全力以赴"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "积极思维、善用想象、对事物保持批判"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "热爱生活、保持乐观的心态、主动训练自己"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "d"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 24,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-25",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "根据罗晓路，俞国良2010年研究，下列关于大学生心理健康与创造力的关系哪一项是正确的？?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "心理健康水平与创造力呈负相关"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "心理健康水平与创造力不存在显著关系"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "心理健康水平的提升，不能促进创造力的发挥和发展"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "心理健康水平的提升，可以促进创造力的发挥和发展"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "d"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 25,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-26",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "下列哪一项不属于创造智商CQ的主要构成？?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "变通能力"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "觉察能力"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "冒险能力"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "学习能力"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "d"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 26,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-27",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "下列哪一项不属于创造智商CQ高者的特征？?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "对传统事务和权威有独到意见"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "对是非曲直有辨别能力"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "喜欢批判评价他人"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "拥有丰富的直觉"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "c"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 27,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-28",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "下列关于聚合思维和发散思维，描述错误的是？?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "聚合思维以逻辑为基础"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "聚合思维具有不稳定性、无方向性的特点"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "发散思维以形象思维为基础"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "发散思维也是直觉思维，与知识经验的丰富程度有密切关系"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "b"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 28,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-29",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "下列不属于Taylor提出的创造力分类是？?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "表达式的创造"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "技术性的创造"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "发明式的创造"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "艺术性的创造"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "d"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 29,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-30",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "影响创造力的因素描述错误的是？?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "创造力的强弱与主观和客观因素都有关，两者互为影响"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "主观因素包括：性格、个人的思维方法和个人所在的环境"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "客观因素包括：家庭、不同团体、教育制度、文化及社会因素"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "个体面对需要时候，能够奋起应对，激发自己不知晓的能力"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "b"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 30,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-31",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "下列哪一项不属于心理资本的是？?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "自信"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "希望"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "乐观"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "意志"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "d"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 31,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-32",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "悲观者对逆境反应模式是？?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "永久因素,影响有限,外在因素"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "永久因素,影响一切,内在因素"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "暂时因素,影响有限,外在因素"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "暂时因素,影响一切,内在因素"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "b"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 32,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-33",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "宾西法尼亚大学心理学系教授凯伦·瑞维奇(Karen Reivich)和安德鲁·夏特(Andrew Shatte)认为,抗逆力涵盖两个层面?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "从困境复原的能力和寻求积极意义"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "对自我情绪的意识和控制冲动"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "从困境复原的能力和乐观"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "控制冲动和寻求积极意义"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "a"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 33,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-34",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "下列哪一项不属于Garmezy(1988)的抗逆力保护因子的是？?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "积极人格特质的建构"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "家庭支持系统的建立"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "社会支持与外在资源的建构"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "亲密关系的维护"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "d"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 34,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-35",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "以下不属于抗逆力的个人保护因子的是？?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "对事件的乐观归因能力"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "幽默感"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "满足感"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "自我效能感"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "c"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 35,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-36",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "以下不属于个体抗逆力的家庭保护因子的是？?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "支持与关心孩子的父母与良好的亲子联结"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "较少的家庭冲突"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "乐观的父母生活态度"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "父母的道德观念"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "d"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 36,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-37",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "以下不属于个体抗逆力的环境保护因子的是？?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "有关心孩子的亲朋好友"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "孩子在社区与学校都有重要他人的人际支持系统"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "成功的学校经验"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "社区丰富的娱乐设施"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "d"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 37,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-38",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "以下哪一项不属于学校为个体抗逆力提供的保护因子？?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "鼓励学生尽量参与学校各项活动"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "对学生的学业成就应要求高但需合理"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "教师对学生应表现出关心、支持的态度"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "学校严格各项考试的设置"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "d"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 38,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-39",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "外在保护因子中最重要的保护因子是？?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "关怀"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "支持"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "情感连结"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "分担"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "c"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 39,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-40",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "以下哪一项对抗逆力的理解是错误的？?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "抗逆力是人天生的一种潜能,是面对危机或逆境的适应,是不可改变的"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "抗逆力是内在的改变、自我校正及复原的一股动力"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "抗逆力可以预防或克服逆境带来的损害"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "抗逆力帮助人们面对挫折,更快复原,更多成长"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "a"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 40,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-41",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "普林斯顿大学曾对1万份人事档案进行分析,调查显示,占成功因素最大的比例的是?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "智慧"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "专业技术"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "丰富的经验"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "良好的人际沟通"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "d"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 41,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-42",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "以下关于单双向沟通正确的是?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "单双向沟通各有利弊"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "双相沟通优于单向沟通"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "上课时,老师更倾向于用双向沟通"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "当甲方滔滔不绝的说话,乙方不能跟上。此时,这种双向沟通会造成沟通的停止及影响双方的关系"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "a"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 42,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-43",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "与双相沟通相比,以下哪个不属于单向沟通的特点?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "快捷、迅速"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "不易准确被理解"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "更有准确性"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "发送者的满意度更高"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "c"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 43,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-44",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "与单向沟通相比,以下哪个不属于双相沟通的特点?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "需要更多时间"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "接受者的满意度更高"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "对发送者的压力更小"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "促使双方感情更融洽"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "c"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 44,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-45",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "以下哪项说法是正确的?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "从准确度讲,单向沟通信息更易准确理解"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "从置信度讲,单向沟通接受者更容易确信"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "从压力上讲,对发送者双相沟通承受的压力小于单向沟通"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "从情感上讲,双相沟通优于单向沟通"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "d"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 45,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-46",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "以下哪项说法是错误的?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "非言语沟通包括姿势、眼神、表情、语气"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "非言语沟通几乎没法通过练习来提高"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "非言语沟通更难反映一个人的真想"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "非言语沟通更难控制"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "b"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 46,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-47",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "以下哪一项属于信息发出者的责任?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "核对收到信息的清晰度"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "核对是否与送出信息相符"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "尽可能让对方听完整"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "核对信息的完整度"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "b"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 47,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-48",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "以下哪种沟通方式可以让沟通持续下去,让双方关系变好?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "主动建设型"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "主动破坏型"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "被动建设型"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "被动破坏型"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "a"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 48,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-49",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "以下哪项不属于沟通最重要的三因素?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "回应"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "发讯者"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "收讯者"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "信息"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "a"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 49,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-50",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "以下哪张图正确表现了双向沟通?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "S —M—▶ R"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "R —M—▶ S"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "S —M—▶ R ◀——"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "R —M—▶ S ◀——"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "c"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 50,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-51",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "以下能让人更快乐和健康的因素是?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "财富"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "名望"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "良好的人际关系"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "拼命的工作"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "c"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 51,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-52",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "以下哪一项不是对人际沟通影响最深的人格品质是?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "大胆"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "忠诚"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "真诚"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "理解"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "a"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 52,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-53",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "人内心的困扰主要源于?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "无助感"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "人际关系问题"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "孤独感"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "贫穷"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "b"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 53,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-54",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "以下哪一项不属于大学生人际交往的特点?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "主要交往对象是同龄人"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "异性交往愿望逐渐强烈"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "交往中功利色彩多情感色彩少"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "交往心理向独立性理智型转化"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "c"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 54,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-55",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "以下哪一项不属于大学生最常见的人际困扰?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "自卑羞怯"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "自我中心"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "人际冲突"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "排挤嘲讽"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "d"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 55,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-56",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "以下哪一项不属于影响人际和谐的最主要因素?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "信任、宽恕"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "共情、感恩"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "友善、体贴"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "沟通、冲突解决"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "c"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 56,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-57",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "以下哪一项是良好人际关系的基本态度?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "你好-我不好"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "你不好-我好"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "你不好-我不好"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "你好-我也好"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "d"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 57,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-58",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "以下哪一项是看待人际冲突合理的理解?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "化解冲突必然会有一方要妥协自己"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "面对冲突最好的办法是大事化小小事化了"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "冲突是一个信号,提示我们之前有矛盾需要处理"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "好的关系不会有冲突出现"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "c"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 58,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-59",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "以下哪一项不是化解冲突的有效方法?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "有效沟通"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "坚持立场"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "坦诚相待"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "求同存异"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "b"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 59,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-60",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "以下哪一项符合刻板印象的定义?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "指人们根据最初获得的信息所形成的印象不易改变,甚至会左右对后来新信息的解释"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "指对事物形成的一般看法和个人评价,认为某种事物应该具有其特定的属性,而忽视事物的个体差异"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "指最新出现的刺激物促使印象形成的心理效果"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "指人际知觉中的以点概面或以偏概全的主观印象"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "b"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 60,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-61",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "下列哪一项不属于亲密关系的特点?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "了解、关心"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "信任、依赖"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "互动、承诺"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "控制、讨好"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "d"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 61,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-62",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "研究发现,缺少亲密关系的人比有亲密关系的人死亡的可能性?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "低2~3倍"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "高2~3倍"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "没有明显变化"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "不确定"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "b"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 62,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-63",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "以下哪种观点对于寻找爱的的真谛是没有积极作用的?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "爱是不重要的"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "爱是一种能力"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "爱需要学习"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "爱是一门艺术"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "a"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 63,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-64",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "下列哪一项不属于爱情的定义?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "爱情是人际吸引最强烈的形式"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "爱情是有浪漫色彩的"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "爱情是一部分人的专利"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "爱情是一种高级情感"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "c"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 64,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-65",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "以下哪个词语不能用来描述爱情?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "主动"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "索取"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "满足"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "给予"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "b"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 65,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-66",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "爱情三元论不包括?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "亲密"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "理解"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "激情"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "承诺"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "b"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 66,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-67",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "关于喜欢和爱慕,以下说法不对的是?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "爱慕是一种与单纯的喜欢极为不同的吸引"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "爱慕比喜欢更加复杂"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "爱慕比喜欢更具有排他和亲密的特点"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "爱慕和喜欢是一样的情感"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "d"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 67,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-68",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "被称为\"爱情激素\"的人脑分泌的化学物质?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "多巴胺"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "后叶催产素"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "去甲肾上腺素"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "内啡肽"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "b"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 68,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-69",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "爱情激素的好处不包括?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "增进对他人的信任"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "令人变得更加慷慨大方"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "帮助找到爱情伴侣"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "有益心脏健康"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "c"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 69,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-70",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "以下哪一项不是恋人矛盾产生的原因?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "男性与女性对事情有不同的心理感受"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "两个人会在个性方面不一样"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "双方都不是完美无缺的,都会出错"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "两个有着不同性格不同经历的人相处,就要彼此相互适应"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "d"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 70,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-71",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "下列哪一项不属于性教育的必要性?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "现代青少年性生理早熟,性需要提前"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "不健康的性信息泛滥"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "性贯穿在生命始终"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "性是青少年发展的主要议题"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "d"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 71,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-72",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "下列哪一项不属于性教育的范畴?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "生理和心理的成长"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "性病传播与预防"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "性与文化"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "性取向的探讨"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "d"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 72,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-73",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "下列哪一项不属于性教育的核心?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "对性障碍提供治疗与帮助"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "提供与性有关的知识"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "培养对性有正确态度"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "建立健康的性价值观"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "a"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 73,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-74",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "下列哪一项不属于性心理健康的标准?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "对性有科学的认识和态度"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "有正常的性需求和性欲望"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "对性的要求毫不避讳"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "有正当的性行为方式"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "c"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 74,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-75",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "下列哪一项不属于Trotzer & Trotzer(1986)提出的婚姻中性行为的四个基本功能?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "亲密"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "自由"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "繁衍"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "需要"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "b"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 75,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-76",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "以下\"性\"需要的描述,哪一项是恰当的?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "男性与女性的\"性\"需要是一样的,伴侣一定与我有一样的需要"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "选取为社会所接受的途径发泄性欲"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "大学阶段有\"性\"需要是一种不正常的状况，应该寻求心理咨询师帮助"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "时刻克制自己的\"性\"需要尽量少与异性接触"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "b"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 76,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-77",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "以下关于如何处理男、女朋友的\"性\"要求,哪一项是恰当的?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "大声斥责,让对方感觉羞愧"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "无论自己是否愿意,都有义务满足对方的需要"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "如果自己不愿意,应立即将对方的要求告知其父母,由父母出面干预"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "如果自己不愿意,则应该坚持个人原则,无须因拒绝对方的要求而感到歉意"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "d"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 77,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-78",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "以下描述,哪一项是不恰当的?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "每个人都应该尊重任何一个他人的存在价值"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "每个人都应该用自己的准则来对待他人"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "每个人发展自尊和自尊都应该建筑于良好的人格标准基础上"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "性欲是正常的和健康的,而且性欲是可以控制的"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "b"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 78,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-79",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "以下关于性知识的描述,哪一项是正确的?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "自慰过度频密对健康是没有妨碍的"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "处女膜破裂一定表示非处女"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "自慰对身体是有害的"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "站着性交可以防止怀孕"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "a"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 79,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-80",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "下列哪一项不属于性心理异常?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "暴露癖"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "易性癖"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "恋物癖"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "同性恋"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "d"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 80,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-81",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "生涯是指?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "个人一生的职业过程"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "个人一生中所从事的工作,也涉及其他非工作/职业活动"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "个人一生工作角色的连续体"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "个人的职业成果"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "b"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 81,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-82",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "从生涯发展的角度来说,职业生涯选择中,我们最看重的应当是?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "内心的职业价值观与所选职业是否一致"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "我的专业与所选职业是否匹配"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "父母是否同意我的选择"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "职业的经济收入是否可观"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "a"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 82,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-83",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "以下哪个选项不属于职业生涯的特点?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "独特性"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "发展性"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "终身性"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "规划性"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "d"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 83,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-84",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "从生涯发展阶段论的角度,大学生阶段属于?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "生涯探索期"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "生涯成长期"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "生涯建立期"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "生涯混沌期"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "a"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 84,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-85",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "根据\"职业生涯辅导之父\"帕森斯的理论,以下哪个选项不属于生涯规划的要素?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "知己"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "知彼"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "抉择"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "兴趣"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "d"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 85,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-86",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "霍兰德职业类型中最喜欢指挥和带领团队的是?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "社会型"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "企业型"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "艺术型"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "常规型"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "b"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 86,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-87",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "以下哪一项不属于影响职业生涯规划的外在因素?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "就业机会多寡"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "经济景气的兴衰"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "未来人生规划"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "职业结构的变迁"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "c"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 87,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-88",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "根据霍兰德的理论,R型的人适合从事的职业为?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "机械自动化"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "作曲家"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "商人"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "记账员"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "a"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 88,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-89",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "大学生探索职业世界的渠道不包括?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "参加招聘会"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "冥想"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "查看行业杂志"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "实习见习"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "b"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 89,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-90",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "以下哪个选项不属于《中华人民共和国职业分类大典》(2015年版)中规定的8个大类职业?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "专业技术人员"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "办事人员和有关人员"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "军人"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "农民"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "d"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 90,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-91",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "压力适当论认为压力和学习表现的关系是?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "压力越大,学习表现越好"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "压力越小,学习表现越好"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "压力在适当的时候学习表现最好,过高和过低的压力会降低学习表现"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "压力在适当的时候学习表现最差,过高和过低的压力会提高学习表现"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "c"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 91,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-92",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "构成压力的主要原因是?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "运气"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "转变"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "个人特质"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "拖延"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "b"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 92,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-93",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "压力的负面影响包括以下哪些方面?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "生理、情绪"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "生理、情绪、行为"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "生理、情绪、认知"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "生理、情绪、认知、行为"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "d"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 93,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-94",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "下列哪一项不属于压力的正常功能?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "满足人的基本需要"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "增强调试技巧"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "增强压力抵抗力"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "促进人际关系"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "d"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 94,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-95",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "以下属于心理方面的压力缓解之道的是?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "低估自己的能力"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "否认自己的限制和弱点"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "增强自信心"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "健康的睡眠习惯"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "c"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 95,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-96",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "以下属于社会方面的压力缓解之道的是?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "适当的宣泄愤怒"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "说人闲话"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "凡事都应允"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "保持运动"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "a"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 96,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-97",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "以下不属于压力应对一般策略的是?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "改变压力的来源"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "改变个人和压力的关系"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "改变他人"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "改变自己"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "c"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 97,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-98",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "压力应对能力的影响因素包括?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "压力来源、应对资源"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "个人特质、应对资源"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "应对资源、压力来源"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "压力来源、应对资源、个人特质"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "d"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 98,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-99",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "以下哪一项对压力的理解是正确的?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "除非你完全改变生活方式,否则你对压力一点也没有办法"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "打针吃药就可以控制压力"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "长期运动会增强你应对压力的能力"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "有压力总是不好的"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "c"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 99,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-青星赛心理健康-100",
+      "bankId": "generated-青星赛心理健康",
+      "type": "single",
+      "stem": "以下哪一项对压力的理解是正确的?",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "压力管理贯穿生命始终"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "你离开单位时就会留下工作的压力而不会把它带回家"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "只要你遭受到压力,你一定会知道的"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "压力是可以完全消除的"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "a"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "青星赛心理健康.json",
+        "row": 100,
+        "inferredType": false
+      }
+    }
+  ]
+}

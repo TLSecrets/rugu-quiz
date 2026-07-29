@@ -1,0 +1,2821 @@
+{
+  "bank": {
+    "id": "generated-通信系统原理",
+    "name": "通信系统原理",
+    "description": "通信系统原理课程题库",
+    "source": "generated",
+    "questionCount": 70,
+    "file": "2025-2026-2/通信系统原理.json",
+    "tags": [
+      "2025-2026-2"
+    ],
+    "createdAt": 1785339740525,
+    "updatedAt": 1785339740525
+  },
+  "questions": [
+    {
+      "id": "q-generated-通信系统原理-1",
+      "bankId": "generated-通信系统原理",
+      "type": "single",
+      "stem": "从信号频谱的特点来考虑，周期信号的频谱是（ ）。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "周期的"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "连续的"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "离散的"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "发散的"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "c"
+        ]
+      },
+      "tags": [
+        "第1-2章小测"
+      ],
+      "domain": "第1-2章小测",
+      "sourceMeta": {
+        "fileName": "通信系统原理.json",
+        "row": 1,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-通信系统原理-2",
+      "bankId": "generated-通信系统原理",
+      "type": "single",
+      "stem": "已知随机相位θ 在（ -π   , π)服从均匀分布，求随机变量Y=cosθ的数学期望。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "π"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "-π"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "0"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "2π"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "c"
+        ]
+      },
+      "tags": [
+        "第1-2章小测"
+      ],
+      "domain": "第1-2章小测",
+      "sourceMeta": {
+        "fileName": "通信系统原理.json",
+        "row": 2,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-通信系统原理-3",
+      "bankId": "generated-通信系统原理",
+      "type": "single",
+      "stem": "周期矩形脉冲的谱线间隔与（ ）有关。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "脉冲幅度"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "脉冲周期"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "脉冲宽度"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "脉冲宽度和幅度"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "b"
+        ]
+      },
+      "tags": [
+        "第1-2章小测"
+      ],
+      "domain": "第1-2章小测",
+      "sourceMeta": {
+        "fileName": "通信系统原理.json",
+        "row": 3,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-通信系统原理-4",
+      "bankId": "generated-通信系统原理",
+      "type": "single",
+      "stem": "某信息源的符号集由四种符号组成，每一符号等概出现，且各符号的出现统计独立，则该信源的熵为（ ）。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "1bit/符号"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "2bit/符号"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "3bit/符号"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "4bit/符号"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "b"
+        ]
+      },
+      "tags": [
+        "第1-2章小测"
+      ],
+      "domain": "第1-2章小测",
+      "sourceMeta": {
+        "fileName": "通信系统原理.json",
+        "row": 4,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-通信系统原理-5",
+      "bankId": "generated-通信系统原理",
+      "type": "single",
+      "stem": "下列三项技术指标，可作为数字通信系统有效性性能指标的是（）。（1）码元速率；（2）信息速率；（3）频带利用率。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "（1）和（2）"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "（1）、（2）和（3）"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "（2）和（3）"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "（1）和（3）"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "b"
+        ]
+      },
+      "tags": [
+        "第1-2章小测"
+      ],
+      "domain": "第1-2章小测",
+      "sourceMeta": {
+        "fileName": "通信系统原理.json",
+        "row": 5,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-通信系统原理-6",
+      "bankId": "generated-通信系统原理",
+      "type": "judge",
+      "stem": "消息中所含信息量的多少与消息的种类无关（ ）。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-true",
+          "key": "true",
+          "label": "A",
+          "content": "正确"
+        },
+        {
+          "id": "opt-false",
+          "key": "false",
+          "label": "B",
+          "content": "错误"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "true"
+        ]
+      },
+      "tags": [
+        "第1-2章小测"
+      ],
+      "domain": "第1-2章小测",
+      "sourceMeta": {
+        "fileName": "通信系统原理.json",
+        "row": 6,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-通信系统原理-7",
+      "bankId": "generated-通信系统原理",
+      "type": "judge",
+      "stem": "传统的无线电广播通信方式是单工的（ ）。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-true",
+          "key": "true",
+          "label": "A",
+          "content": "正确"
+        },
+        {
+          "id": "opt-false",
+          "key": "false",
+          "label": "B",
+          "content": "错误"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "true"
+        ]
+      },
+      "tags": [
+        "第1-2章小测"
+      ],
+      "domain": "第1-2章小测",
+      "sourceMeta": {
+        "fileName": "通信系统原理.json",
+        "row": 7,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-通信系统原理-8",
+      "bankId": "generated-通信系统原理",
+      "type": "judge",
+      "stem": "高斯白噪声通常是指噪声的功率谱密度服从高斯分布（ ）。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-true",
+          "key": "true",
+          "label": "A",
+          "content": "正确"
+        },
+        {
+          "id": "opt-false",
+          "key": "false",
+          "label": "B",
+          "content": "错误"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "false"
+        ]
+      },
+      "tags": [
+        "第1-2章小测"
+      ],
+      "domain": "第1-2章小测",
+      "sourceMeta": {
+        "fileName": "通信系统原理.json",
+        "row": 8,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-通信系统原理-9",
+      "bankId": "generated-通信系统原理",
+      "type": "judge",
+      "stem": "通信系统中不管有没有信号，加性噪声是始终存在的（ ）。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-true",
+          "key": "true",
+          "label": "A",
+          "content": "正确"
+        },
+        {
+          "id": "opt-false",
+          "key": "false",
+          "label": "B",
+          "content": "错误"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "true"
+        ]
+      },
+      "tags": [
+        "第1-2章小测"
+      ],
+      "domain": "第1-2章小测",
+      "sourceMeta": {
+        "fileName": "通信系统原理.json",
+        "row": 9,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-通信系统原理-10",
+      "bankId": "generated-通信系统原理",
+      "type": "judge",
+      "stem": "两个周期信号相加也一定是周期信号（ ）。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-true",
+          "key": "true",
+          "label": "A",
+          "content": "正确"
+        },
+        {
+          "id": "opt-false",
+          "key": "false",
+          "label": "B",
+          "content": "错误"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "false"
+        ]
+      },
+      "tags": [
+        "第1-2章小测"
+      ],
+      "domain": "第1-2章小测",
+      "sourceMeta": {
+        "fileName": "通信系统原理.json",
+        "row": 10,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-通信系统原理-11",
+      "bankId": "generated-通信系统原理",
+      "type": "judge",
+      "stem": "若矩形脉冲信号的宽度加宽，则它的频谱带宽也加宽（ ）。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-true",
+          "key": "true",
+          "label": "A",
+          "content": "正确"
+        },
+        {
+          "id": "opt-false",
+          "key": "false",
+          "label": "B",
+          "content": "错误"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "false"
+        ]
+      },
+      "tags": [
+        "第1-2章小测"
+      ],
+      "domain": "第1-2章小测",
+      "sourceMeta": {
+        "fileName": "通信系统原理.json",
+        "row": 11,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-通信系统原理-12",
+      "bankId": "generated-通信系统原理",
+      "type": "judge",
+      "stem": "周期信号的频谱是离散谱，非周期信号的频谱是连续谱",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-true",
+          "key": "true",
+          "label": "A",
+          "content": "正确"
+        },
+        {
+          "id": "opt-false",
+          "key": "false",
+          "label": "B",
+          "content": "错误"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "true"
+        ]
+      },
+      "tags": [
+        "第1-2章小测"
+      ],
+      "domain": "第1-2章小测",
+      "sourceMeta": {
+        "fileName": "通信系统原理.json",
+        "row": 12,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-通信系统原理-13",
+      "bankId": "generated-通信系统原理",
+      "type": "short",
+      "stem": "已知随机过程X(t)=Acos(2πf0t+θ)其中A  f0为常数,随机相位θ在[0,2π]内均匀分布， 自相关函数为RX(τ)=A22cos2πf0τ，求X(t)的功率谱密度及平均功率。",
+      "media": [],
+      "answer": {
+        "texts": [
+          "X(t)功率谱密度 P_X(f)=(A²/4)[δ(f-f₀)+δ(f+f₀)]，平均功率 P=A²/2"
+        ],
+        "explanation": "由维纳-辛钦定理，功率谱密度是自相关函数的傅里叶变换"
+      },
+      "tags": [
+        "第1-2章小测"
+      ],
+      "domain": "第1-2章小测",
+      "sourceMeta": {
+        "fileName": "通信系统原理.json",
+        "row": 13,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-通信系统原理-14",
+      "bankId": "generated-通信系统原理",
+      "type": "single",
+      "stem": "以下不属于线性调制的调制方式是（ ）。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "DSB"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "SSB"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "AM"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "FM"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "d"
+        ]
+      },
+      "tags": [
+        "第3章小测"
+      ],
+      "domain": "第3章小测",
+      "sourceMeta": {
+        "fileName": "通信系统原理.json",
+        "row": 14,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-通信系统原理-15",
+      "bankId": "generated-通信系统原理",
+      "type": "single",
+      "stem": "将信道的可用频带划分为若干个相互不重叠的频段，每路信号占用其中的一个频段传送，从而能同时传送若干路信号的通信系统称为（ ）。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "时分复用系统"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "频分复用系统"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "码分复用系统"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "波分复用系统"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "b"
+        ]
+      },
+      "tags": [
+        "第3章小测"
+      ],
+      "domain": "第3章小测",
+      "sourceMeta": {
+        "fileName": "通信系统原理.json",
+        "row": 15,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-通信系统原理-16",
+      "bankId": "generated-通信系统原理",
+      "type": "single",
+      "stem": "模拟调幅中DSB、SSB、VSB的已调信号所占用带宽大小关系为（ ）。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "DSB＞SSB＞VSB"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "DSB＞VSB＞SSB"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "SSB ＞DSB＞VSB"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "VSB＞SSB ＞DSB"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "b"
+        ]
+      },
+      "tags": [
+        "第3章小测"
+      ],
+      "domain": "第3章小测",
+      "sourceMeta": {
+        "fileName": "通信系统原理.json",
+        "row": 16,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-通信系统原理-17",
+      "bankId": "generated-通信系统原理",
+      "type": "single",
+      "stem": "SSB短波通信电台，如果基带调制信号的频率范围为0~4000Hz ，载频为 10MHz ，则该SSB信号的带宽为（ ）。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "4KHz"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "8KHz"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "10MHz"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "20MHz"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "a"
+        ]
+      },
+      "tags": [
+        "第3章小测"
+      ],
+      "domain": "第3章小测",
+      "sourceMeta": {
+        "fileName": "通信系统原理.json",
+        "row": 17,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-通信系统原理-18",
+      "bankId": "generated-通信系统原理",
+      "type": "single",
+      "stem": "各模拟线性调制中，已调信号占用频带最小的调制是(  )",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "AM"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "DSB"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "SSB"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "FM"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "c"
+        ]
+      },
+      "tags": [
+        "第3章小测"
+      ],
+      "domain": "第3章小测",
+      "sourceMeta": {
+        "fileName": "通信系统原理.json",
+        "row": 18,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-通信系统原理-19",
+      "bankId": "generated-通信系统原理",
+      "type": "judge",
+      "stem": "DSB和SSB解调只能采用相干解调（ ）。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-true",
+          "key": "true",
+          "label": "A",
+          "content": "正确"
+        },
+        {
+          "id": "opt-false",
+          "key": "false",
+          "label": "B",
+          "content": "错误"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "true"
+        ]
+      },
+      "tags": [
+        "第3章小测"
+      ],
+      "domain": "第3章小测",
+      "sourceMeta": {
+        "fileName": "通信系统原理.json",
+        "row": 19,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-通信系统原理-20",
+      "bankId": "generated-通信系统原理",
+      "type": "judge",
+      "stem": "通信系统的噪声只存在于信道中（ ）。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-true",
+          "key": "true",
+          "label": "A",
+          "content": "正确"
+        },
+        {
+          "id": "opt-false",
+          "key": "false",
+          "label": "B",
+          "content": "错误"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "false"
+        ]
+      },
+      "tags": [
+        "第3章小测"
+      ],
+      "domain": "第3章小测",
+      "sourceMeta": {
+        "fileName": "通信系统原理.json",
+        "row": 20,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-通信系统原理-21",
+      "bankId": "generated-通信系统原理",
+      "type": "judge",
+      "stem": "DSB调制信号的制度增益是SSB的一倍，所以其抗噪声性能比SSB好一倍（ ）。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-true",
+          "key": "true",
+          "label": "A",
+          "content": "正确"
+        },
+        {
+          "id": "opt-false",
+          "key": "false",
+          "label": "B",
+          "content": "错误"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "false"
+        ]
+      },
+      "tags": [
+        "第3章小测"
+      ],
+      "domain": "第3章小测",
+      "sourceMeta": {
+        "fileName": "通信系统原理.json",
+        "row": 21,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-通信系统原理-22",
+      "bankId": "generated-通信系统原理",
+      "type": "single",
+      "stem": "以下不属于线性调制的调制方式是（ ）。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "DSB"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "SSB"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "AM"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "FM"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "d"
+        ]
+      },
+      "tags": [
+        "第4-5章小测"
+      ],
+      "domain": "第4-5章小测",
+      "sourceMeta": {
+        "fileName": "通信系统原理.json",
+        "row": 22,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-通信系统原理-23",
+      "bankId": "generated-通信系统原理",
+      "type": "single",
+      "stem": "将信道的可用频带划分为若干个相互不重叠的频段，每路信号占用其中的一个频段传送，从而能同时传送若干路信号的通信系统称为（ ）。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "时分复用系统"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "频分复用系统"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "码分复用系统"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "波分复用系统"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "b"
+        ]
+      },
+      "tags": [
+        "第4-5章小测"
+      ],
+      "domain": "第4-5章小测",
+      "sourceMeta": {
+        "fileName": "通信系统原理.json",
+        "row": 23,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-通信系统原理-24",
+      "bankId": "generated-通信系统原理",
+      "type": "single",
+      "stem": "无码间串扰的数字基带传输系统的最高频带利用率为（ ）。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "2Baud/Hz"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "1Baud/Hz"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "2bit/Hz"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "1bit/Hz"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "a"
+        ]
+      },
+      "tags": [
+        "第4-5章小测"
+      ],
+      "domain": "第4-5章小测",
+      "sourceMeta": {
+        "fileName": "通信系统原理.json",
+        "row": 24,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-通信系统原理-25",
+      "bankId": "generated-通信系统原理",
+      "type": "single",
+      "stem": "在数字通信系统中，取样判决的定时信息被称为（ ）。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "载波同步信息"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "位同步信息"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "网同步信息"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "群同步信息"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "b"
+        ]
+      },
+      "tags": [
+        "第4-5章小测"
+      ],
+      "domain": "第4-5章小测",
+      "sourceMeta": {
+        "fileName": "通信系统原理.json",
+        "row": 25,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-通信系统原理-26",
+      "bankId": "generated-通信系统原理",
+      "type": "single",
+      "stem": "模拟调幅中DSB、SSB、VSB的已调信号所占用带宽大小关系为（ ）。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "DSB＞SSB＞VSB"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "DSB＞VSB＞SSB"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "SSB ＞DSB＞VSB"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "VSB＞SSB ＞DSB"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "b"
+        ]
+      },
+      "tags": [
+        "第4-5章小测"
+      ],
+      "domain": "第4-5章小测",
+      "sourceMeta": {
+        "fileName": "通信系统原理.json",
+        "row": 26,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-通信系统原理-27",
+      "bankId": "generated-通信系统原理",
+      "type": "single",
+      "stem": "SSB短波通信电台，如果基带调制信号的频率范围为0~4000Hz ，载频为 10MHz ，则该SSB信号的带宽为（ ）。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "4KHz"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "8KHz"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "10MHz"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "20MHz"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "a"
+        ]
+      },
+      "tags": [
+        "第4-5章小测"
+      ],
+      "domain": "第4-5章小测",
+      "sourceMeta": {
+        "fileName": "通信系统原理.json",
+        "row": 27,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-通信系统原理-28",
+      "bankId": "generated-通信系统原理",
+      "type": "judge",
+      "stem": "理论上无限长的横向均衡器可以完全消除抽样时刻上的码间串扰（ ）。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-true",
+          "key": "true",
+          "label": "A",
+          "content": "正确"
+        },
+        {
+          "id": "opt-false",
+          "key": "false",
+          "label": "B",
+          "content": "错误"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "true"
+        ]
+      },
+      "tags": [
+        "第4-5章小测"
+      ],
+      "domain": "第4-5章小测",
+      "sourceMeta": {
+        "fileName": "通信系统原理.json",
+        "row": 28,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-通信系统原理-29",
+      "bankId": "generated-通信系统原理",
+      "type": "judge",
+      "stem": "当脉冲宽度相同时 ,升余弦脉冲信号的带宽是矩形脉冲信号带宽的2倍。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-true",
+          "key": "true",
+          "label": "A",
+          "content": "正确"
+        },
+        {
+          "id": "opt-false",
+          "key": "false",
+          "label": "B",
+          "content": "错误"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "true"
+        ]
+      },
+      "tags": [
+        "第4-5章小测"
+      ],
+      "domain": "第4-5章小测",
+      "sourceMeta": {
+        "fileName": "通信系统原理.json",
+        "row": 29,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-通信系统原理-30",
+      "bankId": "generated-通信系统原理",
+      "type": "judge",
+      "stem": "眼图张开越大，信号传输质量越好（ ）。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-true",
+          "key": "true",
+          "label": "A",
+          "content": "正确"
+        },
+        {
+          "id": "opt-false",
+          "key": "false",
+          "label": "B",
+          "content": "错误"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "true"
+        ]
+      },
+      "tags": [
+        "第4-5章小测"
+      ],
+      "domain": "第4-5章小测",
+      "sourceMeta": {
+        "fileName": "通信系统原理.json",
+        "row": 30,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-通信系统原理-31",
+      "bankId": "generated-通信系统原理",
+      "type": "judge",
+      "stem": "DSB调制信号的制度增益是SSB的一倍，所以其抗噪声性能比SSB好一倍（ ）。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-true",
+          "key": "true",
+          "label": "A",
+          "content": "正确"
+        },
+        {
+          "id": "opt-false",
+          "key": "false",
+          "label": "B",
+          "content": "错误"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "false"
+        ]
+      },
+      "tags": [
+        "第4-5章小测"
+      ],
+      "domain": "第4-5章小测",
+      "sourceMeta": {
+        "fileName": "通信系统原理.json",
+        "row": 31,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-通信系统原理-32",
+      "bankId": "generated-通信系统原理",
+      "type": "judge",
+      "stem": "AM的解调即可以采用包络解调 ,也可以采用相干解调。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-true",
+          "key": "true",
+          "label": "A",
+          "content": "正确"
+        },
+        {
+          "id": "opt-false",
+          "key": "false",
+          "label": "B",
+          "content": "错误"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "true"
+        ]
+      },
+      "tags": [
+        "第4-5章小测"
+      ],
+      "domain": "第4-5章小测",
+      "sourceMeta": {
+        "fileName": "通信系统原理.json",
+        "row": 32,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-通信系统原理-33",
+      "bankId": "generated-通信系统原理",
+      "type": "judge",
+      "stem": "多进制线性调制可以提高频带利用率。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-true",
+          "key": "true",
+          "label": "A",
+          "content": "正确"
+        },
+        {
+          "id": "opt-false",
+          "key": "false",
+          "label": "B",
+          "content": "错误"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "true"
+        ]
+      },
+      "tags": [
+        "第4-5章小测"
+      ],
+      "domain": "第4-5章小测",
+      "sourceMeta": {
+        "fileName": "通信系统原理.json",
+        "row": 33,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-通信系统原理-34",
+      "bankId": "generated-通信系统原理",
+      "type": "judge",
+      "stem": "数字基带信号的功率谱形状仅取决于数字基带信号的码型。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-true",
+          "key": "true",
+          "label": "A",
+          "content": "正确"
+        },
+        {
+          "id": "opt-false",
+          "key": "false",
+          "label": "B",
+          "content": "错误"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "false"
+        ]
+      },
+      "tags": [
+        "第4-5章小测"
+      ],
+      "domain": "第4-5章小测",
+      "sourceMeta": {
+        "fileName": "通信系统原理.json",
+        "row": 34,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-通信系统原理-35",
+      "bankId": "generated-通信系统原理",
+      "type": "judge",
+      "stem": "数字基带信号的功率谱形状仅取决于数字基带信号的波形",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-true",
+          "key": "true",
+          "label": "A",
+          "content": "正确"
+        },
+        {
+          "id": "opt-false",
+          "key": "false",
+          "label": "B",
+          "content": "错误"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "false"
+        ]
+      },
+      "tags": [
+        "第4-5章小测"
+      ],
+      "domain": "第4-5章小测",
+      "sourceMeta": {
+        "fileName": "通信系统原理.json",
+        "row": 35,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-通信系统原理-36",
+      "bankId": "generated-通信系统原理",
+      "type": "judge",
+      "stem": "双极性数字基带信号功率谱的第一个零点频率是矩形波宽度的倒数。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-true",
+          "key": "true",
+          "label": "A",
+          "content": "正确"
+        },
+        {
+          "id": "opt-false",
+          "key": "false",
+          "label": "B",
+          "content": "错误"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "true"
+        ]
+      },
+      "tags": [
+        "第4-5章小测"
+      ],
+      "domain": "第4-5章小测",
+      "sourceMeta": {
+        "fileName": "通信系统原理.json",
+        "row": 36,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-通信系统原理-37",
+      "bankId": "generated-通信系统原理",
+      "type": "short",
+      "stem": "已知调制信号m(t)=cos2000πt,载波为2cos10000πt ，分别画出DSB、SSB （下边带）信号的频谱。",
+      "media": [
+        {
+          "id": "q-generated-通信系统原理-37-img-0",
+          "mime": "image/*",
+          "src": "图片1.png",
+          "placement": "unknown",
+          "alt": "题目配图"
+        }
+      ],
+      "answer": {
+        "texts": [
+          "DSB频谱：载频10kHz处有冲激，±4kHz边带各一对冲激；SSB下边带：仅保留载频以下频谱分量（见题图）"
+        ],
+        "explanation": "DSB含上下边带对称频谱，SSB仅取一个边带"
+      },
+      "tags": [
+        "第4-5章小测"
+      ],
+      "domain": "第4-5章小测",
+      "sourceMeta": {
+        "fileName": "通信系统原理.json",
+        "row": 37,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-通信系统原理-38",
+      "bankId": "generated-通信系统原理",
+      "type": "short",
+      "stem": "已知矩形、升余弦传输特性如下图所示。当采用以下速率传输时，指出哪些是无码间干扰的，哪些会引起码间干扰？ （1） RS=1000Baud, （2） RS=2000Baud, （3） RS=1500Baud, （4） RS=3000Baud",
+      "media": [
+        {
+          "id": "q-generated-通信系统原理-38-img-0",
+          "mime": "image/*",
+          "src": "图片2.png",
+          "placement": "unknown",
+          "alt": "题目配图"
+        }
+      ],
+      "answer": {
+        "texts": [
+          "理想低通滤波器带宽为1000Hz ，此系统所有的无码间干扰速率有2×1000/n(n=1,2,3, …),当n=1,2时得无码间干扰速率为2000Baud和1000Baud。所以这两个速率无码间干扰，而RS=1500Baud和RS=3000Baud则有码间干扰。当升余弦特性带宽为2000Hz ，其所有的无码间干扰速率2×2000/n(n=2,3,4, …), 所以2000Baud和1000Baud是无码间干扰的，而RS=1500Baud和RS=3000Baud则有码间干扰。"
+        ]
+      },
+      "tags": [
+        "第4-5章小测"
+      ],
+      "domain": "第4-5章小测",
+      "sourceMeta": {
+        "fileName": "通信系统原理.json",
+        "row": 38,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-通信系统原理-39",
+      "bankId": "generated-通信系统原理",
+      "type": "short",
+      "stem": "已知HDB3码波形如下图所示，求其原基带信息。",
+      "media": [
+        {
+          "id": "q-generated-通信系统原理-39-img-0",
+          "mime": "image/*",
+          "src": "图片3.png",
+          "placement": "unknown",
+          "alt": "题目配图"
+        }
+      ],
+      "answer": {
+        "texts": [
+          "101100001100000000"
+        ]
+      },
+      "tags": [
+        "第4-5章小测"
+      ],
+      "domain": "第4-5章小测",
+      "sourceMeta": {
+        "fileName": "通信系统原理.json",
+        "row": 39,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-通信系统原理-40",
+      "bankId": "generated-通信系统原理",
+      "type": "single",
+      "stem": "已知某信号的时域表达式为m(t)=200Sa2(200πt)，对此信号取样时，其Nyquist取样速率fs 应取",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "100Hz"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "200Hz"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "300Hz"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "400Hz"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "d"
+        ]
+      },
+      "tags": [
+        "第6-8章小测"
+      ],
+      "domain": "第6-8章小测",
+      "sourceMeta": {
+        "fileName": "通信系统原理.json",
+        "row": 40,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-通信系统原理-41",
+      "bankId": "generated-通信系统原理",
+      "type": "single",
+      "stem": "已知某信号的时域表达式为m(t)=200Sa2(200πt)，当采用取样速率fs =500Hz对此信号取样时，要恢复原信号，低通滤波器的截止频率应选",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "100-200Hz"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "200-300Hz"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "400Hz"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "500Hz"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "b"
+        ]
+      },
+      "tags": [
+        "第6-8章小测"
+      ],
+      "domain": "第6-8章小测",
+      "sourceMeta": {
+        "fileName": "通信系统原理.json",
+        "row": 41,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-通信系统原理-42",
+      "bankId": "generated-通信系统原理",
+      "type": "single",
+      "stem": "在对语音信号进行均匀量化的PCM编码中，设取样速率为8kHz ，若增加编码位数使编码后的速率由40kbit/s增加到6 4kbit/s ，则量化信噪比增加了多少？",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "6dB"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "12dB"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "18dB"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "24dB"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "c"
+        ]
+      },
+      "tags": [
+        "第6-8章小测"
+      ],
+      "domain": "第6-8章小测",
+      "sourceMeta": {
+        "fileName": "通信系统原理.json",
+        "row": 42,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-通信系统原理-43",
+      "bankId": "generated-通信系统原理",
+      "type": "single",
+      "stem": "如果接收机输入端信噪比相同，那么采用相干解调时四种二进制数字调制方式抗高斯白噪声性能的优劣顺序是：",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "2PSK>2DPSK>2FSK>2ASK"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "2PSK>2FSK>2DPSK>2ASK"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "2DPSK>2PSK>2FSK>2ASK"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "2DPSK>2FSK>2PSK>2ASK"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "a"
+        ]
+      },
+      "tags": [
+        "第6-8章小测"
+      ],
+      "domain": "第6-8章小测",
+      "sourceMeta": {
+        "fileName": "通信系统原理.json",
+        "row": 43,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-通信系统原理-44",
+      "bankId": "generated-通信系统原理",
+      "type": "single",
+      "stem": "某均匀量化器输入样值范围[-10, 10] ，量化电平数M=8 ，则量化区间间隔Δ为（ ）。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "1"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "1.25"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "2.5"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "5"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "c"
+        ]
+      },
+      "tags": [
+        "第6-8章小测"
+      ],
+      "domain": "第6-8章小测",
+      "sourceMeta": {
+        "fileName": "通信系统原理.json",
+        "row": 44,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-通信系统原理-45",
+      "bankId": "generated-通信系统原理",
+      "type": "single",
+      "stem": "若发送“0”符号和发送“1”符号的概率相等，则2PSK信号的功率谱中（ ）。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "离散谱和连续谱都有"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "只有离散谱"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "只有连续谱"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "以上都错"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "c"
+        ]
+      },
+      "tags": [
+        "第6-8章小测"
+      ],
+      "domain": "第6-8章小测",
+      "sourceMeta": {
+        "fileName": "通信系统原理.json",
+        "row": 45,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-通信系统原理-46",
+      "bankId": "generated-通信系统原理",
+      "type": "single",
+      "stem": "在误码率相同的条件下，三种数字调制方式之间抗干扰性能好坏的关系为（ ）。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "2ASK>2FSK>2PSK"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "2FSK>2PSK>2ASK"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "2PSK>2ASK>2FSK"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "2PSK>2FSK>2ASK"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "d"
+        ]
+      },
+      "tags": [
+        "第6-8章小测"
+      ],
+      "domain": "第6-8章小测",
+      "sourceMeta": {
+        "fileName": "通信系统原理.json",
+        "row": 46,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-通信系统原理-47",
+      "bankId": "generated-通信系统原理",
+      "type": "single",
+      "stem": "三种数字调制方式之间，其已调信号占用频带的大小关系为（ ）。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "2ASK=2PSK=2FSK"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "2ASK=2PSK＞2FSK"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "2FSK＞2PSK=2ASK"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "2FSK＞2PSK＞2ASK"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "c"
+        ]
+      },
+      "tags": [
+        "第6-8章小测"
+      ],
+      "domain": "第6-8章小测",
+      "sourceMeta": {
+        "fileName": "通信系统原理.json",
+        "row": 47,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-通信系统原理-48",
+      "bankId": "generated-通信系统原理",
+      "type": "single",
+      "stem": "如果数字通信系统的码元速率为1200Baud ，当采用八进制时，其信息速率为",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "3600bit/s"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "2400bit/s"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "1200bit/s"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "400bit/s"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "a"
+        ]
+      },
+      "tags": [
+        "第6-8章小测"
+      ],
+      "domain": "第6-8章小测",
+      "sourceMeta": {
+        "fileName": "通信系统原理.json",
+        "row": 48,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-通信系统原理-49",
+      "bankId": "generated-通信系统原理",
+      "type": "single",
+      "stem": "ASK、 FSK、 PSK、QAM信号中可采用非相干解调的频带信号是（ ）。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "ASK、FSK"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "FSK、PSK"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "PSK、QAM"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "ASK、QAM"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "a"
+        ]
+      },
+      "tags": [
+        "第6-8章小测"
+      ],
+      "domain": "第6-8章小测",
+      "sourceMeta": {
+        "fileName": "通信系统原理.json",
+        "row": 49,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-通信系统原理-50",
+      "bankId": "generated-通信系统原理",
+      "type": "single",
+      "stem": "对于2PSK采用直接法载波同步会带来载波相位模糊是（ ）。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "90∘和180∘不定"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "0∘和180∘不定"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "0∘和90∘不定"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "90∘和360∘不定"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "b"
+        ]
+      },
+      "tags": [
+        "第6-8章小测"
+      ],
+      "domain": "第6-8章小测",
+      "sourceMeta": {
+        "fileName": "通信系统原理.json",
+        "row": 50,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-通信系统原理-51",
+      "bankId": "generated-通信系统原理",
+      "type": "single",
+      "stem": "在数字调制技术中，其采用的进制数越高，则（ ）。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "抗干扰能力越强"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "占用的频带越宽"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "频谱利用率越高"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "实现越简单"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "c"
+        ]
+      },
+      "tags": [
+        "第6-8章小测"
+      ],
+      "domain": "第6-8章小测",
+      "sourceMeta": {
+        "fileName": "通信系统原理.json",
+        "row": 51,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-通信系统原理-52",
+      "bankId": "generated-通信系统原理",
+      "type": "single",
+      "stem": "对均匀量化的样值进行编码时，当编码位数增加一位时，其量化信噪比将增加约（ ）dB。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "2"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "3"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "6"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "4"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "c"
+        ]
+      },
+      "tags": [
+        "第6-8章小测"
+      ],
+      "domain": "第6-8章小测",
+      "sourceMeta": {
+        "fileName": "通信系统原理.json",
+        "row": 52,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-通信系统原理-53",
+      "bankId": "generated-通信系统原理",
+      "type": "single",
+      "stem": "已知某PCM编码器输入信号的归一化样值 Is=+436△ ,则该 PCM编码器输出的8位码字为（），量化误差为（）。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "11011011         4△"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "11011011         8△"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "10111101         4△"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "10111101         6△"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "a"
+        ]
+      },
+      "tags": [
+        "第6-8章小测"
+      ],
+      "domain": "第6-8章小测",
+      "sourceMeta": {
+        "fileName": "通信系统原理.json",
+        "row": 53,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-通信系统原理-54",
+      "bankId": "generated-通信系统原理",
+      "type": "single",
+      "stem": "已知PCM编译器收到的码组为11101000 ，如果最小量化级为 1mV,则译码器输出电压值为",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "784mv"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "786mv"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "864mv"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "698mv"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "a"
+        ]
+      },
+      "tags": [
+        "第6-8章小测"
+      ],
+      "domain": "第6-8章小测",
+      "sourceMeta": {
+        "fileName": "通信系统原理.json",
+        "row": 54,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-通信系统原理-55",
+      "bankId": "generated-通信系统原理",
+      "type": "single",
+      "stem": "QPSK信号解调时",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "存在180度相位模糊问题"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "存在90度相位模糊问题"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "不存在相位模糊问题"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "可以采用相位比较法解调"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "b"
+        ]
+      },
+      "tags": [
+        "第6-8章小测"
+      ],
+      "domain": "第6-8章小测",
+      "sourceMeta": {
+        "fileName": "通信系统原理.json",
+        "row": 55,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-通信系统原理-56",
+      "bankId": "generated-通信系统原理",
+      "type": "judge",
+      "stem": "MQAM和MPSK具有相同的频带利用率",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-true",
+          "key": "true",
+          "label": "A",
+          "content": "正确"
+        },
+        {
+          "id": "opt-false",
+          "key": "false",
+          "label": "B",
+          "content": "错误"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "true"
+        ]
+      },
+      "tags": [
+        "第6-8章小测"
+      ],
+      "domain": "第6-8章小测",
+      "sourceMeta": {
+        "fileName": "通信系统原理.json",
+        "row": 56,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-通信系统原理-57",
+      "bankId": "generated-通信系统原理",
+      "type": "judge",
+      "stem": "QPSK调制方式中当信码从00变为11时，或者从11变为00时，其相位跳变均为180度。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-true",
+          "key": "true",
+          "label": "A",
+          "content": "正确"
+        },
+        {
+          "id": "opt-false",
+          "key": "false",
+          "label": "B",
+          "content": "错误"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "true"
+        ]
+      },
+      "tags": [
+        "第6-8章小测"
+      ],
+      "domain": "第6-8章小测",
+      "sourceMeta": {
+        "fileName": "通信系统原理.json",
+        "row": 57,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-通信系统原理-58",
+      "bankId": "generated-通信系统原理",
+      "type": "judge",
+      "stem": "QPSK的最大相位跳变是90度",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-true",
+          "key": "true",
+          "label": "A",
+          "content": "正确"
+        },
+        {
+          "id": "opt-false",
+          "key": "false",
+          "label": "B",
+          "content": "错误"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "false"
+        ]
+      },
+      "tags": [
+        "第6-8章小测"
+      ],
+      "domain": "第6-8章小测",
+      "sourceMeta": {
+        "fileName": "通信系统原理.json",
+        "row": 58,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-通信系统原理-59",
+      "bankId": "generated-通信系统原理",
+      "type": "judge",
+      "stem": "增量调制系统中如果量化台阶选大有利于减小过载噪声 ，但一般量化噪声增大。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-true",
+          "key": "true",
+          "label": "A",
+          "content": "正确"
+        },
+        {
+          "id": "opt-false",
+          "key": "false",
+          "label": "B",
+          "content": "错误"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "true"
+        ]
+      },
+      "tags": [
+        "第6-8章小测"
+      ],
+      "domain": "第6-8章小测",
+      "sourceMeta": {
+        "fileName": "通信系统原理.json",
+        "row": 59,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-通信系统原理-60",
+      "bankId": "generated-通信系统原理",
+      "type": "judge",
+      "stem": "增量调制系统中减小过载噪声的方法之一是选择大的抽样速率fs",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-true",
+          "key": "true",
+          "label": "A",
+          "content": "正确"
+        },
+        {
+          "id": "opt-false",
+          "key": "false",
+          "label": "B",
+          "content": "错误"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "true"
+        ]
+      },
+      "tags": [
+        "第6-8章小测"
+      ],
+      "domain": "第6-8章小测",
+      "sourceMeta": {
+        "fileName": "通信系统原理.json",
+        "row": 60,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-通信系统原理-61",
+      "bankId": "generated-通信系统原理",
+      "type": "judge",
+      "stem": "均匀量化时量化噪声功率N q大小与信号样值大小无关，仅与量化间隔   V 有关。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-true",
+          "key": "true",
+          "label": "A",
+          "content": "正确"
+        },
+        {
+          "id": "opt-false",
+          "key": "false",
+          "label": "B",
+          "content": "错误"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "true"
+        ]
+      },
+      "tags": [
+        "第6-8章小测"
+      ],
+      "domain": "第6-8章小测",
+      "sourceMeta": {
+        "fileName": "通信系统原理.json",
+        "row": 61,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-通信系统原理-62",
+      "bankId": "generated-通信系统原理",
+      "type": "judge",
+      "stem": "如果信噪比r一定，相同调制方式时有Pe相干<Pe非相干.",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-true",
+          "key": "true",
+          "label": "A",
+          "content": "正确"
+        },
+        {
+          "id": "opt-false",
+          "key": "false",
+          "label": "B",
+          "content": "错误"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "true"
+        ]
+      },
+      "tags": [
+        "第6-8章小测"
+      ],
+      "domain": "第6-8章小测",
+      "sourceMeta": {
+        "fileName": "通信系统原理.json",
+        "row": 62,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-通信系统原理-63",
+      "bankId": "generated-通信系统原理",
+      "type": "judge",
+      "stem": "多进制数字调制随着M增大，相邻信号点的距离会逐渐减小，抗噪声性能会下降。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-true",
+          "key": "true",
+          "label": "A",
+          "content": "正确"
+        },
+        {
+          "id": "opt-false",
+          "key": "false",
+          "label": "B",
+          "content": "错误"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "true"
+        ]
+      },
+      "tags": [
+        "第6-8章小测"
+      ],
+      "domain": "第6-8章小测",
+      "sourceMeta": {
+        "fileName": "通信系统原理.json",
+        "row": 63,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-通信系统原理-64",
+      "bankId": "generated-通信系统原理",
+      "type": "judge",
+      "stem": "QPSK调制方式中载波相位与基带信号双比特的关系是唯一的。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-true",
+          "key": "true",
+          "label": "A",
+          "content": "正确"
+        },
+        {
+          "id": "opt-false",
+          "key": "false",
+          "label": "B",
+          "content": "错误"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "false"
+        ]
+      },
+      "tags": [
+        "第6-8章小测"
+      ],
+      "domain": "第6-8章小测",
+      "sourceMeta": {
+        "fileName": "通信系统原理.json",
+        "row": 64,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-通信系统原理-65",
+      "bankId": "generated-通信系统原理",
+      "type": "judge",
+      "stem": "2ASK、2PSK、2FSK频带信号的带宽都是其数字基带调制信号带宽的两倍（ ）。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-true",
+          "key": "true",
+          "label": "A",
+          "content": "正确"
+        },
+        {
+          "id": "opt-false",
+          "key": "false",
+          "label": "B",
+          "content": "错误"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "false"
+        ]
+      },
+      "tags": [
+        "第6-8章小测"
+      ],
+      "domain": "第6-8章小测",
+      "sourceMeta": {
+        "fileName": "通信系统原理.json",
+        "row": 65,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-通信系统原理-66",
+      "bankId": "generated-通信系统原理",
+      "type": "judge",
+      "stem": "量化时采用的量化台阶数越多其量化信噪比就越小。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-true",
+          "key": "true",
+          "label": "A",
+          "content": "正确"
+        },
+        {
+          "id": "opt-false",
+          "key": "false",
+          "label": "B",
+          "content": "错误"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "false"
+        ]
+      },
+      "tags": [
+        "第6-8章小测"
+      ],
+      "domain": "第6-8章小测",
+      "sourceMeta": {
+        "fileName": "通信系统原理.json",
+        "row": 66,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-通信系统原理-67",
+      "bankId": "generated-通信系统原理",
+      "type": "judge",
+      "stem": "4DPSK解调器既可以采用相干解调+码反变换，也可以采用差分相干解调。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-true",
+          "key": "true",
+          "label": "A",
+          "content": "正确"
+        },
+        {
+          "id": "opt-false",
+          "key": "false",
+          "label": "B",
+          "content": "错误"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "true"
+        ]
+      },
+      "tags": [
+        "第6-8章小测"
+      ],
+      "domain": "第6-8章小测",
+      "sourceMeta": {
+        "fileName": "通信系统原理.json",
+        "row": 67,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-通信系统原理-68",
+      "bankId": "generated-通信系统原理",
+      "type": "judge",
+      "stem": "2DPSK解调器可以采用差分相干解调，但4DPSK不可以采用差分相干解调。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-true",
+          "key": "true",
+          "label": "A",
+          "content": "正确"
+        },
+        {
+          "id": "opt-false",
+          "key": "false",
+          "label": "B",
+          "content": "错误"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "false"
+        ]
+      },
+      "tags": [
+        "第6-8章小测"
+      ],
+      "domain": "第6-8章小测",
+      "sourceMeta": {
+        "fileName": "通信系统原理.json",
+        "row": 68,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-通信系统原理-69",
+      "bankId": "generated-通信系统原理",
+      "type": "judge",
+      "stem": "QPSK调制方式中当信码从01变为10时，其相位跳变90度。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-true",
+          "key": "true",
+          "label": "A",
+          "content": "正确"
+        },
+        {
+          "id": "opt-false",
+          "key": "false",
+          "label": "B",
+          "content": "错误"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "false"
+        ]
+      },
+      "tags": [
+        "第6-8章小测"
+      ],
+      "domain": "第6-8章小测",
+      "sourceMeta": {
+        "fileName": "通信系统原理.json",
+        "row": 69,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-通信系统原理-70",
+      "bankId": "generated-通信系统原理",
+      "type": "judge",
+      "stem": "多进制线性调制可以提高频带利用率。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-true",
+          "key": "true",
+          "label": "A",
+          "content": "正确"
+        },
+        {
+          "id": "opt-false",
+          "key": "false",
+          "label": "B",
+          "content": "错误"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "true"
+        ]
+      },
+      "tags": [
+        "第6-8章小测"
+      ],
+      "domain": "第6-8章小测",
+      "sourceMeta": {
+        "fileName": "通信系统原理.json",
+        "row": 70,
+        "inferredType": false
+      }
+    }
+  ]
+}

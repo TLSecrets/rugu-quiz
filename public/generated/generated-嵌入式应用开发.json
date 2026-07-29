@@ -1,0 +1,6526 @@
+{
+  "bank": {
+    "id": "generated-嵌入式应用开发",
+    "name": "嵌入式应用开发",
+    "description": "嵌入式应用开发课程题库",
+    "source": "generated",
+    "questionCount": 167,
+    "file": "2025-2026-2/嵌入式应用开发.json",
+    "tags": [
+      "2025-2026-2"
+    ],
+    "createdAt": 1785339740518,
+    "updatedAt": 1785339740518
+  },
+  "questions": [
+    {
+      "id": "q-generated-嵌入式应用开发-1",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "Makefile 文件通过什么命令执行。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "make"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "install"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "make install"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "execute"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "a"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 1,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-2",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "下列关于套接字编程基本函数说法错误的是（ ）。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "socket() 函数用于建立一个套接字和一条通信路线的端点"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "recv（）函数形参int backlog系统默认值为5"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "socket（） 函数有3个形参，函数返回值类型 int，-1表示出错，成功返回非负的套接字描述符"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "在TCP中，sendto 和recvfrom 这两个函数的作用与send() 和recv（）函数作用等同"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "b"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 2,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-3",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "哪种套接字提供可靠的、面向连接的通信流（ ）。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "SOCK_STREAM"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "SOCK_DGRAM"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "SOCK_RAW"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "以上都不对"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "a"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 3,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-4",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "下面能实现把端口号从本机字节顺序转换到网络字节顺序的函数是",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "htons( )"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "htonl( )"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "ntohl( )"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "ntohs"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "a"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 4,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-5",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "信号量的特征不包括以下哪一项",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "以原子方式工作"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "实现两线程的同步操作"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "用于保护临界区"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "信号量的值为0或1"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "d"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 5,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-6",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "在linux系统中，有关线程说法正确的是（ ）。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "线程是程序的一次执行过程"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "线程有自己独立的地址空间"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "线程不能独立执行，必须依存在进程中，由进程提供多个线程执行控制"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "线程是系统进行资源分配和调度的一个独立单位"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "c"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 6,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-7",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "下面哪项对进程标识的描述是错误的",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "PID唯一地标识一个进程"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "PPID唯一地标识一个进程"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "PID是非零的正整数"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "PPID是非零的正整数"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "b"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 7,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-8",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "以二进制形式往文件里写数据应该用的函数是",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "fputs"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "fputc"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "puts"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "fwrite"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "d"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 8,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-9",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "下列哪个套接字函数不能用于服务器程序（ ）。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "socket"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "connect"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "send"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "accept"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "b"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 9,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-10",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "下列不属于POSIX互斥锁相关函数的是：",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "int pthread_mutex_destroy(pthread_mutex_t * mutex)"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "int pthread_mutex_lock(pthread_mutex_t *mutex)"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "int pthread_mutex_unlock(pthread_mutex_t * mutex)"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "int pthread_mutex_create(pthread_mutex_t *mutex)"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "d"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 10,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-11",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "（ ）函数用来初始化一个互斥锁",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "pthread_mutex_init"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "pthread_mutex_lock"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "pthread_mutex_begin"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "pthread_mutex_create"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "a"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 11,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-12",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "下列说法错误的是（ ）。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "pthread_join函数是一个线程阻塞的函数。"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "线程函数可以定义为  void * mythread( void * args){   }。"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "使用线程相关函数，需要包含头文件pthread.h。"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "进程的上下文切换的开销比线程上下文切换小很多"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "d"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 12,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-13",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "下述Linux下多线程编程常用的pthread库提供的函数名和意义，说法不正确的是",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "pthread_create 创建一个线程"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "pthread_join用来等待一个线程的结束"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "exit用来结束一个线程"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "pthread_cancel 函数用来向另一个线程发送“终止执行”的信号"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "c"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 13,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-14",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "对线程函数来说，说法正确的是",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "pthread_join 函数用于结束线程，其参数是线程的返回值"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "pthread_exit 函数用于退出另一个线程，参数是另一个线程的ID"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "pthread_cancel 函数用于取消当前线程的执行，即退出本线程"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "pthread_create 中参数arg是传递给start_routine函数的参数"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "d"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 14,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-15",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "创建子线程使用的函数为",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "pthread_create"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "pthread_join"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "pthread_exit"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "create_pthread"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "a"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 15,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-16",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "创建或打开信号量的函数为",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "shmget"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "msgget"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "semget"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "以上都不对"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "c"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 16,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-17",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "下列进程间通信方式中速度最快的是",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "信号"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "管道"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "共享内存"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "信息队列"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "c"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 17,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-18",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "一般情况下，STDOUT_FILENO对应的文件描述符为",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "-1"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "0"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "1"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "2"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "c"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 18,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-19",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "下列哪个是不带缓存的",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "stdin"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "stdout"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "stderr"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "都不是"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "c"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 19,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-20",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "下面对bind( )函数的功能描述错误的是（ ）。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "该函数仅适用于流式套接字"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "该函数用来将套接字绑定到指定的网络地址上"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "该函数一般在connect（）或 listen 函数调用前使用"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "在客户机端使用的套接字一般不必绑定，除非要指定它使用特定的网络地址"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "a"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 20,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-21",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "ftp 属于 TCP/IP参考模型（ ）层协议。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "应用层"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "传输层"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "网络层"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "网络接口层"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "a"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 21,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-22",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "对于 int shmctl(int shmid,int cmd,struct shmid_ds * buf) 若要删除内存对象 cmd 取值为",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "IPC_STAT"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "IPC_SET"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "IPC_RMID"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "IPC_RM"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "c"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 22,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-23",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "创建或打开共享内存使用的函数为",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "msgget"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "shmget"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "semget"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "以上都不对"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "b"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 23,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-24",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "下列进程间通信中可以实现同步互斥的是",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "信号"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "消息队列"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "套接字"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "信号量"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "d"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 24,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-25",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "创建有名管道使用的函数是（ ）。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "pipe"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "create"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "mkfifo"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "fifo"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "c"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 25,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-26",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "下列对无名管道描述错误的是（）。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "写操作不能保证原子性"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "有固定的读端和写端"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "可以使用lseek函数"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "只存在与内存中"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "c"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 26,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-27",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "标准出错stderr产生时，标准I/O典型地使用下面哪项缓冲方式",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "全缓冲"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "行缓冲"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "无缓冲"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "帧缓冲"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "c"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 27,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-28",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "在vi 编辑器里中末行模式下保存修改的命令是（）。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "q!"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "w"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "q"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "wq"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "d"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 28,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-29",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "读入当前目录下的myMakefile 文件作为 makefile,输入命令为",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "make -f myMakefile"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "make -C myMakefile"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "make myMakefile"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "make -I myMakefile"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "a"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 29,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-30",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "将共享内存映射到进程的虚拟地址空间里使用的函数是",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "shmat"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "shmget"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "shmctl"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "semop"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "a"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 30,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-31",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "make 命令确定文件是否应编译的依据是",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "文件生成时间"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "文件生成大小"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "文件类型"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "文件属性"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "a"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 31,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-32",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "在GDB调试过程中，使用下面哪项命令设置断点，其中m代表行号（）。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "b  m"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "c  m"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "n  m"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "s  m"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "a"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 32,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-33",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "为了使用生成的目标文件能够用于gdb调试，在编译时gcc应使用（ ）选项。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "-c"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "-w"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "-g"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "-o"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "c"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 33,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-34",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "cd命令可以改变用户的当前目录，当用户键入命令“cd”并按Enter键后（ ）。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "当前目录改为根目录"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "当前目录不变，屏幕显示当前目录"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "当前目录改为用户主目录"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "当前目录改为上一级目录"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "c"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 34,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-35",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "以下叙述错误的是",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "in_addr 结构中的IP地址是网络字节顺序存储的"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "in_addr 结构可以同时存储3种不同方式表示的IPv4地址"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "sockaddr_in 结构变量可以保持地址族、端口号和IP地址三种地址信息"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "sockaddr_in 结构变量与sockaddr 结构变量中存储的内容与顺序完全一致"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "b"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 35,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-36",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "下面哪项是对进程概念的错误描述",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "进程是一个独立的可调度的活动"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "进程是一个抽象实体，当它执行某个任务时，将要分配和释放各种资源"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "进程是可以并行执行的计算部分"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "进程是保存在磁盘上的指令的有序集合"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "d"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 36,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-37",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "下面哪项对进程的描述是错误的",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "进程是一个静态的概念"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "进程包括动态创建、调度和消亡的整个过程"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "进程是程序执行和资源管理的最小单位"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "当用户在系统中键入命令执行一个程序的时候，它将启动一个进程"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "a"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 37,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-38",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "open函数调用错误时，函数返回值为",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "-1"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "0"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "1"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "2"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "a"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 38,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-39",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "下面哪些与GDB相关的说法是错误的是",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "gdb 能调试可执行文件"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "gdb 能调试源代码"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "gdb对编译过程有要求"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "gdb 支持交叉调试"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "b"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 39,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-40",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "fread（）返回值得含义是",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "读取的字节数"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "读取的对象数"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "缓冲区的首地址"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "0"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "b"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 40,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-41",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "（）函数可从文件中读取指定长度的数据到内存中。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "open"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "read"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "write"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "creat"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "b"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 41,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-42",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "文件 src.c 大小为 65kb，经过下列程序分析des.c文件大小（ ）。\n    int srcfd, desfd;\n    srcfd = open(\"src.c\", O_RDONLY);\n    desfd = open(\"des.c\", O_RDWR);\n    \n    char buffer[64];\n    int num = 0;\n    \n    while ((num = read(srcfd, buffer, 64)) > 0)\n    {\n        write(desfd, buffer, 64);\n    }\n    \n    close(srcfd);\n    close(desfd);",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "65kb"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "小于65kb"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "大于65kb"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "0kb"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "c"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 42,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-43",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "用open( )创建新文件时，若该文件存在则可以返回错误信息的参数是",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "O_CREAT"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "O_EXCL"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "O_TRUNC"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "O_NOCTTY"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "b"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 43,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-44",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "对于tar.bz2 结尾的文件，采用下面哪个命令进行解压缩操作（）。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "tar xzvf"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "tar jxvf"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "tar czvf"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "tar jcvf"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "b"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 44,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-45",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "在使用gcc编译器的过程中，以下（ ）选项可用来指定生成的目标文件名",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "-c"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "-o"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "-S"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "-E"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "b"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 45,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-46",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "一般情况下，STDIN_FILENO对应的文件描述符为",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "-1"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "0"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "1"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "2"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "b"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 46,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-47",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "如需gcc提供编译过程中所有有用的报警信息，则在编译时应加入选项",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "-w"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "-Wall"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "-werror"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "-error"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "b"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 47,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-48",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "gcc的正确编译流程为",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "预处理-编译-汇编-链接"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "预处理-编译-链接-汇编"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "预处理-链接-编译-汇编"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "编译-预处理-汇编-链接"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "a"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 48,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-49",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "下列对 off_t lseek(int fd,off_t offset,int whence) 函数说明错误的是",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "offset 值可以使正数，可以使负数"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "lseek 成功时返回当前文件读写位置"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "offset 相对于whence 参数的偏移，左移动为正数，右移动为负数"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "以上都对"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "c"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 49,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-50",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "对于函数 off_t lseek(int fd, offst_t offset, int whence) 中不是whence值的是",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "SEEK_SET"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "SEEK_END"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "SEEK_START"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "SEEK_CUR"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "c"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 50,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-51",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "lseek( )操作成功时返回值的含义是（）。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "新的文件位移量"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "文件位置指针移动的字节数"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "原先的文件位移量"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "总是0"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "a"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 51,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-52",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "可以将in_addr 结构中的IP地址转换为点分十进制字符串方式的函数是",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "inet_addr(  )"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "inet_pton()"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "inet_ntop()"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "ntohs()"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "c"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 52,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-53",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "下列哪个信号不能忽略或捕获",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "SIGINT"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "SIGSTOP"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "SIGQUIT"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "以上都不对"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "b"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 53,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-54",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "创建无名管道使用的函数是 （ ）。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "mkfifo"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "pipe"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "msgget"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "shmget"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "b"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 54,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-55",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "如果键盘输入为abcdef，程序如下所示，打印结果应该是（ ） \n    char buffer[6]; \n    fgets(buffer,6,stdin); \n    printf(\"%s\",buffer);",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "abcde"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "abcdef"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "abcdef后出现乱码"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "段错误"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "a"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 55,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-56",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "下面哪项不是Linux 操作系统下常见的进程调度命令",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "bg"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "kill"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "open"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "ps"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "c"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 56,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-57",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "以下哪一个不属于Makefile的变量类型（）。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "环境变量"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "自动变量"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "预定义变量"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "符号变量"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "d"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 57,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-58",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "对于函数 int socket(int family,int type,int protocol) 若指定套接字类型为TCP协议，则type 值为下列哪项（ ）。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "SOCK_STREAM"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "SOCK_DGRAM"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "SOCK_RAW"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "AF_INET"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "a"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 58,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-59",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "用于创建一个信号量，并对其初始化的函数是（ ）。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "sem_init"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "sem_post"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "sem_wait"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "sem_destroy"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "a"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 59,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-60",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "以下哪个函数能够实现信号量加1的操作",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "sem_init()"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "sem_wait()"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "sem_post()"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "sem_destory"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "c"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 60,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-61",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "下列哪种进程间通信机制是在软件层次上对中断机制的模拟",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "匿名管道"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "消息队列"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "信号"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "共享内存"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "c"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 61,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-62",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "下列宏那个是指标准输入文件（）。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "STDIN_FILENO"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "STDOUT_FILENO"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "STDERR_FILENO"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "以上都不对"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "a"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 62,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-63",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "使用函数 int open(const char* pathname, int flag, ...）以读写的方式打开一个已经存在的文件，那么flag 的值为（）。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "O_RDONLY"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "O_WRONLY"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "O_RDWR"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "O_CREAT"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "c"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 63,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-64",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "在vi 编辑器里从编辑模式切换到命令行模式需要按（）。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "F2键"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "Shift键"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "Tab键"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "Esc键"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "d"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 64,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-65",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "下面哪种语言gcc编译器不支持",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "c"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "Java"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "ASP"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "c++"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "c"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 65,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-66",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "在Makefile 文件中，使用变量的值的方法是（ ）。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "$变量名"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "$(变量名)"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "#变量名"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "#（变量名）"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "b"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 66,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-67",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "gcc 可以对编译阶段进行控制，其中（ ）选项设定库文件的路径",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "-Lpath"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "-lpath"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "-llibrary"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "-static"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "a"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 67,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-68",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "一般情况下，STDERR_FILENO对应的文件描述符为",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "-1"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "0"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "1"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "2"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "d"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 68,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-69",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "下列哪种打开文件的方式不能修改文件已有的内容",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "r+"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "w"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "w+"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "a+"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "d"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 69,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-70",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "( )函数可将内存中的数据写入文件。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "open"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "read"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "write"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "creat"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "c"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 70,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-71",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "gcc 是针对linux操作系统环境下应用程序的编译工具，下面叙述中错误的是（）。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "gcc 能将c语言、c++语言、汇编语言编写的源程序生成执行文件"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "设计者若要对源程序进行调试，需要在gcc命令中加入-g 参数来编译该源程序"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "gcc将源文件生成可执行文件的过程是有编译、汇编、链接等3个阶段组成"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "用gcc 把源文件仅编译成目标文件，那么，c语言编写的应用程序中可以不要main函数"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "c"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 71,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-72",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "默认情况下管理员创建了一个用户，就会在（ ）目录下创建一个用户主目录。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "/usr"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "/home"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "/root"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "/etc"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "b"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 72,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-73",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "假设当前目录下有文件Makefile，下面是其内容：\n    main:\n      main.o sub_add.o \n      gcc -o main main.o sub_add.o \n    \n    main.o:main.c \n      gcc -c main.c -I ./include/ \n    \n    sub_add.o:sub_add.c \n      gcc -c sub_add.c \n    \n    .PHONY:clean \n    clean: \n      rm -f *.o main \n    \n    现在执行make sub_add.o，实际执行的命令是（）。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "gcc  -o main main.o sub_add.o"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "gcc -c sub_add.c"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "gcc -c main.c -I ./include/"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "rm  -f  *.o main"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "b"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 73,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-74",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "对于tar.gz 结尾的文件，采用下面哪个命令进行解压缩操作（）。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "tar xzvf"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "tar xjvf"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "tar czvf"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "tar jcvf"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "a"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 74,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-75",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "在使用mkdir 命令创建新的目录时，在其父目录不存在时先创建父目录的选项是",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "-m"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "-d"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "-f"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "-p"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "d"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 75,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-76",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "下列对于有名管道描述错误的是（ ）。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "可以用于互不相关的进程间"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "管道内容保存在磁盘中"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "在文件系统中可见"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "通过路径名赖打开有名管道"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "b"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 76,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-77",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "下面哪项对Linux操作系统下exit() 和 _exit()函数的描述是错误的是",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "_exit()函数的作用是直接使进程停止运行，清除其使用的内存空间，并清除其在内核中的各种数据结构"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "exit()函数在调用exit退出系统之前要检查文件的打开情况"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "exit()函数直接将进程关闭，此时缓冲区中的数据将会丢失"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "想保证数据的完整性，就一定要使用exit()函数"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "c"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 77,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-78",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "以读写方式打开一个已存在的标准I/O流时应指定哪个mode参数",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "r"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "r+"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "w+"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "a+"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "b"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 78,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-79",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "当用户程序运行时会自动打开（）个标准流。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "0"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "1"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "2"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "3"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "d"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 79,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-80",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "删除文件命令为（ ）。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "mkdir"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "move"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "mv"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "rm"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "d"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 80,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-81",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "以下哪一项不属于Makefile的目标类型（）。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "依赖文件"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "伪目标（标签）"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "中间目标"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "最终目标"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "a"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 81,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-82",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "在 vi 编辑器里从命令模式切换到末行（尾行）模式需要按（）。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "Tab键"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": ":键"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "Esc键"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "F2键"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "b"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 82,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-83",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "关于信号下列说法错误的是",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "发送信号的函数主要有kill、 raise 和 alarm"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "raise 既可以向自身发送信号，也可以向其他进程发送信号"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "alarm 也称为闹钟函数，一个进程只能有一个闹钟时间。"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "当系统捕捉到某个信号时，可以忽略信号或是使用指定的处理函数赖处理。"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "b"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 83,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-84",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "以下哪一个不是fseek(FILE *stream,long offset,int whence) 中whence的合法值",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "SEEK_SET"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "SEEK_GET"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "SEEK_CUR"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "SEEK_END"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "b"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 84,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-85",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "在gcc的常用选项中，（）表示编译为汇编代码。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "-c"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "-S"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "-E"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "-g"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "b"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 85,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-86",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "下面哪项对进程控制块的描述是错误的",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "进程控制块包含进程的描述信息"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "进程控制块包含进程的控制信息"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "进程控制块包含进程额资源信息"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "进程控制块是进程的一个静态描述"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "d"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 86,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-87",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "用gcc编译一个名为“helloworld.c”的c程序文件，编译后执行文件为“hello”，则相应的编译命令是以下哪一项",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "gcc -i helloworld.c -o hello"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "gcc -o hello helloworld.c"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "gcc -c hello helloworld.c"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "gcc -o helloworld.c hello"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "b"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 87,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-88",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "某文件的组外成员的权限为只读；所有者有全部权限；组内的权限为读与写，则该文件的权限为",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "467"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "674"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "476"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "764"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "d"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 88,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-89",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "移动或重命名文件命令为（）。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "mkdir"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "rmdir"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "mv"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "rm"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "c"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 89,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-90",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "哪个命令可以将普通用户转换成超级用户",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "super"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "passwd"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "tar"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "su"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "d"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 90,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-91",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "下列哪个函数不会改变文件位置指针",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "fread"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "fwrite"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "rewind"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "ftell"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "d"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 91,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-92",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "对文件进行归档的命令为",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "gzip"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "tar"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "dump"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "dd"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "b"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 92,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-93",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "下面哪项对Linux操作系统下fork函数的描述是错误的",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "fork函数执行一次返回两个值"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "新进程称为子进程，而原进程称为父进程"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "父进程返回值为子进程的进程号"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "子进程返回值为父进程的进程号"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "d"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 93,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-94",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "进程的三种状态为",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "准备态、执行态和退出态"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "精确态、模糊态和随机态"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "运行态、就绪态和等待态"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "手工态、自动态和自由"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "c"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 94,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-95",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "在使用gcc编译器的过程中，如果只想生成目标文件而不进行连接，需要使用选项",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "-S"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "-o"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "-c"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "-E"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "c"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 95,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-96",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "使用命令对file目录进行压缩打包，要求打包文件为file.tar.gz,以下哪个选项是正确的（）。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "tar -czvf  file.tar.gz  file"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "tar -xzvf  file.tar.gz  file"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "tar  -czvf    file"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "tar  -czvf   file.tar.gz"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "a"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 96,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-97",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "函数 ssize_t read(int fd, void *buffer, size_t count) 返回值表示的正确是",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "buffer 的大小"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "实际读取文件字节数"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "0"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "以上都不对"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "b"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 97,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-98",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "当流缓冲涉及一个终端时，标准I/O典型地使用下面哪项缓冲方式",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "全缓冲"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "行缓冲"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "无缓冲"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "帧缓冲"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "b"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 98,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-99",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "single",
+      "stem": "下面哪项关于gcc编译过程的说法是错误的",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "编译阶段gcc要检查代码规范性、是否有语法错误等，确定代码的实际要做的工作"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "汇编阶段是把编译阶段生成的.s文件转成目标文件"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "预处理阶段，gcc编译器将代码中包含的头文件编译进来"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "gcc在编译时默认使用静态库"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "d"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 99,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-100",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "multiple",
+      "stem": "关于listen() 函数，下列描述正确的是",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "有两个 参数"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "第1个参数为套接字"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "第2个参数是等待连接队列中的最大等待数"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "用于服务器侦听网络上有无连接请求"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "a",
+          "b",
+          "c",
+          "d"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 100,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-101",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "multiple",
+      "stem": "下列makefile 文件中常见的自动变量描述正确的是",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "$@ 表示目标文件的完整名称"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "$<‌ 表示第一个依赖文件的名称"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "$^ 表示重复的依赖文件，以空格分开"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "$* 表示不包含扩展名的目标文件名称"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "a",
+          "b",
+          "d"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 101,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-102",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "multiple",
+      "stem": "关于connect（）函数，下列哪些说法是正确的（ ）。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "一共3个参数"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "第1个参数是套接字"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "第2个参数是服务端的地址信息"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "第3个参数是服务器地址长度"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "a",
+          "b",
+          "c",
+          "d"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 102,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-103",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "multiple",
+      "stem": "只终止某个线程可以有哪些方法",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "从线程函数return。这种方法对主线程不适用，从main函数return相当于调用exit。"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "一个线程可以调用pthread_cancel终止同一进程中的另一个线程。"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "线程可以调用pthread_exit终止自己。"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "以上都不对"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "a",
+          "b",
+          "c"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 103,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-104",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "multiple",
+      "stem": "采用gcc编译代码时，命令gcc foo.c -o foo1采用动态链接的方式生成可可执行文件fool;命令gcc foo.c -static -o foo2采用静态链接的方式生成可执行文件foo2。通常而言，在相同环境下（ ）。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "foo2运行速度更快"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "foo1可执行文件更小"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "foo2占用的外存空间更小"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "foo2运行时占用的内存空间更小"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "a",
+          "b"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 104,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-105",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "multiple",
+      "stem": "动态库制作完成后，运行可执行文件：./pow_test 2 10 出现下面错误提示：pow_test: error while loading shared libraries:libtmath.so: cannot open shared object file: No such file or directory ，遇到这种问题如何解决（）。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "告诉加载器，动态库文件的路径，通过修改/etc/ld.so.conf文件"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "告诉加载器，动态库文件的路径，通过修改LD_LIBRARY_PATH环境变量"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "将库文件直接拷贝到/lib或者/usr/lib目录下"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "以上都不对"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "a",
+          "b",
+          "c"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 105,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-106",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "multiple",
+      "stem": "欲把当前目录下的file1.txt 复制为 file2.txt ,正确的命令是（）。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "cp file1.txt file2.txt"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "cp file1.txt | file2.txt"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "cat file2.txt file1.txt"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "cat file1.txt >‌ file2.txt"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "a",
+          "d"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 106,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-107",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "multiple",
+      "stem": "下列函数哪些可以发送信号",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "kill"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "alarm"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "signal"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "以上都不对"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "a",
+          "b"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 107,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-108",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "multiple",
+      "stem": "信号的响应有哪几种方式",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "缺省执行"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "忽略信号"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "捕获信号"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "以上都不对"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "a",
+          "b",
+          "c"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 108,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-109",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "multiple",
+      "stem": "makefile 中的变量分为",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "用户自定义变量"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "预定义变量"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "自动变量"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "环境变量"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "a",
+          "b",
+          "c",
+          "d"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 109,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-110",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "multiple",
+      "stem": "下面对Makefile 自动变量描述正确的是（）。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-a",
+          "key": "a",
+          "label": "A",
+          "content": "$<‌ 表示第一个依赖文件"
+        },
+        {
+          "id": "opt-b",
+          "key": "b",
+          "label": "B",
+          "content": "$@ 表示目标体完整名称"
+        },
+        {
+          "id": "opt-c",
+          "key": "c",
+          "label": "C",
+          "content": "$^ 表示所有不重复的依赖文件"
+        },
+        {
+          "id": "opt-d",
+          "key": "d",
+          "label": "D",
+          "content": "以上说法都不对"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "a",
+          "b",
+          "c"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 110,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-111",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "blank",
+      "stem": "上面图表示信号量的（ ）操作（填互斥或同步）,线程一和线程二的执行顺序为：先（ ）执行，在（ ）执行",
+      "media": [
+        {
+          "id": "q-generated-嵌入式应用开发-111-img-0",
+          "mime": "image/*",
+          "src": "images/e667588a964b5d647f1adc3dd57d55160f2613ea7941b1ad8c6e1a97ee72253a.png",
+          "placement": "unknown",
+          "alt": "题目配图"
+        }
+      ],
+      "answer": {
+        "texts": [
+          "同步",
+          "线程一",
+          "线程二"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 111,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-112",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "blank",
+      "stem": "对于整形信号量，在执行一次P操作，信号量的值应（ ）1，在执行一次V操作，信号量的值应（ ）1 。（填加 或减）",
+      "media": [],
+      "answer": {
+        "texts": [
+          "减",
+          "加"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 112,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-113",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "blank",
+      "stem": "对数据要求高可靠性的应用需选择（ ）协议；对实时性要求较高的应用需选择（ ）协议。（ 填TCP或UDP ）",
+      "media": [],
+      "answer": {
+        "texts": [
+          "TCP",
+          "UDP"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 113,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-114",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "blank",
+      "stem": "POSIX信号量执行P操作的函数为（ ），执行V操作的函数为（ ）。",
+      "media": [],
+      "answer": {
+        "texts": [
+          "sem_wait",
+          "sem_post"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 114,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-115",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "blank",
+      "stem": "Shell 的（ ）命令可以查看共享内存的情况",
+      "media": [],
+      "answer": {
+        "texts": [
+          "ipcs -m"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 115,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-116",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "blank",
+      "stem": "常用的进程间通信种类包括无名管道、（ ）、信号、（ ）、共享内存、信号量、socket",
+      "media": [],
+      "answer": {
+        "texts": [
+          "有名管道",
+          "消息队列"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 116,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-117",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "blank",
+      "stem": "调用（ ）函数可以打开或创建一个文件。（这里指系统调用）",
+      "media": [],
+      "answer": {
+        "texts": [
+          "open"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 117,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-118",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "blank",
+      "stem": "使用通配符（） 每次可以匹配一个字符；使用通配符（）每次可以匹配任意字符。",
+      "media": [],
+      "answer": {
+        "texts": [
+          "？",
+          "*"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 118,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-119",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "blank",
+      "stem": "创建子进程的函数是（ ）。",
+      "media": [],
+      "answer": {
+        "texts": [
+          "fork"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 119,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-120",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "blank",
+      "stem": "查看当前Linux 系统有哪些信号的命令是",
+      "media": [],
+      "answer": {
+        "texts": [
+          "kill -l"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 120,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-121",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "blank",
+      "stem": "通常，一个进程启动时，都会默认打开3个文件，标准输入、（ ）和标准出错处理 分别对应的文件描述符是（）、1和2。",
+      "media": [],
+      "answer": {
+        "texts": [
+          "标准输出",
+          "0"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 121,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-122",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "blank",
+      "stem": "( ) 在形式上是一个整数，用来描述被打开文件的索引值或句炳，指向该文件的相关信息记录表",
+      "media": [],
+      "answer": {
+        "texts": [
+          "文件描述符"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 122,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-123",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "blank",
+      "stem": "gcc 的 编译分为四个步骤：（ ） 、编译、（ ）和 链接。",
+      "media": [],
+      "answer": {
+        "texts": [
+          "预处理",
+          "汇编"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 123,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-124",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "blank",
+      "stem": "如果要使用gdb 对可执行文件进行调试，在gcc 编译源代码生成可执行文件 过程中，需要加选项为（）才能对可执行文件调试。",
+      "media": [],
+      "answer": {
+        "texts": [
+          "-g"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 124,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-125",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "blank",
+      "stem": "工程管理器make定义了普通规则、隐含规则和（ ）规则。",
+      "media": [],
+      "answer": {
+        "texts": [
+          "模式"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 125,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-126",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "judge",
+      "stem": "对于recv （ ）函数 如果没有可接收的数据时则阻塞",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-true",
+          "key": "true",
+          "label": "A",
+          "content": "正确"
+        },
+        {
+          "id": "opt-false",
+          "key": "false",
+          "label": "B",
+          "content": "错误"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "true"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 126,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-127",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "judge",
+      "stem": "gethostbyname( ) 函数只能根据给定的本机的主机名称查询本机的IP地址，不能通过DNS域名查询因特网上的其他主机的IP地址。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-true",
+          "key": "true",
+          "label": "A",
+          "content": "正确"
+        },
+        {
+          "id": "opt-false",
+          "key": "false",
+          "label": "B",
+          "content": "错误"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "false"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 127,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-128",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "judge",
+      "stem": "若信号量S为正，S的值可以代表可以资源的数量（ ）。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-true",
+          "key": "true",
+          "label": "A",
+          "content": "正确"
+        },
+        {
+          "id": "opt-false",
+          "key": "false",
+          "label": "B",
+          "content": "错误"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "true"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 128,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-129",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "judge",
+      "stem": "信号量既可以实现同步也可以实现互斥（ ）。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-true",
+          "key": "true",
+          "label": "A",
+          "content": "正确"
+        },
+        {
+          "id": "opt-false",
+          "key": "false",
+          "label": "B",
+          "content": "错误"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "true"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 129,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-130",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "judge",
+      "stem": "结束线程使用pthread_exit函数，而不要使用exit函数。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-true",
+          "key": "true",
+          "label": "A",
+          "content": "正确"
+        },
+        {
+          "id": "opt-false",
+          "key": "false",
+          "label": "B",
+          "content": "错误"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "true"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 130,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-131",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "judge",
+      "stem": "INADDR_ANY表示可以接受本机所有网卡所有ip地址的数据",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-true",
+          "key": "true",
+          "label": "A",
+          "content": "正确"
+        },
+        {
+          "id": "opt-false",
+          "key": "false",
+          "label": "B",
+          "content": "错误"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "true"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 131,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-132",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "judge",
+      "stem": "下面的图为TCP 协议服务器端流程图",
+      "media": [
+        {
+          "id": "q-generated-嵌入式应用开发-132-img-0",
+          "mime": "image/*",
+          "src": "images/3261411d8b2dc9d58ee0fbee75456164f0606c434dacc1a96052a239b4b796ff.png",
+          "placement": "unknown",
+          "alt": "题目配图"
+        }
+      ],
+      "options": [
+        {
+          "id": "opt-true",
+          "key": "true",
+          "label": "A",
+          "content": "正确"
+        },
+        {
+          "id": "opt-false",
+          "key": "false",
+          "label": "B",
+          "content": "错误"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "true"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 132,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-133",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "judge",
+      "stem": "网络字节顺序采用的是大端存储方式。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-true",
+          "key": "true",
+          "label": "A",
+          "content": "正确"
+        },
+        {
+          "id": "opt-false",
+          "key": "false",
+          "label": "B",
+          "content": "错误"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "true"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 133,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-134",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "judge",
+      "stem": "socket 是一种特殊的I/O接口，它也是一种文件描述符。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-true",
+          "key": "true",
+          "label": "A",
+          "content": "正确"
+        },
+        {
+          "id": "opt-false",
+          "key": "false",
+          "label": "B",
+          "content": "错误"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "true"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 134,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-135",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "judge",
+      "stem": "在进程中定义了一个全局变量，那么对其所有的线程都是可见的。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-true",
+          "key": "true",
+          "label": "A",
+          "content": "正确"
+        },
+        {
+          "id": "opt-false",
+          "key": "false",
+          "label": "B",
+          "content": "错误"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "true"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 135,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-136",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "judge",
+      "stem": "二值型信号灯的取值为0或1",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-true",
+          "key": "true",
+          "label": "A",
+          "content": "正确"
+        },
+        {
+          "id": "opt-false",
+          "key": "false",
+          "label": "B",
+          "content": "错误"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "true"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 136,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-137",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "judge",
+      "stem": "shmdt 函数 功能是解除和共享内存段绑定",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-true",
+          "key": "true",
+          "label": "A",
+          "content": "正确"
+        },
+        {
+          "id": "opt-false",
+          "key": "false",
+          "label": "B",
+          "content": "错误"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "true"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 137,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-138",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "judge",
+      "stem": "exec函数族提供了一个在进程中启动另一个程序执行的方法。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-true",
+          "key": "true",
+          "label": "A",
+          "content": "正确"
+        },
+        {
+          "id": "opt-false",
+          "key": "false",
+          "label": "B",
+          "content": "错误"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "true"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 138,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-139",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "judge",
+      "stem": "文件描述符是系统随机分配的非负整数",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-true",
+          "key": "true",
+          "label": "A",
+          "content": "正确"
+        },
+        {
+          "id": "opt-false",
+          "key": "false",
+          "label": "B",
+          "content": "错误"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "false"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 139,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-140",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "judge",
+      "stem": "下面图为TCP协议客户端流程图",
+      "media": [
+        {
+          "id": "q-generated-嵌入式应用开发-140-img-0",
+          "mime": "image/*",
+          "src": "images/8281d126a14a0916fdac5a7bf30c4523726c47bb26bca589c865c95a0c6b8020.png",
+          "placement": "unknown",
+          "alt": "题目配图"
+        }
+      ],
+      "options": [
+        {
+          "id": "opt-true",
+          "key": "true",
+          "label": "A",
+          "content": "正确"
+        },
+        {
+          "id": "opt-false",
+          "key": "false",
+          "label": "B",
+          "content": "错误"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "true"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 140,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-141",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "judge",
+      "stem": "临界资源是一次仅允许一个进程（或线程）使用的共享资源。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-true",
+          "key": "true",
+          "label": "A",
+          "content": "正确"
+        },
+        {
+          "id": "opt-false",
+          "key": "false",
+          "label": "B",
+          "content": "错误"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "true"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 141,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-142",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "judge",
+      "stem": "pthread_join 函数 返回值成功返回对于0的数，失败返回-1。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-true",
+          "key": "true",
+          "label": "A",
+          "content": "正确"
+        },
+        {
+          "id": "opt-false",
+          "key": "false",
+          "label": "B",
+          "content": "错误"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "false"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 142,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-143",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "judge",
+      "stem": "pipe( int pfd[2]) 创建管道，其中参数pfd[0] 用于写管道，pfd[1]用于读管道。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-true",
+          "key": "true",
+          "label": "A",
+          "content": "正确"
+        },
+        {
+          "id": "opt-false",
+          "key": "false",
+          "label": "B",
+          "content": "错误"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "false"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 143,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-144",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "judge",
+      "stem": "系统命令相对API更高一层，它的内部引用用户编程接口（API）来实现相应的功能。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-true",
+          "key": "true",
+          "label": "A",
+          "content": "正确"
+        },
+        {
+          "id": "opt-false",
+          "key": "false",
+          "label": "B",
+          "content": "错误"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "true"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 144,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-145",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "judge",
+      "stem": "工程管理器make读入的配置文件为Makefile 或makefile",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-true",
+          "key": "true",
+          "label": "A",
+          "content": "正确"
+        },
+        {
+          "id": "opt-false",
+          "key": "false",
+          "label": "B",
+          "content": "错误"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "true"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 145,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-146",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "judge",
+      "stem": "一个makefile 文件中可定义多个目标，利用make target 命令可指定要编译的目标，如果不指定目标，则使用最后一个目标。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-true",
+          "key": "true",
+          "label": "A",
+          "content": "正确"
+        },
+        {
+          "id": "opt-false",
+          "key": "false",
+          "label": "B",
+          "content": "错误"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "false"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 146,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-147",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "judge",
+      "stem": "SIGSTOP 和 SIGKILL 信号可以忽略",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-true",
+          "key": "true",
+          "label": "A",
+          "content": "正确"
+        },
+        {
+          "id": "opt-false",
+          "key": "false",
+          "label": "B",
+          "content": "错误"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "false"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 147,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-148",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "judge",
+      "stem": "wait函数时waitpid函数的一个特例，在Linux操作系统内部实现wait函数时直接调用的就是waitpid函数。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-true",
+          "key": "true",
+          "label": "A",
+          "content": "正确"
+        },
+        {
+          "id": "opt-false",
+          "key": "false",
+          "label": "B",
+          "content": "错误"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "true"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 148,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-149",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "judge",
+      "stem": "当程序执行到exit或_exit时，进程会无条件地停止剩下的所有操作，清除包括PCB在内的各种数据结构，并终止本进程的运行。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-true",
+          "key": "true",
+          "label": "A",
+          "content": "正确"
+        },
+        {
+          "id": "opt-false",
+          "key": "false",
+          "label": "B",
+          "content": "错误"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "true"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 149,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-150",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "judge",
+      "stem": "进程是系统的基本调度单位。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-true",
+          "key": "true",
+          "label": "A",
+          "content": "正确"
+        },
+        {
+          "id": "opt-false",
+          "key": "false",
+          "label": "B",
+          "content": "错误"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "true"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 150,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-151",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "judge",
+      "stem": "系统调用规定用户进程进入内核空间的具体位置",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-true",
+          "key": "true",
+          "label": "A",
+          "content": "正确"
+        },
+        {
+          "id": "opt-false",
+          "key": "false",
+          "label": "B",
+          "content": "错误"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "true"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 151,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-152",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "judge",
+      "stem": "open（） 可以用于创建普通文件和设备文件",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-true",
+          "key": "true",
+          "label": "A",
+          "content": "正确"
+        },
+        {
+          "id": "opt-false",
+          "key": "false",
+          "label": "B",
+          "content": "错误"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "false"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 152,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-153",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "judge",
+      "stem": "fork函数使用多少次就创建多少个进程。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-true",
+          "key": "true",
+          "label": "A",
+          "content": "正确"
+        },
+        {
+          "id": "opt-false",
+          "key": "false",
+          "label": "B",
+          "content": "错误"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "true"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 153,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-154",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "judge",
+      "stem": "gdb对可执行文件进行调试",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-true",
+          "key": "true",
+          "label": "A",
+          "content": "正确"
+        },
+        {
+          "id": "opt-false",
+          "key": "false",
+          "label": "B",
+          "content": "错误"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "true"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 154,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-155",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "judge",
+      "stem": "int close(int fd) 函数 成功返回0，出错时返回 -1",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-true",
+          "key": "true",
+          "label": "A",
+          "content": "正确"
+        },
+        {
+          "id": "opt-false",
+          "key": "false",
+          "label": "B",
+          "content": "错误"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "true"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 155,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-156",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "judge",
+      "stem": "在编译阶段，gcc 首先要检查代码的规范性、是否有语法错误等，在检查无误后，gcc把代码翻译为汇编语言。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-true",
+          "key": "true",
+          "label": "A",
+          "content": "正确"
+        },
+        {
+          "id": "opt-false",
+          "key": "false",
+          "label": "B",
+          "content": "错误"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "true"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 156,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-157",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "judge",
+      "stem": "一个API函数通常需要几个系统调用来共同完成函数的功能，但是还有一些API函数不需要调用相应的系统调用。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-true",
+          "key": "true",
+          "label": "A",
+          "content": "正确"
+        },
+        {
+          "id": "opt-false",
+          "key": "false",
+          "label": "B",
+          "content": "错误"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "true"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 157,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-158",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "judge",
+      "stem": "可以先创建子进程在创建无名管道（ ）。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-true",
+          "key": "true",
+          "label": "A",
+          "content": "正确"
+        },
+        {
+          "id": "opt-false",
+          "key": "false",
+          "label": "B",
+          "content": "错误"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "false"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 158,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-159",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "judge",
+      "stem": "make工程管理器根据时间戳来自动发现更新过的文件从而减少编译的工作量。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-true",
+          "key": "true",
+          "label": "A",
+          "content": "正确"
+        },
+        {
+          "id": "opt-false",
+          "key": "false",
+          "label": "B",
+          "content": "错误"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "true"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 159,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-160",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "judge",
+      "stem": "Makefile的基本结构是文本文件，其构成为： （ ） 目标体：依赖文件 <‌Tab>‌命令",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-true",
+          "key": "true",
+          "label": "A",
+          "content": "正确"
+        },
+        {
+          "id": "opt-false",
+          "key": "false",
+          "label": "B",
+          "content": "错误"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "true"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 160,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-161",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "judge",
+      "stem": "一般静态库扩展名为.a ，这类的函数库通常扩展名为libxxx.a ;动态函数库的扩展名一般为.so，这类函数库通常名为libxxx.so( )。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-true",
+          "key": "true",
+          "label": "A",
+          "content": "正确"
+        },
+        {
+          "id": "opt-false",
+          "key": "false",
+          "label": "B",
+          "content": "错误"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "true"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 161,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-162",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "judge",
+      "stem": "无名管道可以使用在任意进程间通信。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-true",
+          "key": "true",
+          "label": "A",
+          "content": "正确"
+        },
+        {
+          "id": "opt-false",
+          "key": "false",
+          "label": "B",
+          "content": "错误"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "false"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 162,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-163",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "judge",
+      "stem": "当一个进程终止时，它所有已打开的文件都由内核自动关闭（）。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-true",
+          "key": "true",
+          "label": "A",
+          "content": "正确"
+        },
+        {
+          "id": "opt-false",
+          "key": "false",
+          "label": "B",
+          "content": "错误"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "true"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 163,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-164",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "judge",
+      "stem": "标准I/O提供了3种类型缓冲存放：全缓冲、行缓冲、不带缓冲。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-true",
+          "key": "true",
+          "label": "A",
+          "content": "正确"
+        },
+        {
+          "id": "opt-false",
+          "key": "false",
+          "label": "B",
+          "content": "错误"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "true"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 164,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-165",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "judge",
+      "stem": "当有名管道只有写或者只有读打开时候，open、read、write函数处于阻塞状态，而普通文件不会。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-true",
+          "key": "true",
+          "label": "A",
+          "content": "正确"
+        },
+        {
+          "id": "opt-false",
+          "key": "false",
+          "label": "B",
+          "content": "错误"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "true"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 165,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-166",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "judge",
+      "stem": "Linux操作系统中创建一个新进程的唯一方法是使用fork函数。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-true",
+          "key": "true",
+          "label": "A",
+          "content": "正确"
+        },
+        {
+          "id": "opt-false",
+          "key": "false",
+          "label": "B",
+          "content": "错误"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "true"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 166,
+        "inferredType": false
+      }
+    },
+    {
+      "id": "q-generated-嵌入式应用开发-167",
+      "bankId": "generated-嵌入式应用开发",
+      "type": "judge",
+      "stem": "有名管道可以保证写管道的原子性。",
+      "media": [],
+      "options": [
+        {
+          "id": "opt-true",
+          "key": "true",
+          "label": "A",
+          "content": "正确"
+        },
+        {
+          "id": "opt-false",
+          "key": "false",
+          "label": "B",
+          "content": "错误"
+        }
+      ],
+      "answer": {
+        "optionKeys": [
+          "true"
+        ]
+      },
+      "tags": [],
+      "sourceMeta": {
+        "fileName": "嵌入式应用开发.json",
+        "row": 167,
+        "inferredType": false
+      }
+    }
+  ]
+}
