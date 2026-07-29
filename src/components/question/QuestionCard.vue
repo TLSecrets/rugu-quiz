@@ -373,7 +373,7 @@ const answerKeysText = computed(() => {
 }
 
 .fav {
-  min-height: 32px;
+  min-height: var(--touch-min);
   padding: 0 var(--space-3);
   border-radius: var(--radius-sm);
   border: 1px solid var(--color-border);
@@ -474,7 +474,7 @@ const answerKeysText = computed(() => {
 }
 
 .field textarea {
-  min-height: 120px;
+  min-height: 7.5rem;
   line-height: 1.55;
 }
 
@@ -543,7 +543,7 @@ const answerKeysText = computed(() => {
 }
 
 .chip {
-  min-height: 36px;
+  min-height: var(--touch-min);
   padding: 0 var(--space-4);
   border-radius: var(--radius-sm);
   border: 1px solid var(--color-border);
@@ -582,7 +582,7 @@ const answerKeysText = computed(() => {
 }
 
 .note__input {
-  min-height: 96px;
+  min-height: 6rem;
   line-height: 1.55;
   font-size: var(--font-size-sm);
 }

@@ -116,7 +116,10 @@ async function onClearAll() {
 
       <div class="font-row">
         <div>
-          <p class="card__desc">阅读字号（{{ settings.fontSize }}px，{{ FONT_SIZE_MIN }}–{{ FONT_SIZE_MAX }}）</p>
+          <p class="card__desc">
+            阅读字号（{{ settings.fontSize }}px，{{ FONT_SIZE_MIN }}–{{ FONT_SIZE_MAX }}）。优先用这里放大：整站文字与按钮会一起变大且布局更稳。浏览器缩放（Ctrl +
+            滚轮）也能放大，但桌面宽度变「窄」时可能切到底部导航，观感容易乱。
+          </p>
         </div>
         <div class="font-controls" role="group" aria-label="阅读字号">
           <button

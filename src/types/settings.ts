@@ -40,7 +40,7 @@ export const DEFAULT_SETTINGS: AppSettings = {
   autoNextDelay: 0,
   autoNextEnabled: false,
   showAnswerMode: 'instant',
-  fontSize: 16,
+  fontSize: 17,
   bankTagMatchMode: 'or',
   deepseek: {
     apiKey: '',
@@ -50,5 +50,5 @@ export const DEFAULT_SETTINGS: AppSettings = {
 }
 
 export const FONT_SIZE_MIN = 14
-export const FONT_SIZE_MAX = 22
+export const FONT_SIZE_MAX = 24
 

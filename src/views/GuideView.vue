@@ -6,8 +6,8 @@ const toc = [
   { id: 'banks-tags', label: '题库与标签' },
   { id: 'practice-exam', label: '练习与考试' },
   { id: 'learning', label: '错题 · 收藏 · 笔记' },
-  { id: 'import-export', label: '导入导出与 AI' },
-  { id: 'settings', label: '设置' },
+  { id: 'import-export', label: '导入与 AI 整理' },
+  { id: 'settings', label: '设置与阅读放大' },
   { id: 'non-goals', label: '明确不做' },
 ] as const
 
@@ -94,34 +94,62 @@ function scrollToSection(id: string) {
     </section>
 
     <section id="import-export" class="card">
-      <h3 class="card__title">导入导出与 AI</h3>
+      <h3 class="card__title">导入与 AI 整理</h3>
       <p>
         打开
         <RouterLink class="link" to="/import-export">导入导出</RouterLink>
-        可下载 Excel / CSV / Word 模板，或导入已有文件。常用字段：
+        ，可以下载 Excel / CSV / Word 模板，也可以直接导入已经整理好的文件。
       </p>
+      <h4 class="card__sub">推荐：模板 + 外部 AI（豆包等）</h4>
+      <ol class="steps">
+        <li>在「导入导出」页下载一份模板（建议 CSV 或 Excel），需要时再看字段说明。</li>
+        <li>
+          把<strong>模板文件</strong>和<strong>你自己的题库材料</strong>（Word、截图文字、杂乱表格等）一起发给豆包、Kimi、ChatGPT
+          等 AI，说明：「请严格按模板的列生成题库，列包括题型、题干、选项 A–H、答案、解析等；多选答案写成
+          A,C；填空多空用 | 分隔。」
+        </li>
+        <li>让 AI 导出或复制成表格 / CSV / Excel，保存到电脑。</li>
+        <li>回到本站「导入导出」，上传该文件完成导入。预览里还能改题再确认入库。</li>
+      </ol>
+      <p>
+        这样不必自己手填每一列，也适合把旧试卷、讲义快速转成如故格式。
+      </p>
+      <h4 class="card__sub">站内 AI 辅助导入（可选）</h4>
+      <p>
+        若在
+        <RouterLink class="link" to="/settings">设置</RouterLink>
+        里填了 OpenAI 兼容 Key（默认 DeepSeek），也可在导入页粘贴杂乱文本，由浏览器直连转换。Key
+        只存在本机，费用由你的账户结算。
+      </p>
+      <h4 class="card__sub">常用字段</h4>
       <ul>
         <li>题型（可空，系统会尝试推断）、题干、选项 A–H、答案、解析、图片、标签、领域</li>
         <li>多选答案如 <code>A,C</code>；填空多空用 <code>|</code> 分隔</li>
       </ul>
       <p>
-        <strong>AI 辅助导入</strong>：在设置中填写 OpenAI 兼容 Key（默认 DeepSeek），将杂乱文本粘贴转换。Key
-        只存在本机，由浏览器直连接口，费用由你的账户结算。
-      </p>
-      <p>
-        开发者可将源文件放入仓库 <code>banks/</code>，执行 <code>npm run build:banks</code>
-        生成 <code>public/generated/</code>；用户首次打开站点时会自动同步尚未入库的构建题库。
+        开发者还可把源文件放进仓库 <code>banks/</code>，执行 <code>npm run build:banks</code>
+        生成构建产物；用户首次打开站点时会自动同步尚未入库的构建题库。
       </p>
     </section>
 
     <section id="settings" class="card">
-      <h3 class="card__title">设置</h3>
+      <h3 class="card__title">设置与阅读放大</h3>
       <ul>
-        <li>主题：浅色 / 深色 / 跟随系统；阅读字号</li>
+        <li>主题：浅色 / 深色 / 跟随系统</li>
+        <li>阅读字号：默认偏大，可在设置里继续加大（推荐方式）</li>
         <li>练习默认项：乱序、填空宽松匹配、自动下一题、答案展示方式、默认题型</li>
         <li>题库标签筛选：或运算 / 与运算（默认或）</li>
         <li>AI 接口：Key、Base URL、模型</li>
         <li>数据管理：可清空学习数据（保留设置），或重置全部本地数据</li>
+      </ul>
+      <h4 class="card__sub">字看不清时怎么放大？</h4>
+      <ul>
+        <li>
+          <strong>优先用站内「阅读字号」</strong>（设置页）：文字、按钮、导航会一起变大，布局更稳，适合各年龄段长时间刷题。
+        </li>
+        <li>
+          <strong>浏览器缩放</strong>（如 Ctrl + 滚轮）也能放大整页，但窗口会变得像「变窄」，桌面可能突然变成底部导航，观感容易乱。需要临时放大时可以用，日常阅读更建议站内字号。
+        </li>
       </ul>
       <p class="note">
         换浏览器、清站点数据或隐私模式会导致本地题库与进度消失；重要内容请自行导出备份。
@@ -181,6 +209,16 @@ function scrollToSection(id: string) {
   padding-left: 1.25em;
   display: grid;
   gap: var(--space-2);
+}
+
+.card ol.steps {
+  margin: 0;
+  padding-left: 1.25em;
+  display: grid;
+  gap: var(--space-2);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.65;
 }
 
 .card strong {

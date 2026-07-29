@@ -57,8 +57,8 @@ const settings = useSettingsStore()
 .header__mark {
   display: grid;
   place-items: center;
-  width: 40px;
-  height: 40px;
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: var(--radius-md);
   background: var(--color-nav-bg);
   color: var(--color-accent);
@@ -126,7 +126,7 @@ const settings = useSettingsStore()
   display: inline-flex;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 56.25rem) {
   .header {
     padding-inline: var(--space-8);
   }

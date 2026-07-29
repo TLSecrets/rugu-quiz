@@ -19,9 +19,23 @@ const favorites = useFavoritesStore()
 const notes = useNotesStore()
 
 const showResumeDialog = ref(false)
-const navOpen = ref(
-  typeof window !== 'undefined' && window.matchMedia('(min-width: 960px)').matches,
-)
+const desktopMq =
+  typeof window !== 'undefined' ? window.matchMedia('(min-width: 56.25rem)') : null
+const navOpen = ref(desktopMq?.matches ?? false)
+
+function onDesktopMqChange(e: MediaQueryListEvent) {
+  navOpen.value = e.matches
+}
+
+if (desktopMq) {
+  desktopMq.addEventListener('change', onDesktopMqChange)
+}
+
+onBeforeUnmount(() => {
+  desktopMq?.removeEventListener('change', onDesktopMqChange)
+  if (autoNextTimer) clearTimeout(autoNextTimer)
+})
+
 let autoNextTimer: ReturnType<typeof setTimeout> | null = null
 
 const bankIdFromRoute = computed(() => {
@@ -183,10 +197,6 @@ watch(
     clearAutoNext()
   },
 )
-
-onBeforeUnmount(() => {
-  clearAutoNext()
-})
 
 async function onToggleFavorite() {
   if (!question.value) return
@@ -411,7 +421,7 @@ function onRestartConfirm() {
   gap: var(--space-4);
 }
 
-@media (min-width: 960px) {
+@media (min-width: 56.25rem) {
   .layout {
     grid-template-columns: minmax(0, 1fr) minmax(11rem, 14rem);
     align-items: start;

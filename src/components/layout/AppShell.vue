@@ -33,7 +33,7 @@ const pageTitle = computed(() => (route.meta.title as string) || '如故题库')
   grid-template-columns: 1fr;
   background: var(--color-bg);
   background-image: var(--shell-glow);
-  background-attachment: fixed;
+  background-attachment: scroll;
 }
 
 .shell__main {
@@ -82,7 +82,7 @@ const pageTitle = computed(() => (route.meta.title as string) || '如故题库')
   }
 }
 
-@media (min-width: 900px) {
+@media (min-width: 56.25rem) {
   .shell {
     grid-template-columns: var(--nav-width) 1fr;
   }

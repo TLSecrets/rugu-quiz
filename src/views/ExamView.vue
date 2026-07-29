@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, onMounted, ref, watch } from 'vue'
+import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import { useRouter } from 'vue-router'
 import PageHeader from '@/components/common/PageHeader.vue'
 import QuestionCard from '@/components/question/QuestionCard.vue'
@@ -29,10 +29,22 @@ const pdfMsg = ref<string | null>(null)
 const pdfErr = ref<string | null>(null)
 const composeError = ref<string | null>(null)
 const tagFilter = ref<string[]>([])
-const navOpen = ref(
-  typeof window !== 'undefined' && window.matchMedia('(min-width: 960px)').matches,
-)
+const desktopMq =
+  typeof window !== 'undefined' ? window.matchMedia('(min-width: 56.25rem)') : null
+const navOpen = ref(desktopMq?.matches ?? false)
 const paperTitle = ref('模拟考试')
+
+function onDesktopMqChange(e: MediaQueryListEvent) {
+  navOpen.value = e.matches
+}
+
+if (desktopMq) {
+  desktopMq.addEventListener('change', onDesktopMqChange)
+}
+
+onBeforeUnmount(() => {
+  desktopMq?.removeEventListener('change', onDesktopMqChange)
+})
 
 onMounted(() => {
   if (!exam.items.length) exam.restore()
@@ -526,7 +538,7 @@ const scoreLabel = computed(() => {
   gap: var(--space-4);
 }
 
-@media (min-width: 960px) {
+@media (min-width: 56.25rem) {
   .layout {
     grid-template-columns: minmax(0, 1fr) minmax(11rem, 14rem);
     align-items: start;

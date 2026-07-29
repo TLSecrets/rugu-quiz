@@ -16,10 +16,13 @@
   --radius-md: 10px;
   --radius-lg: 14px;
 
-  --nav-width: 220px;
-  --header-height: 56px;
-  --tabbar-height: 64px;
-  --touch-min: 44px;
+  /* rem：随站内阅读字号放大，避免壳层与正文比例失调 */
+  --nav-width: 13.75rem;
+  --header-height: 3.5rem;
+  --tabbar-height: 4rem;
+  --touch-min: 2.75rem;
+  /* 壳层 / 练习双栏统一断点（约 900px @16px 根字号） */
+  --layout-desktop: 56.25rem;
 
   --font-size-xs: 0.75rem;
   --font-size-sm: 0.875rem;

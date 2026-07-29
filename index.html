@@ -18,8 +18,8 @@
           document.documentElement.setAttribute('data-theme', resolved)
           document.documentElement.dataset.themeSource = mode
           document.documentElement.style.colorScheme = resolved
-          var fs = Number(localStorage.getItem('rugu-font-size') || 16)
-          if (fs >= 14 && fs <= 22) {
+          var fs = Number(localStorage.getItem('rugu-font-size') || 17)
+          if (fs >= 14 && fs <= 24) {
             document.documentElement.style.fontSize = fs + 'px'
           }
         } catch (e) {}
