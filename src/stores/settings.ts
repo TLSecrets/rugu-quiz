@@ -6,6 +6,7 @@ import {
   FONT_SIZE_MAX,
   FONT_SIZE_MIN,
   type AppSettings,
+  type BankTagMatchMode,
   type ShowAnswerMode,
   type ThemeMode,
 } from '@/types/settings'
@@ -64,6 +65,7 @@ export const useSettingsStore = defineStore('settings', () => {
   const autoNextEnabled = ref(DEFAULT_SETTINGS.autoNextEnabled)
   const showAnswerMode = ref<ShowAnswerMode>(DEFAULT_SETTINGS.showAnswerMode)
   const fontSize = ref(readFontCache())
+  const bankTagMatchMode = ref<BankTagMatchMode>(DEFAULT_SETTINGS.bankTagMatchMode)
   const deepseek = reactive({ ...DEFAULT_SETTINGS.deepseek })
 
   applyTheme(theme.value)
@@ -95,6 +97,7 @@ export const useSettingsStore = defineStore('settings', () => {
     autoNextEnabled: autoNextEnabled.value,
     showAnswerMode: showAnswerMode.value,
     fontSize: fontSize.value,
+    bankTagMatchMode: bankTagMatchMode.value,
     deepseek: { ...deepseek },
   }))
 
@@ -118,6 +121,7 @@ export const useSettingsStore = defineStore('settings', () => {
       autoNextEnabled,
       showAnswerMode,
       fontSize,
+      bankTagMatchMode,
     ],
     schedulePersist,
     { deep: true },
@@ -137,6 +141,7 @@ export const useSettingsStore = defineStore('settings', () => {
     autoNextEnabled.value = loaded.autoNextEnabled
     showAnswerMode.value = loaded.showAnswerMode
     fontSize.value = clampFontSize(loaded.fontSize)
+    bankTagMatchMode.value = loaded.bankTagMatchMode
     Object.assign(deepseek, loaded.deepseek)
     applyTheme(theme.value)
     applyFontSize(fontSize.value)
@@ -182,6 +187,7 @@ export const useSettingsStore = defineStore('settings', () => {
     autoNextEnabled.value = DEFAULT_SETTINGS.autoNextEnabled
     showAnswerMode.value = DEFAULT_SETTINGS.showAnswerMode
     enabledTypes.value = [...DEFAULT_SETTINGS.enabledTypes]
+    bankTagMatchMode.value = DEFAULT_SETTINGS.bankTagMatchMode
   }
 
   return {
@@ -194,6 +200,7 @@ export const useSettingsStore = defineStore('settings', () => {
     autoNextEnabled,
     showAnswerMode,
     fontSize,
+    bankTagMatchMode,
     deepseek,
     themeLabel,
     resolvedTheme,

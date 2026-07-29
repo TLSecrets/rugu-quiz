@@ -1,7 +1,8 @@
 import { defineStore } from 'pinia'
 import { computed, ref } from 'vue'
 import { db } from '@/db'
-import { bankHasTag, normalizeBankTag, normalizeBankTags } from '@/lib/bankTags'
+import { bankMatchesTags, normalizeBankTag, normalizeBankTags } from '@/lib/bankTags'
+import type { BankTagMatchMode } from '@/lib/bankTags'
 import type { Bank, Question } from '@/types/question'
 
 export const useBanksStore = defineStore('banks', () => {
@@ -82,10 +83,10 @@ export const useBanksStore = defineStore('banks', () => {
     return questionsByBank.value[bankId] ?? []
   }
 
-  function banksMatchingTags(tags: string[]): Bank[] {
+  function banksMatchingTags(tags: string[], mode: BankTagMatchMode = 'or'): Bank[] {
     const need = normalizeBankTags(tags)
     if (!need.length) return banks.value
-    return banks.value.filter((b) => need.every((t) => bankHasTag(b.tags, t)))
+    return banks.value.filter((b) => bankMatchesTags(b.tags, need, mode))
   }
 
   async function putBankWithQuestions(bank: Bank, questions: Question[]) {

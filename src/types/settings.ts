@@ -1,9 +1,12 @@
 import type { QuestionType } from './question'
+import type { BankTagMatchMode } from '@/lib/bankTags'
 
 export type ThemeMode = 'light' | 'dark' | 'system'
 
 /** 提交后是否立即揭示解析 */
 export type ShowAnswerMode = 'instant' | 'manual'
+
+export type { BankTagMatchMode }
 
 export interface AppSettings {
   theme: ThemeMode
@@ -20,6 +23,8 @@ export interface AppSettings {
   showAnswerMode: ShowAnswerMode
   /** 全局阅读字号（px）。Phase E 起 UI 可调 */
   fontSize: number
+  /** 多标签筛选题库：或 / 与；默认或 */
+  bankTagMatchMode: BankTagMatchMode
   deepseek: {
     apiKey: string
     baseUrl: string
@@ -36,6 +41,7 @@ export const DEFAULT_SETTINGS: AppSettings = {
   autoNextEnabled: false,
   showAnswerMode: 'instant',
   fontSize: 16,
+  bankTagMatchMode: 'or',
   deepseek: {
     apiKey: '',
     baseUrl: 'https://api.deepseek.com',

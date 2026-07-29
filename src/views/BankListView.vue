@@ -8,13 +8,15 @@ import MediaBlock from '@/components/question/MediaBlock.vue'
 import RichText from '@/components/common/RichText.vue'
 import BankTagsField from '@/components/bank/BankTagsField.vue'
 import BankTagManager from '@/components/bank/BankTagManager.vue'
-import { bankHasTag, normalizeBankTags } from '@/lib/bankTags'
+import { bankMatchesTags, bankTagMatchModeLabel, normalizeBankTags } from '@/lib/bankTags'
 import { useBanksStore } from '@/stores/banks'
 import { useQuizStore } from '@/stores/quiz'
+import { useSettingsStore } from '@/stores/settings'
 import { QUESTION_TYPE_LABELS, type Bank, type Question } from '@/types/question'
 
 const banks = useBanksStore()
 const quiz = useQuizStore()
+const settings = useSettingsStore()
 
 const previewBankId = ref<string | null>(null)
 const filterTags = ref<string[]>([])
@@ -42,9 +44,11 @@ watch(
 const visibleBanks = computed(() => {
   if (!filterTags.value.length) return banks.banks
   return banks.banks.filter((b) =>
-    filterTags.value.every((t) => bankHasTag(b.tags, t)),
+    bankMatchesTags(b.tags, filterTags.value, settings.bankTagMatchMode),
   )
 })
+
+const tagMatchHint = computed(() => bankTagMatchModeLabel(settings.bankTagMatchMode))
 
 function sourceLabel(source: string) {
   if (source === 'builtin') return '内置'
@@ -132,6 +136,7 @@ async function saveEdit() {
       <template v-else>
       <div v-if="banks.allBankTags.length" class="filter">
         <p class="filter__label">按标签筛选题库</p>
+        <p class="filter__hint">{{ tagMatchHint }} · 可在设置中切换</p>
         <div class="chips">
           <button
             v-for="tag in banks.allBankTags"
@@ -262,6 +267,12 @@ async function saveEdit() {
   font-size: var(--font-size-xs);
   font-weight: 600;
   color: var(--color-text-muted);
+}
+
+.filter__hint {
+  margin: 0;
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
 }
 
 .chips {

@@ -7,7 +7,7 @@ import {
 } from '@/types/question'
 import type { PracticeOrder } from '@/stores/quiz'
 import type { ShowAnswerMode } from '@/types/settings'
-import { bankHasTag } from '@/lib/bankTags'
+import { bankMatchesTags, bankTagMatchModeLabel } from '@/lib/bankTags'
 import { useBanksStore } from '@/stores/banks'
 import { useQuizStore } from '@/stores/quiz'
 import { useSettingsStore } from '@/stores/settings'
@@ -52,8 +52,12 @@ watch(
 
 const filteredBankList = computed(() => {
   if (!tagFilter.value.length) return banks.banks
-  return banks.banks.filter((b) => tagFilter.value.every((t) => bankHasTag(b.tags, t)))
+  return banks.banks.filter((b) =>
+    bankMatchesTags(b.tags, tagFilter.value, settings.bankTagMatchMode),
+  )
 })
+
+const tagMatchHint = computed(() => bankTagMatchModeLabel(settings.bankTagMatchMode))
 
 const allBanksChecked = computed(
   () =>
@@ -169,7 +173,7 @@ function onStart() {
         </button>
       </div>
       <div v-if="banks.allBankTags.length" class="tag-filter">
-        <p class="hint">按标签缩小题库列表，再用「全选当前列表」一键勾选</p>
+        <p class="hint">按标签缩小题库列表（{{ tagMatchHint }}），再用「全选当前列表」一键勾选</p>
         <div class="chips">
           <button
             v-for="tag in banks.allBankTags"

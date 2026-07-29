@@ -16,6 +16,7 @@ export const primaryNav: NavItem[] = [
   { key: 'favorites', label: '收藏', to: '/favorites', mobile: true },
   { key: 'notes', label: '笔记', to: '/notes', mobile: false },
   { key: 'import-export', label: '导入导出', to: '/import-export', mobile: false },
+  { key: 'guide', label: '手册', to: '/guide', mobile: false },
   { key: 'settings', label: '设置', to: '/settings', mobile: false },
 ]
 

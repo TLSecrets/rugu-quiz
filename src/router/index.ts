@@ -64,6 +64,12 @@ const router = createRouter({
       meta: { title: '导入导出', nav: 'import-export' },
     },
     {
+      path: '/guide',
+      name: 'guide',
+      component: () => import('@/views/GuideView.vue'),
+      meta: { title: '使用手册', nav: 'guide' },
+    },
+    {
       path: '/settings',
       name: 'settings',
       component: () => import('@/views/SettingsView.vue'),

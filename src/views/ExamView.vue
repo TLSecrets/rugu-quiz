@@ -5,11 +5,12 @@ import PageHeader from '@/components/common/PageHeader.vue'
 import QuestionCard from '@/components/question/QuestionCard.vue'
 import QuestionNavigator from '@/components/practice/QuestionNavigator.vue'
 import { emptyAnswer } from '@/lib/grade'
-import { bankHasTag } from '@/lib/bankTags'
+import { bankMatchesTags, bankTagMatchModeLabel } from '@/lib/bankTags'
 import { exportQuestionsPdf } from '@/lib/exportPdf'
 import { prepareOptions } from '@/lib/shuffle'
 import { useBanksStore } from '@/stores/banks'
 import { useExamStore } from '@/stores/exam'
+import { useSettingsStore } from '@/stores/settings'
 import { type QuestionSession } from '@/stores/quiz'
 import {
   ALL_QUESTION_TYPES,
@@ -21,6 +22,7 @@ import {
 const router = useRouter()
 const banks = useBanksStore()
 const exam = useExamStore()
+const settings = useSettingsStore()
 
 const pdfBusy = ref(false)
 const pdfMsg = ref<string | null>(null)
@@ -55,8 +57,12 @@ watch(
 
 const filteredBankList = computed(() => {
   if (!tagFilter.value.length) return banks.banks
-  return banks.banks.filter((b) => tagFilter.value.every((t) => bankHasTag(b.tags, t)))
+  return banks.banks.filter((b) =>
+    bankMatchesTags(b.tags, tagFilter.value, settings.bankTagMatchMode),
+  )
 })
+
+const tagMatchHint = computed(() => bankTagMatchModeLabel(settings.bankTagMatchMode))
 
 const allBanksChecked = computed(
   () =>
@@ -210,6 +216,9 @@ const scoreLabel = computed(() => {
             </button>
           </div>
           <div v-if="banks.allBankTags.length" class="chips">
+            <p class="hint" style="width: 100%; margin: 0 0 0.25rem">
+              标签筛选：{{ tagMatchHint }}
+            </p>
             <button
               v-for="tag in banks.allBankTags"
               :key="tag"

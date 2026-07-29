@@ -22,6 +22,10 @@ export async function loadSettingsFromDb(): Promise<AppSettings> {
     autoNextEnabled: row.autoNextEnabled ?? DEFAULT_SETTINGS.autoNextEnabled,
     showAnswerMode: row.showAnswerMode ?? DEFAULT_SETTINGS.showAnswerMode,
     fontSize: row.fontSize ?? DEFAULT_SETTINGS.fontSize,
+    bankTagMatchMode:
+      row.bankTagMatchMode === 'and' || row.bankTagMatchMode === 'or'
+        ? row.bankTagMatchMode
+        : DEFAULT_SETTINGS.bankTagMatchMode,
     deepseek: { ...DEFAULT_SETTINGS.deepseek, ...row.deepseek },
   }
 }

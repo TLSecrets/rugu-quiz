@@ -148,6 +148,35 @@ async function onClearAll() {
     </section>
 
     <section class="card">
+      <h3 class="card__title">题库标签筛选</h3>
+      <p class="card__desc">
+        题库列表、练习、考试等多选标签时的匹配方式。默认「或」：选中任一标签即可；「与」则须同时包含全部所选标签。
+      </p>
+      <div class="segment" role="radiogroup" aria-label="标签匹配方式">
+        <button
+          type="button"
+          class="segment__btn"
+          :class="{ 'segment__btn--active': settings.bankTagMatchMode === 'or' }"
+          role="radio"
+          :aria-checked="settings.bankTagMatchMode === 'or'"
+          @click="settings.bankTagMatchMode = 'or'"
+        >
+          或运算
+        </button>
+        <button
+          type="button"
+          class="segment__btn"
+          :class="{ 'segment__btn--active': settings.bankTagMatchMode === 'and' }"
+          role="radio"
+          :aria-checked="settings.bankTagMatchMode === 'and'"
+          @click="settings.bankTagMatchMode = 'and'"
+        >
+          与运算
+        </button>
+      </div>
+    </section>
+
+    <section class="card">
       <h3 class="card__title">练习</h3>
       <label class="toggle">
         <input v-model="settings.shuffleOptions" type="checkbox" />
@@ -261,7 +290,10 @@ async function onClearAll() {
       </p>
       <ul class="about-list">
         <li>版本阶段：Phase A–E（错题本、练习配置、模拟考试、导入增强、设置打磨）</li>
-        <li>开源仓库可在 GitHub 查看 Actions 部署记录</li>
+        <li>
+          <RouterLink class="ext" to="/guide">使用手册</RouterLink>
+          · 开源仓库可在 GitHub 查看 Actions 部署记录
+        </li>
       </ul>
     </section>
   </PageHeader>
