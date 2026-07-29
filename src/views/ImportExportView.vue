@@ -12,8 +12,9 @@ import { parseImportFile, type ParseResult } from '@/lib/parsers'
 import { createId } from '@/lib/parsers/types'
 import PdfExportPanel from '@/components/bank/PdfExportPanel.vue'
 import AiImportPanel from '@/components/bank/AiImportPanel.vue'
+import ImportPreviewEditor from '@/components/bank/ImportPreviewEditor.vue'
 import { useBanksStore } from '@/stores/banks'
-import { QUESTION_TYPE_LABELS, type Bank } from '@/types/question'
+import type { Bank, Question } from '@/types/question'
 
 const banks = useBanksStore()
 
@@ -31,6 +32,7 @@ const templates = [
 const parsing = ref(false)
 const importing = ref(false)
 const parseResult = ref<ParseResult | null>(null)
+const editableQuestions = ref<Question[]>([])
 const fileName = ref('')
 const bankName = ref('')
 const mode = ref<'create' | 'replace'>('create')
@@ -39,7 +41,6 @@ const message = ref<string | null>(null)
 const error = ref<string | null>(null)
 
 const exportBankId = ref('')
-const previewQuestions = computed(() => parseResult.value?.questions.slice(0, 5) ?? [])
 
 const pdfBankId = computed(() => exportBankId.value || banks.banks[0]?.id || '')
 const pdfBank = computed(() => (pdfBankId.value ? banks.getBank(pdfBankId.value) : undefined))
@@ -53,6 +54,7 @@ async function onFileChange(ev: Event) {
   message.value = null
   error.value = null
   parseResult.value = null
+  editableQuestions.value = []
   if (!file) return
 
   parsing.value = true
@@ -60,6 +62,7 @@ async function onFileChange(ev: Event) {
   try {
     const result = await parseImportFile(file)
     parseResult.value = result
+    editableQuestions.value = result.questions.map((q) => ({ ...q }))
     bankName.value = result.bankName
     if (!result.questions.length && result.issues.length) {
       error.value = '未能解析出有效题目，请查看下方问题列表。'
@@ -72,8 +75,20 @@ async function onFileChange(ev: Event) {
   }
 }
 
+function onPreviewUpdate(list: Question[]) {
+  editableQuestions.value = list
+  if (parseResult.value) {
+    parseResult.value = { ...parseResult.value, questions: list }
+  }
+}
+
+function onPreviewRemove(index: number) {
+  const list = editableQuestions.value.filter((_, i) => i !== index)
+  onPreviewUpdate(list)
+}
+
 async function confirmImport() {
-  if (!parseResult.value?.questions.length) return
+  if (!editableQuestions.value.length) return
   importing.value = true
   error.value = null
   message.value = null
@@ -87,31 +102,37 @@ async function confirmImport() {
       bank = {
         ...existing,
         name: bankName.value.trim() || existing.name,
-        description: parseResult.value.description || existing.description,
+        description: parseResult.value?.description || existing.description,
         source: 'import',
         updatedAt: now,
-        questionCount: parseResult.value.questions.length,
+        questionCount: editableQuestions.value.length,
       }
     } else {
       bank = {
         id: createId('bank'),
-        name: bankName.value.trim() || parseResult.value.bankName || '导入题库',
-        description: parseResult.value.description,
+        name: bankName.value.trim() || parseResult.value?.bankName || '导入题库',
+        description: parseResult.value?.description,
         source: 'import',
-        questionCount: parseResult.value.questions.length,
+        questionCount: editableQuestions.value.length,
         createdAt: now,
         updatedAt: now,
       }
     }
 
-    const questions = parseResult.value.questions.map((q) => ({
+    const questions = editableQuestions.value.map((q) => ({
       ...q,
       bankId: bank.id,
+      sourceMeta: {
+        ...q.sourceMeta,
+        uncertain: false,
+        inferredType: false,
+      },
     }))
 
     await banks.putBankWithQuestions(bank, questions)
     message.value = `已导入「${bank.name}」，共 ${questions.length} 题。`
     parseResult.value = null
+    editableQuestions.value = []
     fileName.value = ''
   } catch (e) {
     error.value = e instanceof Error ? e.message : '导入失败'
@@ -161,7 +182,9 @@ function onAiImported(name: string, count: number) {
 
     <section class="block card">
       <h3 class="block__title">导入题库</h3>
-      <p class="hint">选择 .xlsx / .xls / .csv / .json / .docx 文件，预览确认后写入本机。</p>
+      <p class="hint">
+        选择 .xlsx / .xls / .csv / .json / .docx；题型可空（自动推断）；选项支持 A–H。解析后可逐题修改再入库。
+      </p>
       <label class="file">
         <span class="btn">选择文件</span>
         <input
@@ -214,30 +237,17 @@ function onAiImported(name: string, count: number) {
         </select>
       </label>
 
-      <p class="status">
-        解析到 {{ parseResult.questions.length }} 题
-        <template v-if="parseResult.issues.length">
-          ，{{ parseResult.issues.length }} 条提示
-        </template>
-      </p>
-
-      <ul v-if="parseResult.issues.length" class="issues">
-        <li v-for="(issue, i) in parseResult.issues.slice(0, 12)" :key="i">
-          <template v-if="issue.row">第 {{ issue.row }} 行：</template>{{ issue.message }}
-        </li>
-      </ul>
-
-      <ul v-if="previewQuestions.length" class="preview">
-        <li v-for="q in previewQuestions" :key="q.id">
-          <span class="preview__type">{{ QUESTION_TYPE_LABELS[q.type] }}</span>
-          {{ q.stem }}
-        </li>
-      </ul>
+      <ImportPreviewEditor
+        :questions="editableQuestions"
+        :issues="parseResult.issues"
+        @update:questions="onPreviewUpdate"
+        @remove="onPreviewRemove"
+      />
 
       <button
         type="button"
         class="btn btn--primary"
-        :disabled="!parseResult.questions.length || importing || (mode === 'replace' && !replaceBankId)"
+        :disabled="!editableQuestions.length || importing || (mode === 'replace' && !replaceBankId)"
         @click="confirmImport"
       >
         {{ importing ? '导入中…' : '确认导入' }}

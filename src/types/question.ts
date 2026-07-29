@@ -42,8 +42,29 @@ export interface Question {
   media: QuestionMedia[]
   options?: QuestionOption[]
   answer: QuestionAnswer
+  /** 领域分类，用于筛选与组卷；与 tags 并存 */
+  domain?: string
   tags?: string[]
-  sourceMeta?: { fileName?: string; sheet?: string; row?: number }
+  sourceMeta?: {
+    fileName?: string
+    sheet?: string
+    row?: number
+    /** 题型由规则自动推断 */
+    inferredType?: boolean
+    /** 解析存疑，预览中高亮 */
+    uncertain?: boolean
+  }
+}
+
+/** 持久错题记录（答错/半对写入；手动移除后再次答错会重新激活） */
+export interface WrongRecord {
+  /** 主键：题目 id */
+  questionId: string
+  bankId: string
+  wrongCount: number
+  lastWrongAt: number
+  /** 用户手动移出错题本 */
+  removed: boolean
 }
 
 export type BankSource = 'builtin' | 'import' | 'generated'

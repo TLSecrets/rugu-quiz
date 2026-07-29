@@ -6,15 +6,24 @@ import type { QuestionSession } from '@/stores/quiz'
 import { QUESTION_TYPE_LABELS, type Question } from '@/types/question'
 import type { GradeVerdict } from '@/lib/grade'
 
-const props = defineProps<{
-  question: Question
-  session: QuestionSession
-  progressText: string
-  canPrev: boolean
-  canNext: boolean
-  favorited: boolean
-  noteContent: string
-}>()
+const props = withDefaults(
+  defineProps<{
+    question: Question
+    session: QuestionSession
+    progressText: string
+    canPrev: boolean
+    canNext: boolean
+    favorited: boolean
+    noteContent: string
+    /** 是否展示正确答案与解析（手动模式可能为 false） */
+    showAnswerDetail: boolean
+    /** 考试模式：可改答、无单题提交与解析区 */
+    variant?: 'practice' | 'exam'
+    /** 考试模式下显示分值 */
+    scoreLabel?: string
+  }>(),
+  { variant: 'practice' },
+)
 
 const emit = defineEmits<{
   selectSingle: [key: string]
@@ -26,6 +35,8 @@ const emit = defineEmits<{
   next: []
   toggleFavorite: []
   saveNote: [content: string]
+  revealAnswer: []
+  finishExam: []
 }>()
 
 const noteDraft = ref(props.noteContent)
@@ -68,7 +79,9 @@ const isChoice = computed(
 const isMultiple = computed(() => props.question.type === 'multiple')
 const isBlank = computed(() => props.question.type === 'blank')
 const isShort = computed(() => props.question.type === 'short')
-const submitted = computed(() => props.session.submitted)
+const isExam = computed(() => props.variant === 'exam')
+const submitted = computed(() => (isExam.value ? false : props.session.submitted))
+const locked = computed(() => props.session.submitted && !isExam.value)
 
 const effectiveVerdict = computed<GradeVerdict | null>(() => {
   if (props.session.selfVerdict) return props.session.selfVerdict
@@ -95,19 +108,20 @@ function isCorrectKey(key: string) {
 function optionClass(key: string) {
   const selected = isSelected(key)
   if (!submitted.value) return selected ? 'opt--selected' : ''
+  if (!props.showAnswerDetail) return selected ? 'opt--selected' : ''
   if (isCorrectKey(key)) return 'opt--correct'
   if (selected) return 'opt--wrong'
   return ''
 }
 
 function onOptionClick(key: string) {
-  if (submitted.value) return
+  if (locked.value) return
   if (isMultiple.value) emit('toggleMultiple', key)
   else emit('selectSingle', key)
 }
 
 const canSubmit = computed(() => {
-  if (submitted.value) return false
+  if (isExam.value || props.session.submitted) return false
   if (isChoice.value) return props.session.answer.optionKeys.length > 0
   if (isBlank.value || isShort.value) {
     return props.session.answer.texts.some((t) => t.trim().length > 0)
@@ -130,9 +144,13 @@ const answerKeysText = computed(() => {
 <template>
   <article class="card">
     <header class="card__meta">
-      <span class="card__type">{{ QUESTION_TYPE_LABELS[question.type] }}</span>
+      <span class="card__type">
+        {{ QUESTION_TYPE_LABELS[question.type] }}
+        <template v-if="scoreLabel"> · {{ scoreLabel }}</template>
+      </span>
       <div class="card__meta-right">
         <button
+          v-if="!isExam"
           type="button"
           class="fav"
           :class="{ 'fav--on': favorited }"
@@ -155,7 +173,7 @@ const answerKeysText = computed(() => {
           type="button"
           class="opt"
           :class="optionClass(opt.key)"
-          :disabled="submitted"
+          :disabled="locked"
           :aria-pressed="isSelected(opt.key)"
           @click="onOptionClick(opt.key)"
         >
@@ -174,7 +192,7 @@ const answerKeysText = computed(() => {
         <input
           :value="session.answer.texts[i]"
           type="text"
-          :disabled="submitted"
+          :disabled="locked"
           autocomplete="off"
           @input="emit('setText', i, ($event.target as HTMLInputElement).value)"
         />
@@ -187,7 +205,7 @@ const answerKeysText = computed(() => {
         <textarea
           :value="session.answer.texts[0] ?? ''"
           rows="5"
-          :disabled="submitted"
+          :disabled="locked"
           @input="emit('setText', 0, ($event.target as HTMLTextAreaElement).value)"
         />
       </label>
@@ -195,35 +213,52 @@ const answerKeysText = computed(() => {
 
     <MediaBlock :items="question.media" placement="after-options" />
 
-    <section v-if="submitted" class="result" :data-verdict="effectiveVerdict || 'ungraded'">
-      <p class="result__badge">{{ verdictLabel }}</p>
-      <p v-if="session.result?.message" class="result__msg">{{ session.result.message }}</p>
+    <section
+      v-if="!isExam && submitted"
+      class="result"
+      :data-verdict="effectiveVerdict || 'ungraded'"
+    >
+      <p class="result__badge">{{ verdictLabel || '已提交' }}</p>
+      <p v-if="session.result?.message && showAnswerDetail" class="result__msg">
+        {{ session.result.message }}
+      </p>
 
-      <div v-if="isChoice && answerKeysText" class="result__block">
-        <p class="result__label">正确答案</p>
-        <p>{{ answerKeysText }}</p>
-      </div>
+      <button
+        v-if="!showAnswerDetail"
+        type="button"
+        class="btn btn--reveal"
+        @click="emit('revealAnswer')"
+      >
+        查看答案
+      </button>
 
-      <div v-if="(isBlank || isShort) && question.answer.texts?.length" class="result__block">
-        <p class="result__label">参考答案</p>
-        <ul class="result__texts">
-          <li v-for="(t, i) in question.answer.texts" :key="i">
-            <RichText :source="t" />
-          </li>
-        </ul>
-      </div>
+      <template v-if="showAnswerDetail">
+        <div v-if="isChoice && answerKeysText" class="result__block">
+          <p class="result__label">正确答案</p>
+          <p>{{ answerKeysText }}</p>
+        </div>
 
-      <div v-if="question.answer.explanation" class="result__block">
-        <p class="result__label">解析</p>
-        <RichText :source="question.answer.explanation" />
-      </div>
+        <div v-if="(isBlank || isShort) && question.answer.texts?.length" class="result__block">
+          <p class="result__label">参考答案</p>
+          <ul class="result__texts">
+            <li v-for="(t, i) in question.answer.texts" :key="i">
+              <RichText :source="t" />
+            </li>
+          </ul>
+        </div>
 
-      <MediaBlock
-        v-if="question.answer.media?.length"
-        :items="question.answer.media"
-        placement="in-answer"
-        caption="答案配图"
-      />
+        <div v-if="question.answer.explanation" class="result__block">
+          <p class="result__label">解析</p>
+          <RichText :source="question.answer.explanation" />
+        </div>
+
+        <MediaBlock
+          v-if="question.answer.media?.length"
+          :items="question.answer.media"
+          placement="in-answer"
+          caption="答案配图"
+        />
+      </template>
 
       <div v-if="isShort" class="self">
         <p class="result__label">自评</p>
@@ -256,7 +291,7 @@ const answerKeysText = computed(() => {
       </div>
     </section>
 
-    <section class="note">
+    <section v-if="!isExam" class="note">
       <div class="note__head">
         <p class="note__title">笔记</p>
         <span v-if="noteSavedHint" class="note__saved">已保存</span>
@@ -271,24 +306,36 @@ const answerKeysText = computed(() => {
 
     <footer class="card__foot">
       <button type="button" class="btn" :disabled="!canPrev" @click="emit('prev')">上一题</button>
-      <button
-        v-if="!submitted"
-        type="button"
-        class="btn btn--primary"
-        :disabled="!canSubmit"
-        @click="emit('submit')"
-      >
-        提交
-      </button>
-      <button
-        v-else
-        type="button"
-        class="btn btn--primary"
-        :disabled="!canNext"
-        @click="emit('next')"
-      >
-        {{ canNext ? '下一题' : '已是最后一题' }}
-      </button>
+      <template v-if="isExam">
+        <button
+          type="button"
+          class="btn btn--primary"
+          :disabled="!canNext"
+          @click="emit('next')"
+        >
+          {{ canNext ? '下一题' : '已是最后一题' }}
+        </button>
+      </template>
+      <template v-else>
+        <button
+          v-if="!session.submitted"
+          type="button"
+          class="btn btn--primary"
+          :disabled="!canSubmit"
+          @click="emit('submit')"
+        >
+          提交
+        </button>
+        <button
+          v-else
+          type="button"
+          class="btn btn--primary"
+          :disabled="!canNext"
+          @click="emit('next')"
+        >
+          {{ canNext ? '下一题' : '已是最后一题' }}
+        </button>
+      </template>
     </footer>
   </article>
 </template>
@@ -567,5 +614,12 @@ const answerKeysText = computed(() => {
   background: var(--color-accent);
   color: var(--color-accent-text);
   border-color: transparent;
+}
+
+.btn--reveal {
+  align-self: flex-start;
+  background: var(--color-accent-soft);
+  color: var(--color-accent);
+  border-color: color-mix(in srgb, var(--color-accent) 35%, var(--color-border));
 }
 </style>

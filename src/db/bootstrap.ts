@@ -18,6 +18,10 @@ export async function loadSettingsFromDb(): Promise<AppSettings> {
     shuffleOptions: row.shuffleOptions ?? DEFAULT_SETTINGS.shuffleOptions,
     enabledTypes: row.enabledTypes ?? [],
     blankLooseMatch: row.blankLooseMatch ?? DEFAULT_SETTINGS.blankLooseMatch,
+    autoNextDelay: row.autoNextDelay ?? DEFAULT_SETTINGS.autoNextDelay,
+    autoNextEnabled: row.autoNextEnabled ?? DEFAULT_SETTINGS.autoNextEnabled,
+    showAnswerMode: row.showAnswerMode ?? DEFAULT_SETTINGS.showAnswerMode,
+    fontSize: row.fontSize ?? DEFAULT_SETTINGS.fontSize,
     deepseek: { ...DEFAULT_SETTINGS.deepseek, ...row.deepseek },
   }
 }
@@ -116,14 +120,23 @@ export async function bootstrapDatabase(): Promise<void> {
   await syncGeneratedBanks()
 }
 
-/** 清空题库 / 收藏 / 笔记与练习进度（保留设置与 API Key） */
+/** 清空题库 / 收藏 / 笔记 / 错题与练习进度（保留设置与 API Key） */
 export async function clearLearningData(): Promise<void> {
-  await db.transaction('rw', db.banks, db.questions, db.favorites, db.notes, async () => {
-    await db.favorites.clear()
-    await db.notes.clear()
-    await db.questions.clear()
-    await db.banks.clear()
-  })
+  await db.transaction(
+    'rw',
+    db.banks,
+    db.questions,
+    db.favorites,
+    db.notes,
+    db.wrongRecords,
+    async () => {
+      await db.favorites.clear()
+      await db.notes.clear()
+      await db.wrongRecords.clear()
+      await db.questions.clear()
+      await db.banks.clear()
+    },
+  )
   localStorage.removeItem('rugu-practice-progress')
   localStorage.removeItem('rugu-practice-results')
   await ensureSampleBank()

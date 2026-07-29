@@ -8,11 +8,13 @@ import { useBanksStore } from '@/stores/banks'
 import { useFavoritesStore } from '@/stores/favorites'
 import { useNotesStore } from '@/stores/notes'
 import { useSettingsStore } from '@/stores/settings'
+import { useWrongsStore } from '@/stores/wrongs'
 
 const settings = useSettingsStore()
 const banks = useBanksStore()
 const favorites = useFavoritesStore()
 const notes = useNotesStore()
+const wrongs = useWrongsStore()
 
 const booting = ref(true)
 const bootError = ref<string | null>(null)
@@ -22,7 +24,13 @@ async function boot() {
   bootError.value = null
   try {
     await bootstrapDatabase()
-    await Promise.all([settings.init(), banks.refresh(), favorites.refresh(), notes.refresh()])
+    await Promise.all([
+      settings.init(),
+      banks.refresh(),
+      favorites.refresh(),
+      notes.refresh(),
+      wrongs.refresh(),
+    ])
   } catch (e) {
     bootError.value = e instanceof Error ? e.message : '初始化失败'
   } finally {

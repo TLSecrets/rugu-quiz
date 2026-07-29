@@ -3,10 +3,12 @@ import PageHeader from '@/components/common/PageHeader.vue'
 import { useBanksStore } from '@/stores/banks'
 import { useFavoritesStore } from '@/stores/favorites'
 import { useNotesStore } from '@/stores/notes'
+import { useWrongsStore } from '@/stores/wrongs'
 
 const banks = useBanksStore()
 const favorites = useFavoritesStore()
 const notes = useNotesStore()
+const wrongs = useWrongsStore()
 </script>
 
 <template>
@@ -20,16 +22,19 @@ const notes = useNotesStore()
         <h3 class="hero__lead">如故题库</h3>
         <p class="hero__text">
           当前共 {{ banks.banks.length }} 套题库、{{ banks.totalQuestions }} 道题；收藏
-          {{ favorites.items.length }} · 笔记 {{ notes.items.length }}。
+          {{ favorites.items.length }} · 笔记 {{ notes.items.length }} · 错题
+          {{ wrongs.activeItems.length }}。
         </p>
         <div class="hero__actions">
           <RouterLink class="btn btn--primary" to="/banks">查看题库</RouterLink>
           <RouterLink class="btn btn--ghost" to="/practice">继续练习</RouterLink>
+          <RouterLink class="btn btn--ghost" to="/wrong">错题本</RouterLink>
+          <RouterLink class="btn btn--ghost" to="/exam">模拟考试</RouterLink>
         </div>
       </div>
       <ul class="hero__list">
         <li>仓库 <code>banks/</code> 构建收录 + 浏览器导入 / AI 辅助</li>
-        <li>搜索 · 收藏 · 笔记 · 公式 · PDF 导出</li>
+        <li>搜索 · 收藏 · 笔记 · 错题本 · 不限时模拟考试 · 公式 · PDF</li>
         <li>选项乱序 · 深色模式 · 移动端适配</li>
         <li>不做账号登录、考试计时、Docker</li>
       </ul>

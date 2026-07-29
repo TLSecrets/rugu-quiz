@@ -5,6 +5,26 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <meta name="description" content="如故题库 — 专业刷题，本地可用" />
+    <script>
+      ;(function () {
+        try {
+          var mode = localStorage.getItem('rugu-theme') || 'dark'
+          var resolved = 'dark'
+          if (mode === 'light' || mode === 'dark') {
+            resolved = mode
+          } else {
+            resolved = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+          }
+          document.documentElement.setAttribute('data-theme', resolved)
+          document.documentElement.dataset.themeSource = mode
+          document.documentElement.style.colorScheme = resolved
+          var fs = Number(localStorage.getItem('rugu-font-size') || 16)
+          if (fs >= 14 && fs <= 22) {
+            document.documentElement.style.fontSize = fs + 'px'
+          }
+        } catch (e) {}
+      })()
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link

@@ -3,6 +3,8 @@ import type { Question, QuestionType } from '@/types/question'
 export interface ParseIssue {
   row?: number
   message: string
+  /** info=提示，warn=建议核对，error=该行可能无效 */
+  level?: 'info' | 'warn' | 'error'
 }
 
 export interface ParseResult {
@@ -22,10 +24,13 @@ export interface RawRow {
   选项D?: string
   选项E?: string
   选项F?: string
+  选项G?: string
+  选项H?: string
   答案?: string
   解析?: string
   图片?: string
   标签?: string
+  领域?: string
   [key: string]: string | number | undefined
 }
 

@@ -26,7 +26,7 @@ function practiceAll() {
 }
 
 function practiceOne(bankId: string, questionId: string) {
-  quiz.openQuestion(bankId, questionId, true)
+  quiz.openQuestion(bankId, questionId, 'favorites')
   void router.push({
     name: 'practice',
     query: { scope: 'favorites', questionId },

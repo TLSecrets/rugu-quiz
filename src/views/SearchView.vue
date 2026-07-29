@@ -14,6 +14,7 @@ const quiz = useQuizStore()
 
 const input = ref('')
 const keyword = ref('')
+const domainFilter = ref('')
 let timer: ReturnType<typeof setTimeout> | null = null
 
 watch(input, (value) => {
@@ -31,11 +32,14 @@ const allQuestions = computed(() =>
   banks.banks.flatMap((b) => banks.getQuestions(b.id)),
 )
 
+const domains = computed(() => quiz.allDomains)
+
 const hits = computed(() =>
   searchQuestions(
     allQuestions.value,
     (bankId) => banks.getBank(bankId)?.name ?? '未知题库',
     keyword.value,
+    { domain: domainFilter.value || undefined },
   ),
 )
 
@@ -46,7 +50,7 @@ function openHit(bankId: string, questionId: string) {
 </script>
 
 <template>
-  <PageHeader title="搜索" subtitle="检索本机已加载题库的题干、选项、解析与标签。">
+  <PageHeader title="搜索" subtitle="检索本机已加载题库的题干、选项、解析、标签与领域。">
     <div class="search">
       <label class="search__label" for="q">关键词</label>
       <input
@@ -57,20 +61,34 @@ function openHit(bankId: string, questionId: string) {
         placeholder="输入关键字…"
         autocomplete="off"
       />
-      <p v-if="keyword" class="search__meta">
-        「{{ keyword }}」· {{ hits.length }} 条结果
+
+      <label v-if="domains.length" class="search__label" for="domain">领域</label>
+      <select
+        v-if="domains.length"
+        id="domain"
+        v-model="domainFilter"
+        class="search__select"
+      >
+        <option value="">全部领域</option>
+        <option v-for="d in domains" :key="d" :value="d">{{ d }}</option>
+      </select>
+
+      <p v-if="keyword || domainFilter" class="search__meta">
+        <template v-if="keyword">「{{ keyword }}」</template>
+        <template v-if="domainFilter"> · 领域 {{ domainFilter }}</template>
+        · {{ hits.length }} 条结果
       </p>
     </div>
 
     <EmptyState
-      v-if="!keyword"
-      title="输入关键字开始搜索"
-      description="支持题干、选项、解析、标签。点击结果可跳转练习并定位到该题。"
+      v-if="!keyword && !domainFilter"
+      title="输入关键字或选择领域"
+      description="支持题干、选项、解析、标签、领域。点击结果可跳转练习并定位到该题。"
     />
     <EmptyState
       v-else-if="!hits.length"
       title="没有匹配题目"
-      description="试试更短的关键词，或先导入更多题库。"
+      description="试试更短的关键词，或调整领域筛选。"
     />
 
     <ul v-else class="results">
@@ -79,6 +97,7 @@ function openHit(bankId: string, questionId: string) {
           <div class="hit__top">
             <span class="hit__type">{{ QUESTION_TYPE_LABELS[hit.question.type] }}</span>
             <span class="hit__bank">{{ hit.bankName }}</span>
+            <span v-if="hit.question.domain" class="hit__domain">{{ hit.question.domain }}</span>
             <span class="hit__field">{{ fieldLabel(hit.field) }}</span>
           </div>
           <p class="hit__stem">
@@ -87,7 +106,7 @@ function openHit(bankId: string, questionId: string) {
               <template v-else>{{ part.text }}</template>
             </template>
           </p>
-          <p v-if="hit.field !== 'stem'" class="hit__snippet">
+          <p v-if="hit.field !== 'stem' && keyword" class="hit__snippet">
             <template v-for="(part, i) in splitHighlight(hit.snippet, keyword)" :key="i">
               <mark v-if="part.hit">{{ part.text }}</mark>
               <template v-else>{{ part.text }}</template>
@@ -104,24 +123,28 @@ function openHit(bankId: string, questionId: string) {
   display: flex;
   flex-direction: column;
   gap: var(--space-2);
+  margin-bottom: var(--space-5);
 }
 
 .search__label {
-  font-size: var(--font-size-sm);
-  color: var(--color-text-secondary);
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  color: var(--color-text-muted);
 }
 
-.search__input {
+.search__input,
+.search__select {
   min-height: var(--touch-min);
   padding: 0 var(--space-4);
   border-radius: var(--radius-md);
   border: 1px solid var(--color-border);
   background: var(--color-surface);
   color: var(--color-text);
+  font-size: var(--font-size-md);
 }
 
 .search__meta {
-  font-size: var(--font-size-xs);
+  font-size: var(--font-size-sm);
   color: var(--color-text-muted);
 }
 
@@ -133,20 +156,21 @@ function openHit(bankId: string, questionId: string) {
   gap: var(--space-3);
 }
 
-.hit__btn {
-  width: 100%;
-  text-align: left;
-  padding: var(--space-4) var(--space-5);
+.hit {
   border-radius: var(--radius-lg);
   border: 1px solid var(--color-border);
   background: var(--color-surface);
-  display: grid;
-  gap: var(--space-2);
-  min-height: var(--touch-min);
+  overflow: hidden;
+}
+
+.hit__btn {
+  width: 100%;
+  text-align: left;
+  padding: var(--space-4);
 }
 
 .hit__btn:hover {
-  border-color: var(--color-accent);
+  background: var(--color-surface-muted);
 }
 
 .hit__top {
@@ -155,27 +179,31 @@ function openHit(bankId: string, questionId: string) {
   gap: var(--space-2);
   font-size: var(--font-size-xs);
   color: var(--color-text-muted);
+  font-weight: 600;
 }
 
 .hit__type {
   color: var(--color-accent);
-  font-weight: 600;
+}
+
+.hit__domain {
+  color: var(--color-text-secondary);
 }
 
 .hit__stem {
+  margin-top: var(--space-2);
   font-size: var(--font-size-sm);
-  color: var(--color-text);
-  line-height: 1.5;
+  line-height: 1.55;
 }
 
 .hit__snippet {
+  margin-top: var(--space-1);
   font-size: var(--font-size-xs);
   color: var(--color-text-secondary);
-  line-height: 1.45;
 }
 
 mark {
-  background: color-mix(in srgb, var(--color-warning) 35%, transparent);
+  background: color-mix(in srgb, var(--color-accent) 28%, transparent);
   color: inherit;
   padding: 0 0.1em;
   border-radius: 2px;

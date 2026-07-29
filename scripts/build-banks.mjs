@@ -1,6 +1,6 @@
 /**
  * 扫描 banks/ → 生成 public/generated/manifest.json 与各题库 JSON
- * 约定字段与网页导入一致：题型/题干/选项A-F/答案/解析/图片/标签
+ * 约定字段与网页导入一致：题型/题干/选项A-H/答案/解析/图片/标签/领域
  */
 import fs from 'node:fs'
 import path from 'node:path'
@@ -31,8 +31,10 @@ const TYPE_ALIASES = {
   short: 'short',
 }
 
-const OPTION_KEYS = ['a', 'b', 'c', 'd', 'e', 'f']
-const OPTION_HEADERS = ['选项A', '选项B', '选项C', '选项D', '选项E', '选项F']
+const OPTION_KEYS = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']
+const OPTION_HEADERS = ['选项A', '选项B', '选项C', '选项D', '选项E', '选项F', '选项G', '选项H']
+const JUDGE_TRUTHY = ['对', '正确', '是', 'true', 't', '√', '1', 'yes']
+const JUDGE_FALSY = ['错', '错误', '否', 'false', 'f', '×', '0', 'no']
 
 function slugify(name) {
   return name
@@ -64,6 +66,9 @@ function normalizeHeader(header) {
     answer: '答案',
     explanation: '解析',
     tags: '标签',
+    domain: '领域',
+    分类: '领域',
+    category: '领域',
     images: '图片',
     image: '图片',
   }
@@ -143,11 +148,50 @@ function parseAnswer(type, raw, options) {
     .filter(Boolean)
     .map((token) => {
       const upper = token.toUpperCase()
-      if (/^[A-F]$/.test(upper)) return OPTION_KEYS[upper.charCodeAt(0) - 65]
+      if (/^[A-H]$/.test(upper)) return OPTION_KEYS[upper.charCodeAt(0) - 65]
       return options?.find((o) => o.key === token.toLowerCase())?.key
     })
     .filter(Boolean)
   return { optionKeys: [...new Set(keys)] }
+}
+
+function cell(row, key) {
+  return String(row[key] ?? '').trim()
+}
+
+function inferType(row) {
+  const stem = cell(row, '题干')
+  const answer = cell(row, '答案')
+  const filled = OPTION_HEADERS.map((h) => cell(row, h)).filter(Boolean)
+  const answerNorm = answer.replace(/\s/g, '')
+  const isJudgeWord =
+    JUDGE_TRUTHY.includes(answerNorm.toLowerCase()) ||
+    JUDGE_FALSY.includes(answerNorm.toLowerCase()) ||
+    JUDGE_TRUTHY.includes(answerNorm) ||
+    JUDGE_FALSY.includes(answerNorm)
+
+  if (isJudgeWord && filled.length === 0) return 'judge'
+  if (filled.length === 0 && /（\s*）|\(\s*\)|_{2,}|＿{2,}/.test(stem)) return 'blank'
+  if (filled.length === 2 && !cell(row, '选项C')) {
+    const a = cell(row, '选项A')
+    const b = cell(row, '选项B')
+    const abJudge =
+      (JUDGE_TRUTHY.includes(a) || JUDGE_FALSY.includes(a)) &&
+      (JUDGE_TRUTHY.includes(b) || JUDGE_FALSY.includes(b))
+    if (abJudge || isJudgeWord) return 'judge'
+    return 'single'
+  }
+  if (filled.length >= 2) {
+    const letters = answer
+      .toUpperCase()
+      .split(/[,，、\s]+/)
+      .map((t) => t.trim())
+      .filter((t) => /^[A-H]$/.test(t))
+    if (letters.length >= 2) return 'multiple'
+    return 'single'
+  }
+  if (filled.length === 0 && answer.length >= 12) return 'short'
+  return answer ? 'blank' : 'short'
 }
 
 function rowsToQuestions(rows, bankId, fileName) {
@@ -157,7 +201,11 @@ function rowsToQuestions(rows, bankId, fileName) {
     const stem = String(row['题干'] ?? '').trim()
     const typeRaw = String(row['题型'] ?? '').trim()
     if (!stem && !typeRaw) return
-    const type = TYPE_ALIASES[typeRaw] ?? TYPE_ALIASES[typeRaw.toLowerCase()]
+    let type = TYPE_ALIASES[typeRaw] ?? TYPE_ALIASES[typeRaw.toLowerCase()]
+    if (!type && !typeRaw && stem) {
+      type = inferType(row)
+      issues.push(`行 ${row.rowNum ?? idx + 1}: 题型已自动识别为 ${type}`)
+    }
     if (!type) {
       issues.push(`行 ${row.rowNum ?? idx + 1}: 题型无效`)
       return
@@ -185,7 +233,14 @@ function rowsToQuestions(rows, bankId, fileName) {
         .split(/[,，;；]/)
         .map((t) => t.trim())
         .filter(Boolean),
-      sourceMeta: { fileName, row: row.rowNum ?? idx + 1 },
+      domain:
+        String(row['领域'] ?? '').trim() ||
+        String(row['标签'] ?? '')
+          .split(/[,，;；]/)
+          .map((t) => t.trim())
+          .filter(Boolean)[0] ||
+        undefined,
+      sourceMeta: { fileName, row: row.rowNum ?? idx + 1, inferredType: !typeRaw },
     })
   })
   return { questions, issues }
@@ -351,7 +406,7 @@ async function parseFile(filePath) {
       .map((b) => b.trim())
       .filter(Boolean)
     const fieldRe =
-      /^(题型|题干|选项A|选项B|选项C|选项D|选项E|选项F|答案|解析|图片|标签)\s*[:：]\s*(.*)$/
+      /^(题型|题干|选项A|选项B|选项C|选项D|选项E|选项F|选项G|选项H|答案|解析|图片|标签|领域)\s*[:：]\s*(.*)$/
     const rows = []
     let rowNum = 1
     for (const block of blocks) {

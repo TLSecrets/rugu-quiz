@@ -16,6 +16,7 @@ const settings = useSettingsStore()
       </div>
     </div>
     <div class="header__actions">
+      <RouterLink class="header__link header__link--mobile" to="/exam">考试</RouterLink>
       <RouterLink class="header__link header__link--mobile" to="/notes">笔记</RouterLink>
       <RouterLink class="header__link header__link--mobile" to="/settings">设置</RouterLink>
       <button

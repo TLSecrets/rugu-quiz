@@ -61,6 +61,7 @@ export const sampleQuestions: Question[] = [
       explanation: 'Phase 1 只交付可运行的 UI 壳与路由，不含账号与 Docker。',
     },
     tags: ['产品', '阶段'],
+    domain: '产品',
   },
   {
     id: 'q-sample-02',
@@ -79,6 +80,7 @@ export const sampleQuestions: Question[] = [
       explanation: '无后端场景下用 Pages + IndexedDB + Hash 路由即可。',
     },
     tags: ['架构'],
+    domain: '架构',
   },
   {
     id: 'q-sample-03',
@@ -99,6 +101,7 @@ export const sampleQuestions: Question[] = [
       media: [media('ma1', '答案附图', 'in-answer', 160)],
     },
     tags: ['媒体'],
+    domain: '媒体',
   },
   {
     id: 'q-sample-04',
@@ -111,6 +114,7 @@ export const sampleQuestions: Question[] = [
       explanation: 'Pinia 管运行时状态，Dexie 封装 IndexedDB。',
     },
     tags: ['技术栈'],
+    domain: '技术栈',
   },
   {
     id: 'q-sample-05',
@@ -126,6 +130,7 @@ export const sampleQuestions: Question[] = [
       media: [media('ma1', '规范化流程', 'in-answer', 205)],
     },
     tags: ['架构'],
+    domain: '架构',
   },
   {
     id: 'q-sample-06',
@@ -150,6 +155,7 @@ export const sampleQuestions: Question[] = [
       explanation: 'label 可重排，key 保持不变。',
     },
     tags: ['练习'],
+    domain: '练习',
   },
   {
     id: 'q-sample-07',
@@ -168,6 +174,7 @@ export const sampleQuestions: Question[] = [
       explanation: '收藏与笔记是 P0；登录、计时、Docker 为排除项。',
     },
     tags: ['范围'],
+    domain: '产品',
   },
   {
     id: 'q-sample-08',
@@ -184,6 +191,7 @@ export const sampleQuestions: Question[] = [
       explanation: '不经第三方中转，Key 不得写入仓库。',
     },
     tags: ['安全', 'AI'],
+    domain: '安全',
   },
   {
     id: 'q-sample-09',
@@ -203,6 +211,7 @@ export const sampleQuestions: Question[] = [
         '其中 $E$ 为能量，$m$ 为质量，$c$ 为真空中光速。块级公式示例：\n\n$$\nE = mc^2\n$$',
     },
     tags: ['公式', '物理'],
+    domain: '公式',
   },
   {
     id: 'q-sample-10',
@@ -215,5 +224,6 @@ export const sampleQuestions: Question[] = [
       explanation: '表格由 Markdown 渲染；公式 $a^{2}+b^{2}=c^{2}$ 由 KaTeX 渲染。',
     },
     tags: ['公式', '表格'],
+    domain: '公式',
   },
 ]

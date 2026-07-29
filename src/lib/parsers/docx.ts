@@ -3,7 +3,7 @@ import { rowsToQuestions, emptyParseResult } from './normalize'
 import { createId, type ParseResult, type RawRow } from './types'
 
 const FIELD_PATTERN =
-  /^(题型|题干|选项A|选项B|选项C|选项D|选项E|选项F|答案|解析|图片|标签)\s*[:：]\s*(.*)$/
+  /^(题型|题干|选项A|选项B|选项C|选项D|选项E|选项F|选项G|选项H|答案|解析|图片|标签|领域)\s*[:：]\s*(.*)$/
 
 /**
  * Word 约定：

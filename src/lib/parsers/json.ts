@@ -83,6 +83,7 @@ function mapStructuredQuestion(
         media: Array.isArray(answerRaw.media) ? (answerRaw.media as QuestionMedia[]) : undefined,
       },
       tags: Array.isArray(raw.tags) ? raw.tags.map(asString).filter(Boolean) : undefined,
+      domain: asString(raw.domain ?? raw.领域) || undefined,
       sourceMeta: { fileName, row: index + 1 },
     },
   }

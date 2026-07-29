@@ -5,13 +5,16 @@ import { clearAllLocalData, clearLearningData } from '@/db/bootstrap'
 import { useBanksStore } from '@/stores/banks'
 import { useFavoritesStore } from '@/stores/favorites'
 import { useNotesStore } from '@/stores/notes'
+import { useWrongsStore } from '@/stores/wrongs'
 import { useSettingsStore, type ThemeMode } from '@/stores/settings'
 import { ALL_QUESTION_TYPES, QUESTION_TYPE_LABELS } from '@/types/question'
+import { FONT_SIZE_MAX, FONT_SIZE_MIN } from '@/types/settings'
 
 const settings = useSettingsStore()
 const banks = useBanksStore()
 const favorites = useFavoritesStore()
 const notes = useNotesStore()
+const wrongs = useWrongsStore()
 
 const themeOptions: { value: ThemeMode; label: string }[] = [
   { value: 'dark', label: '深色' },
@@ -40,13 +43,17 @@ function onTypeToggle(type: (typeof ALL_QUESTION_TYPES)[number]) {
 }
 
 async function refreshStores() {
-  await Promise.all([banks.refresh(), favorites.refresh(), notes.refresh()])
+  await Promise.all([banks.refresh(), favorites.refresh(), notes.refresh(), wrongs.refresh()])
 }
 
 async function onClearLearning() {
   dataMsg.value = null
   dataErr.value = null
-  if (!confirm('将清空题库、收藏、笔记与练习进度，并重新写入示例题。设置与 API Key 会保留。确定？')) {
+  if (
+    !confirm(
+      '将清空题库、收藏、笔记、错题与练习进度，并重新写入示例题。设置与 API Key 会保留。确定？',
+    )
+  ) {
     return
   }
   busy.value = true
@@ -86,7 +93,12 @@ async function onClearAll() {
   <PageHeader title="设置" subtitle="偏好写入 IndexedDB；主题缓存到 localStorage 以免闪烁。">
     <section class="card">
       <h3 class="card__title">外观</h3>
-      <p class="card__desc">浅色 / 深色 / 跟随系统</p>
+      <p class="card__desc">
+        浅色 / 深色 / 跟随系统
+        <template v-if="settings.theme === 'system'">
+          （当前：{{ settings.resolvedTheme === 'dark' ? '深色' : '浅色' }}）
+        </template>
+      </p>
       <div class="segment" role="radiogroup" aria-label="主题">
         <button
           v-for="opt in themeOptions"
@@ -101,6 +113,38 @@ async function onClearAll() {
           {{ opt.label }}
         </button>
       </div>
+
+      <div class="font-row">
+        <div>
+          <p class="card__desc">阅读字号（{{ settings.fontSize }}px，{{ FONT_SIZE_MIN }}–{{ FONT_SIZE_MAX }}）</p>
+        </div>
+        <div class="font-controls" role="group" aria-label="阅读字号">
+          <button
+            type="button"
+            class="btn"
+            :disabled="settings.fontSize <= FONT_SIZE_MIN"
+            @click="settings.adjustFontSize(-1)"
+          >
+            A−
+          </button>
+          <input
+            class="font-slider"
+            type="range"
+            :min="FONT_SIZE_MIN"
+            :max="FONT_SIZE_MAX"
+            :value="settings.fontSize"
+            @input="settings.setFontSize(Number(($event.target as HTMLInputElement).value))"
+          />
+          <button
+            type="button"
+            class="btn"
+            :disabled="settings.fontSize >= FONT_SIZE_MAX"
+            @click="settings.adjustFontSize(1)"
+          >
+            A+
+          </button>
+        </div>
+      </div>
     </section>
 
     <section class="card">
@@ -112,6 +156,26 @@ async function onClearAll() {
       <label class="toggle">
         <input v-model="settings.blankLooseMatch" type="checkbox" />
         <span>填空宽松匹配（去空格 / 忽略大小写）</span>
+      </label>
+      <label class="toggle">
+        <input v-model="settings.autoNextEnabled" type="checkbox" />
+        <span>默认答题后自动下一题</span>
+      </label>
+      <label class="field">
+        <span>自动下一题延迟（秒，0 = 立即）</span>
+        <input
+          v-model.number="settings.autoNextDelay"
+          type="number"
+          min="0"
+          max="30"
+        />
+      </label>
+      <label class="field">
+        <span>默认答案展示</span>
+        <select v-model="settings.showAnswerMode">
+          <option value="instant">即时显示</option>
+          <option value="manual">手动确认</option>
+        </select>
       </label>
 
       <div>
@@ -129,13 +193,20 @@ async function onClearAll() {
           </button>
         </div>
       </div>
+
+      <div class="row">
+        <button type="button" class="btn" @click="settings.resetPracticeDefaults()">
+          恢复练习默认项
+        </button>
+      </div>
     </section>
 
     <section class="card">
-      <h3 class="card__title">DeepSeek</h3>
+      <h3 class="card__title">AI 接口（OpenAI 兼容）</h3>
       <p class="card__desc">
-        Key 仅保存在本机。导入导出页的「AI 辅助导入」由浏览器直连，不经第三方；费用由你的账户结算。
-        申请地址：
+        默认对接 DeepSeek（OpenAI 兼容 Chat Completions）。Key 仅保存在本机；导入导出页的「AI
+        辅助导入」由浏览器直连，不经第三方；费用由你的账户结算。也可改 Base URL / 模型指向其他兼容接口。
+        DeepSeek 申请：
         <a
           class="ext"
           href="https://platform.deepseek.com/api_keys"
@@ -182,6 +253,17 @@ async function onClearAll() {
       <p v-if="dataMsg" class="flash flash--ok">{{ dataMsg }}</p>
       <p v-if="dataErr" class="flash flash--err">{{ dataErr }}</p>
     </section>
+
+    <section class="card">
+      <h3 class="card__title">关于</h3>
+      <p class="card__desc">
+        如故题库 · 纯前端刷题站 · 数据仅存当前浏览器 · 部署于 GitHub Pages。不提供账号登录、考试限时与云同步。
+      </p>
+      <ul class="about-list">
+        <li>版本阶段：Phase A–E（错题本、练习配置、模拟考试、导入增强、设置打磨）</li>
+        <li>开源仓库可在 GitHub 查看 Actions 部署记录</li>
+      </ul>
+    </section>
   </PageHeader>
 </template>
 
@@ -214,6 +296,34 @@ async function onClearAll() {
   font-weight: 600;
   text-decoration: underline;
   text-underline-offset: 2px;
+}
+
+.font-row {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.font-controls {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.font-slider {
+  flex: 1;
+  min-width: 0;
+  accent-color: var(--color-accent);
+}
+
+.about-list {
+  margin: 0;
+  padding-left: 1.2em;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
 }
 
 .segment {
@@ -287,6 +397,15 @@ async function onClearAll() {
 }
 
 .field input {
+  min-height: var(--touch-min);
+  padding: 0 var(--space-4);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+.field select {
   min-height: var(--touch-min);
   padding: 0 var(--space-4);
   border-radius: var(--radius-md);

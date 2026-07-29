@@ -6,8 +6,8 @@
     "source": "generated",
     "questionCount": 5,
     "file": "examples/构建示例.json",
-    "createdAt": 1785257006945,
-    "updatedAt": 1785257006945
+    "createdAt": 1785294411108,
+    "updatedAt": 1785294411108
   },
   "questions": [
     {
@@ -51,9 +51,11 @@
       "tags": [
         "部署"
       ],
+      "domain": "部署",
       "sourceMeta": {
         "fileName": "构建示例.json",
-        "row": 1
+        "row": 1,
+        "inferredType": false
       }
     },
     {
@@ -107,9 +109,11 @@
       "tags": [
         "题型"
       ],
+      "domain": "题型",
       "sourceMeta": {
         "fileName": "构建示例.json",
-        "row": 2
+        "row": 2,
+        "inferredType": false
       }
     },
     {
@@ -141,9 +145,11 @@
       "tags": [
         "媒体"
       ],
+      "domain": "媒体",
       "sourceMeta": {
         "fileName": "构建示例.json",
-        "row": 3
+        "row": 3,
+        "inferredType": false
       }
     },
     {
@@ -162,9 +168,11 @@
       "tags": [
         "技术栈"
       ],
+      "domain": "技术栈",
       "sourceMeta": {
         "fileName": "构建示例.json",
-        "row": 4
+        "row": 4,
+        "inferredType": false
       }
     },
     {
@@ -182,9 +190,11 @@
       "tags": [
         "练习"
       ],
+      "domain": "练习",
       "sourceMeta": {
         "fileName": "构建示例.json",
-        "row": 5
+        "row": 5,
+        "inferredType": false
       }
     }
   ]

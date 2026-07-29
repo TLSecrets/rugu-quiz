@@ -40,10 +40,13 @@ export function questionsToRows(questions: Question[]): Record<string, string>[]
     选项D: optionContent(q, 'd'),
     选项E: optionContent(q, 'e'),
     选项F: optionContent(q, 'f'),
+    选项G: optionContent(q, 'g'),
+    选项H: optionContent(q, 'h'),
     答案: answerToCell(q),
     解析: q.answer.explanation ?? '',
     图片: mediaToCell(q),
     标签: (q.tags ?? []).join(','),
+    领域: q.domain ?? '',
   }))
 }
 
@@ -60,6 +63,7 @@ export function exportBankAsJson(bank: Bank, questions: Question[]): Blob {
       options: q.options,
       answer: q.answer,
       tags: q.tags,
+      domain: q.domain,
     })),
   }
   return new Blob([JSON.stringify(payload, null, 2)], {

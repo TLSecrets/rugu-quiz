@@ -56,7 +56,7 @@ async function convert() {
   rawModelOutput.value = ''
 
   if (!hasKey.value) {
-    error.value = '请先在设置中填写 DeepSeek API Key（仅存本机，请求直连 DeepSeek）。'
+    error.value = '请先在设置中填写 API Key（OpenAI 兼容接口，仅存本机，浏览器直连）。'
     return
   }
   if (rawText.value.trim().length < 8) {
@@ -89,9 +89,9 @@ async function convert() {
     if (parsed.bankName) bankName.value = parsed.bankName
 
     if (result.usage?.total_tokens != null) {
-      usageText.value = `本次约消耗 ${result.usage.total_tokens} tokens（prompt ${result.usage.prompt_tokens ?? '-'} / completion ${result.usage.completion_tokens ?? '-'}）。费用由你的 DeepSeek 账户结算，本站不代扣。`
+      usageText.value = `本次约消耗 ${result.usage.total_tokens} tokens（prompt ${result.usage.prompt_tokens ?? '-'} / completion ${result.usage.completion_tokens ?? '-'}）。费用由你的 API 账户结算，本站不代扣。`
     } else {
-      usageText.value = '费用由你的 DeepSeek 账户结算，本站不代扣、不中转 Key。'
+      usageText.value = '费用由你的 API 账户结算，本站不代扣、不中转 Key。'
     }
 
     if (!parsed.questions.length) {
@@ -120,7 +120,7 @@ async function confirmImport() {
     const bank: Bank = {
       id: createId('bank'),
       name: bankName.value.trim() || 'AI 导入题库',
-      description: '由 DeepSeek 辅助导入',
+      description: '由 AI 辅助导入',
       source: 'import',
       questionCount: previewQuestions.value.length,
       createdAt: now,
@@ -145,14 +145,14 @@ async function confirmImport() {
 <template>
   <section class="ai">
     <div class="ai__head">
-      <h3 class="ai__title">AI 辅助导入（DeepSeek）</h3>
+      <h3 class="ai__title">AI 辅助导入（OpenAI 兼容）</h3>
       <p class="ai__desc">
-        粘贴杂乱文本，由模型转为结构化题目。Key 仅存本机，浏览器直连 DeepSeek，不经第三方。
+        粘贴杂乱文本，由模型转为结构化题目。Key 仅存本机，浏览器直连你配置的接口（默认 DeepSeek），不经第三方。
       </p>
     </div>
 
     <div v-if="!hasKey" class="gate">
-      <p>尚未配置 API Key。请先到设置填写 DeepSeek Key 与模型。</p>
+      <p>尚未配置 API Key。请先到设置填写 Key、Base URL 与模型。</p>
       <RouterLink class="link" to="/settings">前往设置</RouterLink>
     </div>
 

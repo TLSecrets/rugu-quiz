@@ -17,7 +17,8 @@ export const AI_IMPORT_SYSTEM_PROMPT = `你是题库结构化助手。将用户�
         "texts": ["填空或简答参考答案"],
         "explanation": "解析，可选"
       },
-      "tags": ["可选标签"]
+      "tags": ["可选标签"],
+      "domain": "可选领域分类"
     }
   ]
 }
@@ -27,10 +28,11 @@ export const AI_IMPORT_SYSTEM_PROMPT = `你是题库结构化助手。将用户�
 2. single/multiple/judge 必须有 options；judge 默认两项 key 为 true/false，content 为「正确」「错误」（若原文用对/错也可）。
 3. single/judge 的 answer.optionKeys 恰好 1 个；multiple 为全部正确项 key。
 4. blank/short 用 answer.texts；多空用多个字符串。blank/short 可无 options。
-5. key 使用小写 a、b、c… 或 true/false；不要用显示标签当唯一依据。
+5. key 使用小写 a–h 或 true/false；不要用显示标签当唯一依据。
 6. 无法确定的答案仍给出最合理猜测，并在 explanation 注明「答案存疑」。
 7. 忽略广告、页眉页脚；保留公式与必要换行。
-8. 只输出 JSON 对象本身。`
+8. 若能识别章节/科目，写入 domain；否则可省略。
+9. 只输出 JSON 对象本身。`
 
 export function buildAiImportUserPrompt(rawText: string): string {
   return `请将以下内容转为题库 JSON：\n\n---\n${rawText.trim()}\n---`

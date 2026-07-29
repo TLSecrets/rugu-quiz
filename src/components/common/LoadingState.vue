@@ -21,10 +21,10 @@ withDefaults(
   display: flex;
   align-items: center;
   gap: var(--space-3);
-  padding: var(--space-6) var(--space-5);
+  padding: var(--space-8) var(--space-5);
   border-radius: var(--radius-lg);
-  border: 1px solid var(--color-border);
-  background: color-mix(in srgb, var(--color-surface) 80%, transparent);
+  border: 1px dashed var(--color-border-strong);
+  background: color-mix(in srgb, var(--color-surface) 70%, transparent);
 }
 
 .loading__dot {

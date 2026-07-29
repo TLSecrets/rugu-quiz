@@ -68,7 +68,9 @@ async function runExport() {
 <template>
   <section class="pdf">
     <h3 class="pdf__title">导出 PDF</h3>
-    <p class="pdf__desc">可导出当前题、错题集或整库；支持是否包含答案与解析。</p>
+    <p class="pdf__desc">
+      可导出当前题、会话/题库内错题或整表；错题本页导出范围为持久错题。支持是否包含答案与解析。
+    </p>
 
     <div class="segment" role="radiogroup" aria-label="导出范围">
       <button

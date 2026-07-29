@@ -12,6 +12,8 @@ export interface PdfExportOptions {
   includeAnswers: boolean
   /** 已提交且判为错误/半对的题 id，仅 wrong 范围使用 */
   wrongIds?: Set<string>
+  /** 题号旁显示分值（空白试卷） */
+  scoreByQuestionId?: Record<string, number>
   onProgress?: (done: number, total: number) => void
 }
 
@@ -40,7 +42,12 @@ function answerBlock(q: Question): string {
   return parts.join('')
 }
 
-function buildArticleHtml(q: Question, index: number, includeAnswers: boolean): string {
+function buildArticleHtml(
+  q: Question,
+  index: number,
+  includeAnswers: boolean,
+  score?: number,
+): string {
   const media = [...(q.media ?? []), ...(includeAnswers ? q.answer.media ?? [] : [])]
     .filter((m) => m.src)
     .map(
@@ -49,10 +56,12 @@ function buildArticleHtml(q: Question, index: number, includeAnswers: boolean): 
     )
     .join('')
 
+  const scoreText = score != null ? `（${score} 分）` : ''
+
   return `
     <article class="pdf-q" style="padding:16px 18px;margin-bottom:14px;border:1px solid #d8dee6;border-radius:10px;background:#fff;color:#152033;font-family:'Noto Sans SC',sans-serif;">
       <p style="margin:0 0 8px;font-size:12px;color:#718096;font-weight:600;">
-        ${index + 1}. ${QUESTION_TYPE_LABELS[q.type]}
+        ${index + 1}. ${QUESTION_TYPE_LABELS[q.type]}${scoreText}
       </p>
       <div style="font-size:14px;line-height:1.6;">${renderRichText(q.stem)}</div>
       <div style="margin-top:8px;font-size:13px;line-height:1.55;">${optionLines(q)}</div>
@@ -88,7 +97,12 @@ export async function exportQuestionsPdf(options: PdfExportOptions): Promise<voi
     for (let i = 0; i < list.length; i++) {
       options.onProgress?.(i, list.length)
       const wrap = document.createElement('div')
-      wrap.innerHTML = buildArticleHtml(list[i], i, options.includeAnswers)
+      wrap.innerHTML = buildArticleHtml(
+        list[i],
+        i,
+        options.includeAnswers,
+        options.scoreByQuestionId?.[list[i].id],
+      )
       host.innerHTML = ''
       host.appendChild(wrap)
 

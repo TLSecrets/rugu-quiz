@@ -22,6 +22,24 @@ const router = createRouter({
       meta: { title: '练习', nav: 'practice' },
     },
     {
+      path: '/exam',
+      name: 'exam',
+      component: () => import('@/views/ExamView.vue'),
+      meta: { title: '模拟考试', nav: 'exam' },
+    },
+    {
+      path: '/exam-result',
+      name: 'exam-result',
+      component: () => import('@/views/ExamResultView.vue'),
+      meta: { title: '考试结果', nav: 'exam' },
+    },
+    {
+      path: '/wrong',
+      name: 'wrong',
+      component: () => import('@/views/WrongCollectionView.vue'),
+      meta: { title: '错题', nav: 'wrong' },
+    },
+    {
       path: '/search',
       name: 'search',
       component: () => import('@/views/SearchView.vue'),
