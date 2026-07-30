@@ -32,6 +32,7 @@ function isActive(key: string) {
 
 <style scoped>
 .side {
+  display: flex;
   position: sticky;
   top: 0;
   height: 100dvh;

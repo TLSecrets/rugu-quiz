@@ -32,6 +32,7 @@ function isActive(key: string) {
   z-index: 30;
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
+  /* 实际占位高度 = 栏高 + 底部安全区，与 shell 内容 padding 对齐 */
   min-height: calc(var(--tabbar-height) + env(safe-area-inset-bottom));
   padding-bottom: env(safe-area-inset-bottom);
   background: color-mix(in srgb, var(--color-surface) 92%, transparent);

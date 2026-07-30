@@ -4,14 +4,18 @@ import { useRoute } from 'vue-router'
 import SideNav from './SideNav.vue'
 import MobileTabBar from './MobileTabBar.vue'
 import AppHeader from './AppHeader.vue'
+import { useMediaQuery } from '@/composables/useMediaQuery'
+import { MQ_TABLET } from '@/lib/layoutBreakpoints'
 
 const route = useRoute()
 const pageTitle = computed(() => (route.meta.title as string) || '如故题库')
+/** ≥48rem：侧栏；否则底栏。用 v-if 避免 scoped display 互相覆盖 */
+const isTabletUp = useMediaQuery(MQ_TABLET)
 </script>
 
 <template>
-  <div class="shell">
-    <SideNav class="shell__side" />
+  <div class="shell" :class="{ 'shell--tablet': isTabletUp }">
+    <SideNav v-if="isTabletUp" class="shell__side" />
     <div class="shell__main">
       <AppHeader :title="pageTitle" />
       <main class="shell__content">
@@ -22,7 +26,7 @@ const pageTitle = computed(() => (route.meta.title as string) || '如故题库')
         </RouterView>
       </main>
     </div>
-    <MobileTabBar class="shell__tabs" />
+    <MobileTabBar v-if="!isTabletUp" />
   </div>
 </template>
 
@@ -48,15 +52,29 @@ const pageTitle = computed(() => (route.meta.title as string) || '如故题库')
   width: min(960px, 100%);
   margin: 0 auto;
   padding: var(--space-5) var(--space-4);
-  padding-bottom: calc(var(--tabbar-height) + var(--space-6) + env(safe-area-inset-bottom));
+  /* 手机：为固定底栏 + 安全区留空，避免最后操作被挡住 */
+  padding-bottom: calc(var(--tabbar-height) + env(safe-area-inset-bottom) + var(--space-6));
 }
 
-.shell__side {
-  display: none;
+.shell--tablet {
+  grid-template-columns: var(--nav-width) 1fr;
 }
 
-.shell__tabs {
-  display: block;
+.shell--tablet .shell__side {
+  display: flex;
+}
+
+.shell--tablet .shell__content {
+  padding: var(--space-6) var(--space-5);
+  padding-bottom: var(--space-10);
+}
+
+/* --layout-desktop: 56.25rem — 宽屏更大留白 */
+@media (min-width: 56.25rem) {
+  .shell--tablet .shell__content {
+    padding: var(--space-8) var(--space-8);
+    padding-bottom: var(--space-12);
+  }
 }
 
 .fade-enter-active,
@@ -79,34 +97,6 @@ const pageTitle = computed(() => (route.meta.title as string) || '如故题库')
   .fade-enter-from,
   .fade-leave-to {
     transform: none;
-  }
-}
-
-/* --layout-tablet: 48rem — 平板起侧栏、隐藏底栏 */
-@media (min-width: 48rem) {
-  .shell {
-    grid-template-columns: var(--nav-width) 1fr;
-  }
-
-  .shell__side {
-    display: flex;
-  }
-
-  .shell__tabs {
-    display: none;
-  }
-
-  .shell__content {
-    padding: var(--space-6) var(--space-5);
-    padding-bottom: var(--space-10);
-  }
-}
-
-/* --layout-desktop: 56.25rem — 宽屏更大留白 */
-@media (min-width: 56.25rem) {
-  .shell__content {
-    padding: var(--space-8) var(--space-8);
-    padding-bottom: var(--space-12);
   }
 }
 </style>
